@@ -1,8 +1,20 @@
 ---
-title: "Important dates"
+title: ""
 ---
 
+The following table lists the important
+
+### Section D100
   
+Date         | Event
+-------------| ---------
+May 9     | First day of classes
+June 37 | Second test
+
+
+
+### Section D200
+
 Date         | Event
 -------------| ---------
 August 27    | It is over!
