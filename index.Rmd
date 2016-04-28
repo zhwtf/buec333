@@ -1,11 +1,10 @@
 ---
-title: "BUEC 333"
+title: ""
 ---
 
-Course website for BUEC 333, Summer 2016.
+This is the course website for BUEC 333, Summer 2016. Please check back often for updates.
 
-
-### Weekly material {.tabset .tabset-pills}
+### Weekly material {.tabset}
 
 #### Week 1
 
