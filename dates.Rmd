@@ -2,7 +2,8 @@
 title: ""
 ---
 
-The following table lists the important
+<br>
+<br> 
 
 ### Section D100
   
@@ -12,9 +13,9 @@ May 9     | First day of classes
 June 37 | Second test
 
 
-
 ### Section D200
 
-Date         | Event
--------------| ---------
-August 27    | It is over!
+Date | Event
+-----| ------
+May 10 | Let's go!
+Snoptober 64 | Test 8

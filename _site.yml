@@ -10,6 +10,8 @@ navbar:
       href: index.html
     - text: "Dates"
       href: dates.html
+    - text: "Old exams"
+      href: exams.html
     - text: "Docs"
       menu:
       - text: Syllabus
