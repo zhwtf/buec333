@@ -4,7 +4,7 @@ output_dir: "."
 
 navbar:
   title: "BUEC 333"
-#  type: inverse
+  type: inverse
   left:
     - text: "Home"
       href: index.html
@@ -27,15 +27,15 @@ navbar:
         href: https://www.rstudio.com/
       - text: "R Markdown Websites"
         href: http://rmarkdown.rstudio.com/rmarkdown_websites.html
-      - text: "simplextheme"
-        href: http://bootswatch.com/simplex/
+      - text: "journal theme"
+        href: http://bootswatch.com/journal/
       - text: "Github"
         href: https://github.com/chrismuris/homepage
       
 
 output:
   html_document:
-    theme: simplex
+    theme: journal
     highlight: default
     toc: false
     toc_float: false

@@ -7,6 +7,10 @@ title: ""
 
 This is the course website for BUEC 333, Summer 2016. Please check back often for updates.
 
+<div class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">...</a>
+</div>
+
 <br>
 
 #### Weekly material {.tabset .tabset-pills}
