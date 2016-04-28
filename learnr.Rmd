@@ -1,0 +1,10 @@
+---
+title: "Learning R"
+---
+
+<br>
+
+An important part of this course is about using the methods you learn in a statistical computing environment called "R". On this page, I provide some information to help you get started.
+
+
+[Post assignments here?]

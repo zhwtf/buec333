@@ -8,6 +8,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Learning R"
+      href: learnr.html
     - text: "Dates"
       href: dates.html
     - text: "Old exams"
