@@ -1,0 +1,92 @@
+---
+title: "BUEC 333"
+---
+
+Course website for BUEC 333, Summer 2016.
+
+
+### Weekly material {.tabset .tabset-pills}
+
+#### Week 1
+
+Dates: May 9-15
+
+Topic: Introduction and Probability theory
+
+Readings: Stock and Watson, Chapters 1 and 2
+
+#### Week 2
+
+Dates: May 16-22
+
+Topic: Statistics
+
+Readings: Stock and Watson, Chapter 3
+
+#### Week 3
+
+etc... 
+
+#### Week 1
+
+Dates: May 9-15
+
+Topic: Introduction and Probability theory
+
+Readings: Stock and Watson, Chapters 1 and 2
+
+#### Week 2
+
+Dates: May 16-22
+
+Topic: Statistics
+
+Readings: Stock and Watson, Chapter 3
+
+#### Week 3
+
+Dates: May 9-15
+
+Topic: Introduction and Probability theory
+
+Readings: Stock and Watson, Chapters 1 and 2
+
+#### Week 4
+
+Dates: May 16-22
+
+Topic: Statistics
+
+Readings: Stock and Watson, Chapter 3
+
+#### Week 5
+
+Dates: May 9-15
+
+Topic: Introduction and Probability theory
+
+Readings: Stock and Watson, Chapters 1 and 2
+
+#### Week 6
+
+Dates: May 16-22
+
+Topic: Statistics
+
+Readings: Stock and Watson, Chapter 3
+
+#### Week 7
+
+Dates: May 9-15
+
+Topic: Introduction and Probability theory
+
+Readings: Stock and Watson, Chapters 1 and 2
+
+#### Week 8
+
+Dates: May 16-22
+
+Topic: Statistics
+
+Readings: Stock and Watson, Chapter 3

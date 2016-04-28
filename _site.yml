@@ -1,0 +1,40 @@
+name: "buec333"
+
+output_dir: "."
+
+navbar:
+  title: "BUEC 333"
+  type: inverse
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Dates"
+      href: dates.html
+    - text: "Docs"
+      menu:
+      - text: Syllabus
+        href: syllabus.html
+      - text: "Contact"
+        href: contact.html
+  right:
+    - text: "Built with"
+      menu:
+      - text: "RStudio"
+        href: https://www.rstudio.com/
+      - text: "R Markdown Websites"
+        href: http://rmarkdown.rstudio.com/rmarkdown_websites.html
+      - text: "paper theme"
+        href: http://bootswatch.com/paper/
+      - text: "Github"
+        href: https://github.com/chrismuris/homepage
+      
+
+output:
+  html_document:
+    theme: paper
+    highlight: default
+    toc: false
+    toc_float: false
+    css: styles.css
+
+    
