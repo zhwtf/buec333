@@ -1,0 +1,943 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+BUEC 333, Test 2
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+July 8, 2015, 14:30-17:20
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Instructions
+\end_layout
+
+\begin_layout Itemize
+On the front page of
+\series bold
+ your answer sheet
+\series default
+, write (i) your name; (ii) your student ID.
+ 
+\end_layout
+
+\begin_layout Itemize
+On the front page of
+\series bold
+ this document
+\series default
+, write: (i) your name; and (ii) your student ID.
+\end_layout
+
+\begin_layout Itemize
+Once you 
+\series bold
+finish
+\series default
+ this exam, 
+\series bold
+signal
+\series default
+ it to us, and we will come to pick up your exam.
+ Stay seated until somebody comes to collect your exam.
+\end_layout
+
+\begin_layout Itemize
+No explanation = no points.
+ A correct answer 
+\series bold
+with correct explanation 
+\series default
+earns 1 point for each subquestion.
+ 
+\end_layout
+
+\begin_layout Itemize
+For a 
+\begin_inset Quotes eld
+\end_inset
+
+compute
+\begin_inset Quotes erd
+\end_inset
+
+ question, an explanation can consist of starting from 
+\series bold
+an appropriate formula
+\series default
+, and working towards the correct numerical answer.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Chapter 4.
+
+\series default
+ The following questions are about regression analysis.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In a regression equation, what does the error term capture? 
+\end_layout
+
+\begin_layout Enumerate
+What is the difference between an error term and a residual? 
+\end_layout
+
+\begin_layout Enumerate
+Using the population regression equation 
+\emph on
+or
+\emph default
+ the estimated regression equation, write down 
+\emph on
+precisely
+\emph default
+ what the OLS estimator minimizes.
+ Your answer should include 
+\begin_inset Quotes eld
+\end_inset
+
+error terms
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+residuals
+\begin_inset Quotes erd
+\end_inset
+
+, as well as a precise mathematical expression for what is being minimized.
+\end_layout
+
+\begin_layout Enumerate
+Is the OLS estimator 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ a random variable? Explain!
+\end_layout
+
+\begin_layout Enumerate
+Least squares Assumption 1 is: 
+\begin_inset Formula $E\left(\left.u_{i}\right|X_{i}\right)=0$
+\end_inset
+
+.
+ What is the interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ if Assumption 1 holds? Be precise.
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ have an interpretation if Assumption 1 does not hold? Elaborate.
+\end_layout
+
+\begin_layout Enumerate
+A linear regression yields 
+\begin_inset Formula $\hat{\beta}_{1}=0$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $R^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Chapter 4.
+ 
+\series default
+Consider the linear regression model, with equation 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i}.$
+\end_inset
+
+ You are given the following random sample of size 
+\begin_inset Formula $n=3$
+\end_inset
+
+:
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For this sample, Compute 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+, the OLS estimator for the slope 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For this sample, Compute 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+, the OLS estimator for the intercept 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\sum_{i=1}^{3}\hat{u}_{i}$
+\end_inset
+
+ .
+ Compute 
+\begin_inset Formula $\sum_{i=1}^{3}X_{i}\hat{u}_{i}$
+\end_inset
+
+.
+ Is this what you would expect? Why?
+\end_layout
+
+\begin_layout Enumerate
+Compute the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+.
+ Interpret the number you obtain.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Chapter 4.
+ 
+\series default
+A regression of weekly average earnings (AWE, in $) on age (measured in
+ years) using a random sample of college-educated full-time workers aged
+ 25-65 yields the following:
+\begin_inset Formula 
+\[
+\widehat{AWE}=696.7+9.6\times Age,\,R^{2}=0.023,\,SER=624.1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain what the coefficient values 696.7 and 9.6 mean.
+\end_layout
+
+\begin_layout Enumerate
+What are the units of measurement for the SER? What are the units of measurement
+ for the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What does this regression predict will be the earnings for a 30-year old
+ worker? For a 40 year old worker?
+\end_layout
+
+\begin_layout Enumerate
+The average age in this sample is 41.6 years.
+ What is the average value of AWE in the sample?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Chapter 5.
+ 
+\series default
+Consider the R output from the code that we ran in class in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:code"
+
+\end_inset
+
+ on page 3, where we investigated the effect of class-size on student performanc
+e.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Graphics
+	filename 20150603-BUEC333-Test2-add.pdf
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+R output for class-size/performance example.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:code"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Use the output to construct a 95% confidence interval for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ Only go as far as you can without a calculator.
+\end_layout
+
+\begin_layout Enumerate
+Interpret the interval you obtained under (a).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use the reported 
+\series bold
+p-value
+\series default
+ to test the null hypothesis 
+\begin_inset Formula $H_{0}:\beta_{1}=0$
+\end_inset
+
+.
+ Would you reject the null hypothesis at the 5% level?
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+? Make sure that your answer is specific to this example.
+ You must use the word 
+\begin_inset Quotes eld
+\end_inset
+
+class size
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Do you think that Assumption 1 holds (see question 1e)? Why/why not?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Chapter 14.
+
+\series default
+ Suppose that 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ follows the stationary AR(1) model
+\begin_inset Formula 
+\[
+Y_{t}=2.5+\beta_{1}Y_{t-1}+u_{t}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is i.i.d.
+ with 
+\begin_inset Formula $E\left(u_{i}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{var}\left(u_{i}\right)=\sigma^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Express 
+\begin_inset Formula $E\left(Y_{t}\right)$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is 
+\begin_inset Formula $\text{var}\left(Y_{t}\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $\beta_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}=0$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $Y_{1}=2.5$
+\end_inset
+
+.
+ Can you compute 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+? Once you have 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+, can you compute 
+\begin_inset Formula $Y_{3}?$
+\end_inset
+
+ What about 
+\begin_inset Formula $Y_{10}?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Forget the additional assumptions you made under (c).
+ Look at your answers under (a) and (b).
+ What happens to them when 
+\begin_inset Formula $\beta_{1}=1$
+\end_inset
+
+? Is the sequence 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ still stationary when 
+\begin_inset Formula $\beta_{1}=1$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Chapter 14.
+
+\series default
+ Consider the time series 
+\begin_inset Formula $\left(Y_{1},Y_{2},Y_{3}\right)=\left(-1,0,1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the first sample autocovariance.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Formula sheet
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Key Concept 2.3
+\series default
+.
+ Let 
+\begin_inset Formula $X,$
+\end_inset
+
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ be random variables, let 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{x}^{2}$
+\end_inset
+
+ be the mean and variance of 
+\begin_inset Formula $X$
+\end_inset
+
+, let 
+\begin_inset Formula $\sigma_{XY}$
+\end_inset
+
+ be the covariance between 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ (and so forth for the other variables), and let 
+\begin_inset Formula $a,$
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+, and 
+\begin_inset Formula $c$
+\end_inset
+
+ be constants.
+ The following facts follow from the definitions of the mean, variance,
+ and covariance: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+E(a+bX+cY) & =a+b\mu_{X}+c\mu_{Y},\\
+\text{Var}\left(a+bY\right) & =b^{2}\sigma_{Y}^{2},\\
+\text{Var}\left(aX+bY\right) & =a^{2}\sigma_{X}^{2}+2ab\sigma_{XY}+b^{2}\sigma_{Y}^{2},\\
+E\left(Y^{2}\right) & =\sigma_{Y}^{2}+\mu_{Y}^{2},\\
+\text{Cov}\left(a+bX+cV,Y\right) & =b\sigma_{XY}+c\sigma_{VY},\\
+E\left(XY\right) & =\sigma_{XY}+\mu_{X}\mu_{Y},\text{ and }\\
+|corr(X,Y)|\leq1 & \text{ and }|\sigma_{XY}|\leq\sqrt{\sigma_{X}^{2}\sigma_{Y}^{2}}\text{ (correlation inequality).}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Miscellaneous.
+ 
+\series default
+These correspond to (4.16) and (14.5) in the textbook:
+\series bold
+
+\begin_inset Formula 
+\begin{align}
+R^{2} & =\frac{ESS}{TSS},\\
+\widehat{\text{cov}\left(Y_{t},Y_{t-j}\right)} & =\frac{1}{T}\sum_{t=j+1}\left(Y_{t}-\bar{Y}_{j+1:T}\right)\left(Y_{t-1}-\bar{Y}_{1:T-j}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

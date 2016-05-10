@@ -1,0 +1,4017 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\mode<presentation>
+{
+\usetheme{default}
+        \setbeamercovered{transparent}
+}
+\AtBeginSection{\frame{\sectionpage}}
+
+
+\usepackage{times}\usepackage{amsfonts}\usepackage{url}\usepackage{multirow}\usepackage[margin=10pt,labelfont=bf]{caption}\usepackage{listings}
+
+\DeclareMathOperator{\hn}{H_0}
+\DeclareMathOperator{\ha}{H_A}
+
+%\AtBeginSection[]
+%{
+%   \begin{frame}
+%       \frametitle{Outline}
+%       \tableofcontents[currentsection]
+%   \end{frame}
+%}
+
+\title{BUEC-333\\Statistical analysis of economic data}
+\author{Summer 2015}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-1
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Estimate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+An 
+\series bold
+estimand
+\series default
+ is the thing we want to have a guess for 
+\end_layout
+
+\begin_layout Itemize
+An 
+\series bold
+estimator
+\series default
+ is the 
+\series bold
+rule
+\series default
+ that we use to combine data into a guess 
+\end_layout
+
+\begin_layout Itemize
+What is an 
+\series bold
+estimate
+\series default
+? 
+\end_layout
+
+\begin_layout Itemize
+An estimate is what results from applying the rule (estimator) to specific
+ measurements 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estimator:
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+add up all the values for 
+\begin_inset Formula $X_{1},\cdots,X_{n}$
+\end_inset
+
+ and divide them by 
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estimate:
+\series default
+ (1+9+4+5+3)/5=22/5=4.4 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Interpretation of CI
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+As long as we consider the CI with 
+\series bold
+estimators
+\series default
+...
+ 
+\end_layout
+
+\begin_layout Itemize
+...the interval captures 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+ with 0.95 
+\series bold
+probability
+\series default
+, 
+\begin_inset Formula 
+\[
+P\left(\bar{Y}-z_{\alpha}\cdot s_{Y}/\sqrt{n}<\mu_{Y}<\bar{Y}+z_{\alpha}\cdot s_{Y}/\sqrt{n}\right)=1-\alpha
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Interpretation (2)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Now consider the actual range, the CI 
+\series bold
+estimate
+\series default
+, e.g.
+ 
+\begin_inset Formula 
+\[
+[1.2,5.6]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Saying 
+\begin_inset Formula $P(1.2<\mu_{Y}<5.6)$
+\end_inset
+
+ is meaningless.
+ 
+\end_layout
+
+\begin_layout Itemize
+Why? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Interpretation (3)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+A 95% confidence interval for 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+for 95% of all possible random samples, the true 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+ would be in the range of the estimated CI.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Another interesting question is: 
+\begin_inset Quotes eld
+\end_inset
+
+Is Candidate A going to win the elections?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Say there are two candidates, and one candidate wins when more than 50%
+ of the people vote for this candidate 
+\end_layout
+
+\begin_layout Itemize
+Then the question is: 
+\begin_inset Quotes eld
+\end_inset
+
+Is candidate A going to get more than 50% of the votes?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Our best guess is 59%, but this number would have been different with a
+ different sample 
+\end_layout
+
+\begin_layout Itemize
+Do we have enough evidence to say that candidate A is going to win? 
+\end_layout
+
+\begin_layout Itemize
+This is 
+\series bold
+hypothesis testing
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Testing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Beyond estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Econometrics started from testing economic theory 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Does quantity demanded decrease with price?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Is money neutral?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Does trade induce economic growth?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+So far: best guesses (estimation) 
+\end_layout
+
+\begin_layout Itemize
+Now: 
+\series bold
+testing
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+What can we learn about the real world from the sample? 
+\end_layout
+
+\begin_layout Itemize
+Did our result come about by 
+\series bold
+chance
+\series default
+? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Proving a theory
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+You can 
+\series bold
+never
+\series default
+ 
+\series bold
+prove
+\series default
+ that a theory is 
+\series bold
+correct
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+All we can do is show that sample seems to 
+\series bold
+fit
+\series default
+ theory 
+\begin_inset VSpace 0.5cm*
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Example: 
+\series bold
+All
+\series default
+ swans are white 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Disproving
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+However, you can often 
+\series bold
+reject
+\series default
+ a hypothesis or theory 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+It is very unlikely this sample would have been observed if the theory were
+ true
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Example: Find 
+\series bold
+one
+\series default
+ black swan! 
+\end_layout
+
+\begin_layout Itemize
+That's testing! 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Three ingredients
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Specification of the hypothesis to be tested 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+e.g.: 
+\begin_inset Formula $\hn:\beta_{k}\geq0$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $\ha:\beta_{k}<0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The decision rule 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+e.g.: Reject 
+\begin_inset Formula $\text{H}_{0}$
+\end_inset
+
+ if 
+\begin_inset Formula $|t|>1.699$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What can go wrong when making a decision 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Type I and Type II errors 
+\end_layout
+
+\begin_layout Itemize
+Type I: 
+\series bold
+Rejecting
+\series default
+ when hypothesis 
+\series bold
+true
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Type II: 
+\series bold
+Not
+\series default
+ rejecting when hypothesis 
+\series bold
+false
+\series default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypotheses
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+No cheating: state your hypothesis before you estimate 
+\end_layout
+
+\begin_layout Itemize
+Do the theoretical work before 
+\end_layout
+
+\begin_layout Itemize
+Example: Hockey player's 
+\series bold
+salary
+\series default
+ goes 
+\series bold
+up
+\series default
+ if, 
+\series bold
+ceteris paribus
+\series default
+, the number of 
+\series bold
+points
+\series default
+ (goals+assists) goes 
+\series bold
+up
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Example: We expect a 
+\series bold
+positive
+\series default
+ coefficient 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Setting up hypothesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In regression models, we will make 
+\series bold
+hypotheses
+\series default
+ about the 
+\series bold
+regression coefficients
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+In economics, we usually do not specify 
+\series bold
+values
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+We specify 
+\series bold
+signs
+\series default
+: a coefficient is negative, positive, or different from zero 
+\end_layout
+
+\begin_layout Itemize
+Sometimes: different from 1 (Is demand for a specific good elastic?) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Meaning of hypotheses
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y=\beta_{0}+\beta_{1}X+\epsilon$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ha$
+\end_inset
+
+: coefficient is positive: 
+\begin_inset Formula $X$
+\end_inset
+
+ has a positive effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+, ceteris paribus 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ha$
+\end_inset
+
+: coefficient is negative: 
+\begin_inset Formula $X$
+\end_inset
+
+ has a negative effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+, ceteris paribus 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ha$
+\end_inset
+
+: coefficient is non-zero: 
+\begin_inset Formula $X$
+\end_inset
+
+ has an effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+, ceteris paribus 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Setting up the null
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Say you expect a 
+\series bold
+negative
+\series default
+ sign for a coefficient 
+\end_layout
+
+\begin_layout Itemize
+For example: demand 
+\begin_inset Formula $q$
+\end_inset
+
+ and price 
+\begin_inset Formula $p$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+For example: 
+\begin_inset Formula $q=\beta_{0}+\beta_{1}p+\epsilon$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+What you do not expect goes in the null: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\hn:\beta_{1}\geq0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What you expect goes in the alternative hypothesis 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ha:\beta_{1}<0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Setting up the null (2)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Say you expect a 
+\series bold
+positive
+\series default
+ sign for a coefficient 
+\end_layout
+
+\begin_layout Itemize
+For example: housing price, and the size of a house 
+\end_layout
+
+\begin_layout Itemize
+For example: 
+\begin_inset Formula $\text{PRICE}=\beta_{0}+\beta_{1}\text{SIZE}+\cdots+\epsilon$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+What you do not expect goes in the null: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\hn:\beta_{1}\leq0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What you do expect goes in the alternative hypothesis 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ha:\beta_{1}>0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Setting up the null (3)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Say you do not know what to expect, other than that there is 
+\series bold
+some
+\series default
+ effect 
+\end_layout
+
+\begin_layout Itemize
+For example: fastfood sales in a neighbourhood 
+\end_layout
+
+\begin_layout Itemize
+For example: 
+\begin_inset Formula $\text{SALES}=\beta_{0}+\beta_{1}\text{INCOME}+\cdots+\epsilon$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+What you do not expect goes in the null: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\hn:\beta_{1}=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What you do expect goes in the alternative hypothesis 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ha:\beta_{1}\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+background canvas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bg=black
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+[plain]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Type of errors
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+We can never prove a theory 
+\end_layout
+
+\begin_layout Itemize
+We can 
+\begin_inset Quotes eld
+\end_inset
+
+reject
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+not reject
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Type I error: reject when the null hypothesis is true 
+\end_layout
+
+\begin_layout Itemize
+Type II error: not reject under alternative hypothesis 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Legal system analogy
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In court, 
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+null
+\series default
+ hypothesis is that the defendant is 
+\series bold
+not guilty
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+alternative
+\series default
+ hypothesis is that the defendant is 
+\series bold
+guilty
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Innocent until proven guilty
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Type I: Convicting the innocent 
+\end_layout
+
+\begin_layout Itemize
+Type II: Not convicting the guilty 
+\end_layout
+
+\begin_layout Itemize
+Type I is seen as more severe 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Type I
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Assume that 
+\begin_inset Formula $\hn:\beta\leq0$
+\end_inset
+
+, and 
+\begin_inset Formula $\ha:\beta>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Assume that 
+\begin_inset Formula $\hn$
+\end_inset
+
+ is true 
+\end_layout
+
+\begin_layout Itemize
+For
+\series bold
+ any given
+\series default
+ sample, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ may be much larger than 0 
+\end_layout
+
+\begin_layout Itemize
+And may lead us to reject the null 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Type I error
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/Teaching/BUEC333/2014 Summer/slides/type1error.pdf
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Type II
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Assume that 
+\begin_inset Formula $\hn:\beta\leq0$
+\end_inset
+
+, and 
+\begin_inset Formula $\ha:\beta>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Assume that 
+\begin_inset Formula $\ha$
+\end_inset
+
+ is true 
+\end_layout
+
+\begin_layout Itemize
+For any given sample, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ could be negative, or close to zero 
+\end_layout
+
+\begin_layout Itemize
+And may lead us not to reject the null 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Type II error
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/Teaching/BUEC333/2014 Summer/slides/type2error.pdf
+	scale 40
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Testing: How it works
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The 
+\series bold
+principle
+\series default
+ behind testing is straightforward: 
+\end_layout
+
+\begin_layout Itemize
+According to the null, you should find something close to
+\series bold
+ 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+You find something 
+\series bold
+far away
+\series default
+ from 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+That is 
+\series bold
+enough
+\series default
+ evidence against the null 
+\begin_inset VSpace 1cm*
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+What is 
+\begin_inset Formula $x$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Itemize
+What is far away / enough? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+How it works
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Testing:
+\begin_inset Newline newline
+\end_inset
+
+ If a sample is
+\series bold
+ very unlikely
+\series default
+ under 
+\begin_inset Formula $\hn$
+\end_inset
+
+, we reject 
+\begin_inset Formula $\hn$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Decision rule
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ before estimation
+\series default
+, we set up a 
+\series bold
+decision rule
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+For some 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, we decide: reject 
+\end_layout
+
+\begin_layout Itemize
+For others, we decide: not reject 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Critical value
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Critical value 
+\end_layout
+
+\begin_layout Itemize
+Divides interval in rejection region...
+ 
+\end_layout
+
+\begin_layout Itemize
+...and acceptance region 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Regions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/Teaching/BUEC333/2014 Summer/slides/acceptreject.pdf
+	scale 35
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Rejection region
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In the picture, we have the sampling distribution under 
+\begin_inset Formula $\hn$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Size of rejection region: probability of Type I error 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Type I: If 
+\begin_inset Formula $\hn$
+\end_inset
+
+ true, but we reject 
+\end_layout
+
+\begin_layout Itemize
+We reject when we are in the rejection region 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Why not shrink Type I region
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+We do not like making a Type I error 
+\end_layout
+
+\begin_layout Itemize
+Why not make that region as small as possible? 
+\end_layout
+
+\begin_layout Itemize
+Move critical value all the way to the right 
+\end_layout
+
+\begin_layout Itemize
+Problem: increases probability of a Type II error 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Back to courtroom
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Simple way to avoid Type I error in courts: 
+\end_layout
+
+\begin_layout Itemize
+(i.e.
+ not to convict anybody that is not guilty) 
+\end_layout
+
+\begin_layout Itemize
+Do not convict anybody! 
+\end_layout
+
+\begin_layout Itemize
+Problem: we will not convict any guilty people 
+\end_layout
+
+\begin_layout Itemize
+Huge Type II error 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Two-sided
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hn:\beta=0$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $\ha:\beta\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Two-sided test 
+\end_layout
+
+\begin_layout Itemize
+What should the critical value be? 
+\end_layout
+
+\begin_layout Itemize
+There should be two! 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+One for if 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is very negative 
+\end_layout
+
+\begin_layout Enumerate
+One for if 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is very positive 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Two-sided pic
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/Teaching/BUEC333/2014 Summer/slides/twosidedpic.pdf
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+background canvas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bg=black
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+[plain]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+section{$t-$test}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t-$
+\end_inset
+
+test
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Most famous test 
+\end_layout
+
+\begin_layout Itemize
+Test can be used when 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Error terms are normally distributed, or 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ (CLT) 
+\end_layout
+
+\begin_layout Itemize
+Variance is unknown, must be estimated 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Standard error of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{SE}(\hat{\beta}_{k})$
+\end_inset
+
+ is the standard error of the OLS estimator 
+\begin_inset Newline newline
+\end_inset
+
+ It is an estimate of the standard deviation of the estimator
+\begin_inset Newline newline
+\end_inset
+
+ The standard deviation is the square root of the variance.
+\begin_inset Newline newline
+\end_inset
+
+ Provided to you by R.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Border value
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+First, get the 
+\series bold
+border value
+\series default
+ 
+\begin_inset Formula $\beta_{\hn}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+It is often zero: 
+\begin_inset Formula $\beta_{\hn}=0$
+\end_inset
+
+ if 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta\leq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta\geq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+But it could be any value, say 
+\begin_inset Formula $\beta_{\hn}=3.8$
+\end_inset
+
+ if 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta\leq3.8$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta\geq3.8$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hn:\beta=3.8$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t-$
+\end_inset
+
+statistic
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ In order to do a 
+\begin_inset Formula $t-$
+\end_inset
+
+test, we need the 
+\begin_inset Formula $t-$
+\end_inset
+
+statistic 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $t_{k}=\frac{\hat{\beta}_{k}-\beta_{\hn}}{\text{SE}(\hat{\beta}_{k})}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\beta_{\hn}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $t_{k}=\frac{\hat{\beta}_{k}}{\text{SE}(\hat{\beta}_{k})}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t-$
+\end_inset
+
+stat: why?
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Why does it make sense to look at 
+\begin_inset Formula $t=\hat{\beta}/\text{SE}(\hat{\beta})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Imagine two estimators yielding 
+\begin_inset Formula $\hat{\beta}=1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+One has a lot of uncertainty associated with it: 
+\begin_inset Formula $\text{SE}=10$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+The other one is more precisely estimated: 
+\begin_inset Formula $\text{SE}=0.1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+The second estimator contains much more evidence against 
+\begin_inset Formula $\hn$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+This should be taken into account 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t$
+\end_inset
+
+-test decision rule
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Compare the 
+\begin_inset Formula $t-$
+\end_inset
+
+statistic to a critical value 
+\begin_inset Formula $z_{alpha}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Critical value: we know that the 
+\begin_inset Formula $t-$
+\end_inset
+
+statistic has a Normal distribution if 
+\begin_inset Formula $n$
+\end_inset
+
+ is large enough 
+\end_layout
+
+\begin_layout Itemize
+Get critical value from the 
+\series bold
+statistical tables
+\series default
+ in the back of your book 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Decision rule
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Reject 
+\begin_inset Formula $\hn$
+\end_inset
+
+ if 
+\begin_inset Formula $|t_{k}|>z_{\alpha}$
+\end_inset
+
+ an if 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ also has the sign implied by 
+\begin_inset Formula $\ha$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ If not, do not reject 
+\begin_inset Formula $\hn$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Critical values, significance levels
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/Teaching/BUEC333/2014 Summer/slides/critval.pdf
+	scale 40
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Procedure of a 
+\begin_inset Formula $t-$
+\end_inset
+
+test
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Set up null and alternative hypothesis 
+\end_layout
+
+\begin_layout Enumerate
+Choose a level of significance, and a critical value 
+\end_layout
+
+\begin_layout Enumerate
+Run regression and get the estimated 
+\begin_inset Formula $t-$
+\end_inset
+
+value 
+\end_layout
+
+\begin_layout Enumerate
+Apply the decision rule: compare (3) to (2).
+\begin_inset Newline newline
+\end_inset
+
+Reject or do not reject.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

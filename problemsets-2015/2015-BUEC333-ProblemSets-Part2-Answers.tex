@@ -1,0 +1,335 @@
+\documentclass[12pt]{article}
+
+%==================== Preamble Begins ====================
+
+%\begin{fonts}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+%\end{fonts}
+
+%\begin{layout}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing % Default line space is set to 1.5
+\setlength{\parindent}{0pt}
+
+\usepackage{fancyhdr} % for making fancy header/footer
+\usepackage{lastpage} % for page numbering style
+\pagestyle{fancy}
+\fancyhf{} % clear default texts in header aned footer
+\renewcommand{\headrulewidth}{0pt} % remove border line in headerb
+\cfoot{Page \thepage\ of \pageref*{LastPage}} % text in center footer
+%\end{layout}
+
+%\begin{math}
+\usepackage{mathtools,amsthm}
+\usepackage{amssymb,nicefrac}
+\usepackage{xparse} % to define \given
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace} 
+\DeclarePairedDelimiter{\paren}{(}{)}
+\DeclarePairedDelimiter{\braket}{\langle}{\rangle}
+\DeclarePairedDelimiter{\sqbrac}{[}{]}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\NewDocumentCommand\given{s}{%
+  \IfBooleanTF#1%
+  {\;\middle\vert\;}% star version
+  {\mid}% no-star version
+}
+%\end{math}
+
+%\begin{graphics}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hypcap]{caption}
+\usepackage[labelformat=simple]{subcaption}
+% autoref as "Fig 1(a)" instead of "Fig 1a"
+\renewcommand\thesubfigure{(\alph{subfigure})}
+%\end{graphics}
+
+%\begin{misc and macros}
+\usepackage{enumitem}
+% \setlist[1]{noitemsep,leftmargin=2\parindent}
+% \setlist[2]{noitemsep,leftmargin=\parindent,partopsep=0pt}
+\setlist[enumerate,1]{label=\alph*)}
+\usepackage{booktabs}
+%\end{misc and macros}
+
+%\begin{hyperlinks and PDF properties}
+\usepackage[pagebackref]{hyperref}
+\hypersetup{
+  colorlinks=true,citecolor=blue!50!black,linkcolor=blue!50!black,urlcolor=blue!50!black,
+}
+%\end{hyperlinks and PDF properties}
+
+
+%==================== Preamble Ends ====================
+
+\begin{document}
+
+\section{Mechanics and Fit}
+
+1. Let $GPA$ be $Y$ and $ACT$ be $X$.
+\begin{enumerate}
+  \item $\bar Y=3.21$, $\bar X=25.88$, $s_{XY}=5.8125$, $s_X^2=56.875$. 
+  Recall that 
+  \begin{equation}\label{OLS}
+    \hat\beta_1=\frac{s_{XY}}{s_X^2}=\frac{\sum_i(X_i-\bar X)(Y_i-\bar Y)}{\sum_i(X_i-\bar X)^2}
+    \qquad\text{and}\qquad
+    \hat\beta_0=\bar Y-\hat\beta_1\bar X
+  \end{equation}
+  Thus $\hat\beta_1=0.1022$ and $\hat\beta_0=0.5681$
+  
+  \item No
+  
+  \item A one unit increase in $ACT$ is, on average, associated with a $\hat\beta_1$ unit increase in $GPA$
+  
+  \item Observation specific values are in the table below
+  \begin{center}
+    \begin{tabular}{ccc}
+    \toprule
+    Student & $\hat Y_i$ & $\hat u_i$ \\
+    \midrule
+    1     & 2.7143 & 0.0857 \\
+    2     & 3.0209 & 0.3791 \\
+    3     & 3.2253 & -0.2252 \\
+    4     & 3.3275 & 0.1725 \\
+    5     & 3.5319 & 0.0681 \\
+    6     & 3.1231 & -0.1231 \\
+    7     & 3.1231 & -0.4231 \\
+    8     & 3.6341 & 0.0659 \\
+    \midrule
+          &       & {$\sum_i \hat u_i=-0.0001$} \\
+    \bottomrule
+    \end{tabular}%
+  \end{center}
+  
+  \item $\hat Y(X=20)=0.5681+0.1022(20)=2.6121$
+  
+  \item $ESS=0.5940$, $TSS=1.0288$. Recall that 
+  \begin{equation*}
+    R^2=\frac{ESS}{TSS}=\frac{\sum_i(\hat Y_i-\bar Y)^2}{\sum_i(Y_i-\bar Y)^2}
+  \end{equation*}
+  Thus $R^2=0.5774$.
+\end{enumerate}
+
+
+
+2. $\bar X=\bar Y=0$
+\begin{enumerate}
+  \item If $k=2$ for $i=1,\dots,6$, $Y_i=X_i$ (i.e. $\hat\beta_0=0$, $\hat\beta_1=1$), $\hat u_i=Y_i-\hat Y_i=Y_i-X_i=0$, $SSR=\sum_i \hat u_i=0$, $R^2=1-\frac{SSR}{TSS}=1-0=1$
+  
+  \item Given the formulae in equation \eqref{OLS} above, 
+  \begin{equation*}
+    \hat\beta_1=\frac{5+k}7,\qquad\text{and}\qquad \hat\beta_0=0
+  \end{equation*}
+  
+  \item If $k=1$, $\hat\beta_0=0,\hat\beta_1=\frac67,\hat Y_i=\frac67X_i$. 
+  Thus $R^2=\frac{ESS}{TSS}=\frac{144/7}{22}=\frac{72}{77}$
+  
+  \item If $k=3$, $\hat\beta_0=0,\hat\beta_1=\frac87,\hat Y_i=\frac87X_i$. $R^2=\frac{256/7}{38}=\frac{128}{133}$
+  
+  \item If $k=10$, $\hat\beta_0=0,\hat\beta_1=\frac{15}7,\hat Y_i=\frac{15}7X_i$. $R^2=\frac{900/7}{220}=\frac{45}{77}$
+  
+  \item Given that $\hat\beta_0=0$ and $\hat\beta_1=\frac{5+k}7$, $\hat\beta_1\to\infty$ as $k\to\infty$.
+  That is, the fitted line converges to a vertical line going through the origin.
+  And since $\hat Y_i=\frac{5+k}7X_i$, $ESS=\frac17(100+4k^2+40k)$, $TSS=20+2k^2$, and 
+  \begin{equation*}
+    R^2=\frac{50+20k+2k^2}{70+7k^2}
+  \end{equation*}
+  $R^2\to\frac27$ as $k\to\infty$
+\end{enumerate}
+
+
+
+3. Stock \& Watson 4.1
+\begin{enumerate}
+  \item The predicted average test score is 
+  \begin{equation*}
+    \widehat{TestScore}=520.4-5.82\times22=392.36
+  \end{equation*}
+  
+  \item The predicted change in the classroom average test score is
+  \begin{equation*}
+    \Delta\widehat{TestScore}=(-5.82\times19)-(-5.82\times23)=23.28
+  \end{equation*}
+  
+  \item Using the formula for $\hat\beta_0$ in equation (4.8), we know the sample average of the test score across the 100 classroom is 
+  \begin{equation*}
+    \overline{TestScore}=\hat\beta_0+\hat\beta_1\overline{CS}=520.4-5.82\times21.4=395.85
+  \end{equation*}
+\end{enumerate}
+
+
+
+\section{Estimation and Inference}
+1. Stock \& Watson 4.4
+
+
+
+2. Stock \& Watson 4.6 
+\begin{align*}
+  E(Y_i\given X_i)&=E(\beta_0+\beta_1X_i+u_i\given X_i) \\
+  &=E(\beta_0\given X_i)+E(\beta_1X_i\given X_i)+E(u_i\given X_i) \\
+  &=\beta_0+\beta_1X_i
+\end{align*}
+
+
+
+3. Stock \& Watson 4.7
+\begin{align*}
+  E(\hat\beta_0)&=E(\bar Y-\hat\beta_1\bar X) \\
+  &=E\sqbrac*{\paren*{\beta_0+\beta_1\bar X+\frac1n \sum_i u_i}-\hat\beta_1\bar X}\\
+  &=\beta_0+\underbrace{E(\beta_1-\hat\beta_1)}_{\mathclap{\substack{=0\text{ since $\hat\beta_1$}\\\text{is unbiased}}}}\bar X +\frac1n\sum_i \underbrace{E(u_i)}_{\mathclap{\substack{=0\\\text{by assumption}}}}\\
+  &=\beta_0
+\end{align*}
+
+
+
+4. Stock \& Watson 5.2 (a)-(d)
+\begin{enumerate}
+  \item 
+  \begin{align*}
+    \beta_1&=E(Wage_i\given Male_i=1)-E(Wage_i\given Male_i=0)\\
+    &=\text{difference in mean earnings between men and women}\\
+    &=\text{wage gender gap}
+  \end{align*}
+  The estimated gender gap $=\hat\beta_1=\$2.12\,\text{/hour}$
+  
+  \item $H_0:\beta_1=0$, $H_1:\beta\ne0$. $t=\frac{2.12-0}{0.36}=5.89$, $p\text{-value}=\Pr(Z\le -5.89)\times2\approx0<0.01$.
+  Thus reject $H_0$ at $\alpha=1\%$.
+  That is, the estimated gender gap is significantly different from 0.
+  
+  \item $\set{2.12\pm1.96\times0.36}=(1.4144,2.8256)$
+  
+  \item $\overline{Wage}=\hat\beta_0+\hat\beta_1\overline{Male}$. \\
+  For women:
+  \begin{equation*}
+    Male_i=0\Rightarrow\overline{Male}=0\Rightarrow\overline{Wage}=\hat\beta_0+\hat\beta_1\times0=\$12.52\text{/hour}
+  \end{equation*}
+  For men:
+  \begin{equation*}
+    Male_i=1\Rightarrow\overline{Male}=1\Rightarrow\overline{Wage}=\hat\beta_0+\hat\beta_1=\$14.64\text{/hour}
+  \end{equation*} 
+\end{enumerate}
+
+
+
+5. Stock \& Watson 5.3
+\begin{enumerate}
+  \item[] The 99\% confidence interval is $1.5 \times \{3.94 \pm 2.58 \times 0.31\}$ or
+  \begin{align*}
+  4.71 \text{lbs} \le WeightGain \le  7.11 \text{lbs}.
+  \end{align*}
+\end{enumerate}
+
+
+
+6. 
+\begin{enumerate}
+\item[a.] 130
+\item[b.] 124
+\item[c.] The $R^2$ never decreases. This question relies on Chapter 6 knowledge.
+\item[d.] No, the estimator is a random variable.
+\end{enumerate}
+
+
+
+7.\begin{enumerate}
+\item[a-c.] See book.
+\item[d.] No. Yes. Yes. Last one: yes, because it depends on $\hat{\beta}}_1$.
+\end{enumerate}
+
+
+\section{Prediction and Forecasting}
+
+1. Stock \& Watson 14.1
+\begin{enumerate} 
+\item
+$Y_t$ is stationary so its probability distribution does not change over time. As a results expected value of $Y_t$ and $Y_{t-1}$ are the same. \\
+
+
+\item
+\begin{equation*}
+Y_t = \beta_0 + \beta_1Y_{t-1}+u_t \Rightarrow   E(Y_t) = \beta_0 + \beta_1E(Y_{t-1})
+\end{equation}
+From (a) we know  $E(Y_t) = E(Y_{t-1})$
+
+\begin{equation*}
+\Rightarrow   E(Y_t) = \beta_0 + \beta_1E(Y_{t})
+\end{equation}
+\begin{equation*}
+\Rightarrow  (1-\beta_1) E(Y_t) = \beta_0 
+\end{equation}
+\begin{equation*}
+\Rightarrow   E(Y_t) = \beta_0 /(1-\beta_1)
+\end{equation}
+\end{enumerate}
+
+2. 
+\begin{enumerate} 
+\item Using the result from 1(b),
+$E(Y_{t})=\frac{\beta_{0}}{1-\beta_{1}}=\frac{2.5}{1-0.7}=8.33$.
+
+$Var(Y_{t})=Var(0.7Y_{t-1}+u_{t})=0.7^{2}Var(Y_{t-1})+Var(u_{t})=0.49Var(Y_{t})+Var(u_{t})$ (Note that $Var(Y_{t})=Var(Y_{t-1})$ because $Y_{t}$ is stationary.) 
+
+Thus $(1-0.49)Var(Y_{t})=9$, \ and therefore $Var(Y_{t})=9/(1-0.49)=17.647$.
+
+\item 
+$Cov(Y_{t},Y_{t-1})=Cov(2.5+0.7Y_{t-1}+u_{t},Y_{t-1})=0.7Var(Y_{t-1})+Cov(u_{t},Y_{t-1})\\
+=0.7Var(Y_{t})=0.7\times17.647=12.3529$
+
+$Cov(Y_{t,}Y_{t-2})=Cov(2.5+0.7(2.5+0.7Y_{t-2}+u_{t-1})+u_{t},Y_{t-2})\\
+=Cov(0.49Y_{t-2}+0.7u_{t-1}+u_{t},Y_{t-2})\\
+=0.49Cov(Y_{t-2},Y_{t-2})+0.7Cov(u_{t-1,}Y_{t-2})+Cov(u_{t},Y_{t-2})\\
+=0.49Var(Y_{t-2})=0.49Var(Y_{t})=0.49\times17.647=8.64703$
+
+\item (not assigned)
+
+\item 
+$Y_{T+1|T}=E(Y_{T+1}|Y_{T},Y_{T-1},...)=E(2.5+0.7Y_{T}+u_{t}|Y_{T,}Y_{T-1,...})=2.5+0.7Y_{T}\\
+=2.5+0.7\times102.3=74.11$
+\end{enumerate}
+
+
+3. Let $(Y_1,Y_2,Y_3)=(-1,1,-1)$.
+\begin{enumerate}
+  \item Recall that 
+  \begin{equation*}
+    \widehat{\mathrm{cov}(Y_t,Y_{t-j})}=\frac1T \sum_{t=j+1}^T (Y_t-\bar Y_{j+1:T})(Y_{t-j}-\bar Y_{1:T-j})
+  \end{equation*}
+  where $T=3$ and $j=1$ for this question (and note that both $\bar Y$s equal zero). 
+  Applying this formula we get 
+  \begin{equation*}
+    \widehat{\mathrm{cov}(Y_t,Y_{t-1})}=\frac13\sqbrac[\Big]{(Y_2-0)(Y_1-0)+(Y_3-0)(Y_2-0)}=-\frac23.
+  \end{equation*}
+  
+  \item Recall that 
+  \begin{equation*}
+    \hat\rho_j=\frac{\widehat{\mathrm{cov}(Y_t,Y_{t-j})}}{\widehat{\mathrm{var}(Y_t)}}
+  \end{equation*}
+  where $j=1$ for this question.
+  Since $\bar Y=\frac13(-1+1-1)=-\frac13$,
+  \begin{equation*}
+    \widehat{\mathrm{var}(Y_t)}=\frac12\sqbrac*{\paren*{-1+\frac13}^2+\paren*{1+\frac13}^2+\paren*{-1+\frac13}^2}=\frac43
+  \end{equation*}
+  Thus,
+  \begin{equation*}
+    \hat\rho_1=\frac{-2/3}{4/3}=-\frac12.
+  \end{equation*}
+  
+  \item Yes, consider $(0,0,0,0,0)$.
+\end{enumerate}
+
+
+
+4. See ``forecasts and predicted values'' on p.533 of Stock \& Watson.
+
+
+
+
+
+\end{document}

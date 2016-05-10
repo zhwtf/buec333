@@ -1,0 +1,991 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+Retake final BUEC 333
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+Sep 2, 2014
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8cm}
+\end_layout
+
+\end_inset
+
+Name: 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+____________________
+\end_layout
+
+\begin_layout Standard
+Student ID: 
+\begin_inset space ~
+\end_inset
+
+____________________
+\end_layout
+
+\begin_layout Section*
+Read carefully before starting
+\end_layout
+
+\begin_layout Itemize
+Allowed on your desk: a pen, a ruler, your SFU ID, and something to eat+drink.
+ 
+\series bold
+Anything else will cost you 20% of the max score.
+ 
+\series default
+This includes erasers, cases, ...
+\end_layout
+
+\begin_layout Itemize
+On the 
+\series bold
+front page of this document
+\series default
+ (the questions), write: (i) your name, and (ii) your student ID.
+\end_layout
+
+\begin_layout Itemize
+On the 
+\series bold
+front page of your answer sheet, 
+\series default
+write: (i) your name, and (ii) your student ID.
+\end_layout
+
+\begin_layout Itemize
+Answer the questions in 
+\series bold
+chronological
+\series default
+ order.
+\end_layout
+
+\begin_layout Itemize
+For every subquestion (e.g.
+ for 2 (c)), use 
+\series bold
+maximum 3 lines.
+ 
+\series default
+This excludes math.
+\end_layout
+
+\begin_layout Itemize
+Every subquestion is worth 1 point.
+ 
+\series bold
+No partial marks
+\series default
+ will be given for a subquestion: be complete and precise.
+ Adding incorrect or irrelevant statements to an otherwise correct answer
+ will result in 0 points.
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Independence.
+
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two RVs, both with sample space 
+\begin_inset Formula $\{10,20\}$
+\end_inset
+
+.
+ You know that 
+\begin_inset Formula $P(X=10)=0.3$
+\end_inset
+
+ and 
+\begin_inset Formula $P(Y=10)=0.4$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent.
+ What is 
+\begin_inset Formula $P\left(X=10,Y=20\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent.
+ What is 
+\begin_inset Formula $P\left(X=10|Y=20\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are not independent, can you compute 
+\begin_inset Formula $P\left(X=10,Y=20\right)$
+\end_inset
+
+? Explain.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Three coin flips.
+
+\series default
+ You are about to flip 3 coins.
+ The random outcome is what the coins are showing.
+ For example, you could throw HHT: first two coins show heads, third shows
+ tails.
+ Or HTH, TTT, etcetera.
+ Consider the RV's:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $X_{1}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the number of heads showing on the 
+\series bold
+first two
+\series default
+ flips
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $X_{2}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the number of heads showing 
+\series bold
+times
+\series default
+ the number of tails showing
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the probability distribution for 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+? (Hint: You first need to determine the sample space.)
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{E}\left(X_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{Var}\left(X_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{Cov}\left(X_{1},X_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{E}\left(\left.X_{2}\right|X_{1}=2\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Wooldridge, Exercise 2.3
+\series default
+.
+ Table 1 presents a random sample of 3 observations on students' ACT (American
+ College Test) and GPA (grade point average) scores.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ACT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Students's ACT and GPA scores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Consider the model 
+\begin_inset Formula 
+\[
+ACT_{i}=\beta_{0}+\beta_{1}GPA_{i}+u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the OLS estimators 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is the predicted value of 
+\begin_inset Formula $ACT$
+\end_inset
+
+ when 
+\begin_inset Formula $GPA=2$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+How much of the variation in 
+\begin_inset Formula $ACT$
+\end_inset
+
+ for these students is explained by 
+\begin_inset Formula $GPA$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ be a dummy variable.
+ Consider the model that consists of the equation 
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}D_{i}+u_{i}
+\]
+
+\end_inset
+
+and the standard OLS assumptions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw a graph to visualize this model.
+ Make sure to label the horizontal and vertical axes, and to describe in
+ words clearly what all the curves in your graph mean.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Based on SW, Exercise 8.7] This problem is inspired by the study of the
+ gender gap in top corporate jobs in Bertrand and Hallock (2001).
+ The study compares total compensation among top executives in a large set
+ of U.S.
+ public corporations in the 1990s.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $Female$
+\end_inset
+
+ be an indicator variable that is equal to 1 for females and to 0 for males.
+ A regression of the logarithm of earnings onto 
+\begin_inset Formula $Female$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=6.48-0.44Female
+\]
+
+\end_inset
+
+where the estimated regression coefficient 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ has a standard error of 
+\begin_inset Formula $0.05$
+\end_inset
+
+.
+ Explain what the 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ means.
+\end_layout
+
+\begin_layout Enumerate
+Does this regression suggest that there is gender discrimination? Explain.
+\end_layout
+
+\begin_layout Enumerate
+Two new variables are added to the regression: 
+\begin_inset Formula $MarketValue$
+\end_inset
+
+, a measure of firm size, in millions; and 
+\begin_inset Formula $\log\left(Return\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $Return$
+\end_inset
+
+ is the stock return in percentage points.
+ The resulting estimated regression line is
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=3.68-0.28Female+0.021MarketValue+0.04\log\left(Return\right)
+\]
+
+\end_inset
+
+where the standard errors for the three regressors are 
+\begin_inset Formula $0.02$
+\end_inset
+
+, 
+\begin_inset Formula $0.001$
+\end_inset
+
+, and 
+\begin_inset Formula $0.003$
+\end_inset
+
+, respectively.
+ Interpret the coefficient of 
+\begin_inset Formula $\log\left(Return\right)$
+\end_inset
+
+, i.e.
+ what does the 0.04 mean?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A mixed bag of questions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describe the difference between 
+\begin_inset Quotes eld
+\end_inset
+
+internal validity
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+external validity
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+List two threats to external validity.
+\end_layout
+
+\begin_layout Enumerate
+What is the difference between a balanced panel and an unbalanced panel?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Based on SW, 14.7] Suppose that 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ follows the stationary AR(1) model
+\begin_inset Formula 
+\[
+Y_{t}=4.5+0.25Y_{t-1}+u_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is i.i.d.
+ with 
+\begin_inset Formula $E\left(u_{t}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{var}\left(u_{t}\right)=16.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the mean and variance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the first autocovariance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the second autocovariance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+In the context of your second hand-in assignment, consider the following
+ code and output.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Interpret the coefficient of 
+\begin_inset Quotes eld
+\end_inset
+
+year
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Is the coefficient of
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+ statistically significantly different from 0 at the 1% level?
+\begin_inset listings
+lstparams "basicstyle={\small\ttfamily},numbers=left,numberstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> unionData <- read.dta("http://www.sfu.ca/~cmuris/2014-Summer-333/wagepan.dta")
+\end_layout
+
+\begin_layout Plain Layout
+
+> summary(lm(lwage~union+hours+year+black+occ1+occ2+occ3+ ...
+\end_layout
+
+\begin_layout Plain Layout
+
+   ...
+ + occ4+occ5+occ6+occ7+occ8+occ9+exper,data=unionData))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Coefficients: 
+\end_layout
+
+\begin_layout Plain Layout
+
+              Estimate Std.
+ Error t value Pr(>|t|)    
+\end_layout
+
+\begin_layout Plain Layout
+
+(Intercept) -1.422e+02  1.145e+01 -12.424  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+union        2.376e-01  1.779e-02  13.355  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+hours       -5.794e-05  1.373e-05  -4.219 2.50e-05 
+\end_layout
+
+\begin_layout Plain Layout
+
+year         7.250e-02  5.784e-03  12.534  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+black       -1.306e-01  2.354e-02  -5.549 3.05e-08 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ1         3.966e-01  3.218e-02  12.323  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ2         3.542e-01  3.364e-02  10.529  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ3         2.979e-01  3.922e-02   7.596 3.73e-14 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ4         1.778e-01  3.108e-02   5.721 1.13e-08 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ5         2.605e-01  2.738e-02   9.516  < 2e-16 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ6         1.831e-01  2.747e-02   6.667 2.94e-11 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ7         8.598e-02  3.278e-02   2.623  0.00874 
+\end_layout
+
+\begin_layout Plain Layout
+
+occ8        -5.678e-02  6.579e-02  -0.863  0.38816    
+\end_layout
+
+\begin_layout Plain Layout
+
+occ9                NA         NA      NA       NA    
+\end_layout
+
+\begin_layout Plain Layout
+
+exper       -1.252e-02  4.667e-03  -2.682  0.00734 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Residual standard error: 0.4888 on 4346 degrees of freedom
+\end_layout
+
+\begin_layout Plain Layout
+
+Multiple R-squared:  0.1601,	Adjusted R-squared:  0.1576 
+\end_layout
+
+\begin_layout Plain Layout
+
+F-statistic: 63.74 on 13 and 4346 DF,  p-value: < 2.2e-16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,4123 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem sets for BUEC 333
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ I will indicate the relevant exercises for each week at the end of the
+ lecture.
+ Numbered exercises are back-of-chapter exercises from Stock and Watson.
+ Try to complete the exercises before going to the tutorials.
+ In the tutorials, the TAs will help you if you have any difficulties.
+\end_layout
+
+\begin_layout Section*
+Probability
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+An unfair die.
+
+\series default
+ You are about to roll an unfair die, and are interested in the random variable
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Number of eyes that show
+\begin_inset Quotes erd
+\end_inset
+
+, denoted by 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The probability of 
+\begin_inset Quotes eld
+\end_inset
+
+rolling a 1
+\begin_inset Quotes erd
+\end_inset
+
+ is one-half (1/2), in other words: 
+\begin_inset Formula 
+\[
+P(X=1)=1/2.
+\]
+
+\end_inset
+
+All the other outcomes (2,3,4,5) have equal probability, i.e.
+ 
+\begin_inset Formula 
+\[
+P(X=2)=\cdots=P\left(X=6\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write down the probability distribution of 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Consider the event 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+throwing more than 3
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Write 
+\begin_inset Formula $A$
+\end_inset
+
+ in terms of elements of sample space.
+ Compute 
+\begin_inset Formula $P(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Consider the event 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+throwing an odd number
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Write 
+\begin_inset Formula $B$
+\end_inset
+
+ in terms of elements of sample space.
+ Compute 
+\begin_inset Formula $P(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the variance of this RV 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Compare this to the variance of a fair die throw.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Three coin flips (Final exam, Summer 2013).
+
+\series default
+ You are about to flip 3 coins.
+ The random outcome is what the coins are showing.
+ For example, you could throw HHT: first two coins show heads, third shows
+ tails.
+ Or HTH, TTT, etcetera.
+ This experiment can lead to different random variables.
+ Let us look at two of them:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $X_{1}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the number of heads showing
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $X_{2}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the number of heads showing 
+\series bold
+minus
+\series default
+ the number of tails showing
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Answer the following questions:
+\end_layout
+
+\begin_layout Enumerate
+What is the probability distribution for 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+? Note that you first need to determine the sample space.
+\end_layout
+
+\begin_layout Enumerate
+What is the probability distribution for 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+A Bernoulli RV.
+
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable, with sample space 
+\begin_inset Formula $\Omega=\{0,1\}$
+\end_inset
+
+.
+ Let the probability that the RV 
+\begin_inset Formula $X$
+\end_inset
+
+ take the value 
+\begin_inset Formula $0$
+\end_inset
+
+ be denoted as 
+\begin_inset Formula $P(X=0)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $P(X=1)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $E(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{var}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Variance.
+ 
+\series default
+In class, we considered the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ with sample space 
+\begin_inset Formula $\Omega=\left\{ -1,1\right\} $
+\end_inset
+
+ and associated probabilities 
+\begin_inset Formula $\left\{ 1/2,1/2\right\} $
+\end_inset
+
+ and found that the variance of this RV was 1 [Check this].
+ This setup corresponds to the probability distribution in Table 1.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outcome 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability distribution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ We also considered the modified RV in Table 2, and found the variance to
+ equal 4.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outcome 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability distribution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Compute the variance of the RVs described in Tables 3 and 4.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outcome 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability distribution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outcome 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9/10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability distribution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Monty Hall II.
+
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+You are a contender on a game show.
+ There are 
+\series bold
+10
+\series default
+ doors.
+ Behind one is a car.
+ Behind the other 
+\series bold
+9 
+\series default
+doors is a goat.
+ You pick door No.
+ 1 (the door on the left).
+ The game show host, who knows what is behind each door, opens 
+\series bold
+8
+\series default
+ of the other 
+\series bold
+9
+\series default
+ doors, revealing 
+\series bold
+8
+\series default
+ goats.
+ The host was instructed to open doors with goats only.
+ The host asks you whether you want to switch to the other closed door.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The value of the prize you receive is a random variable.
+ Derive the probability distribution if your strategy is to switch.
+\end_layout
+
+\begin_layout Enumerate
+Derive the probability distribution if your strategy is 
+\series bold
+not 
+\series default
+to switch.
+\end_layout
+
+\begin_layout Enumerate
+Should you switch?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Monty Hall III.
+
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+You are a contender on a game show.
+ There are 
+\series bold
+10
+\series default
+ doors.
+ Behind one is a car.
+ Behind the other 
+\series bold
+9 
+\series default
+doors is a goat.
+ You pick door No.
+ 1 (the door on the left).
+ The game show host, who knows what is behind each door, opens 
+\series bold
+1
+\series default
+ of the other 
+\series bold
+9
+\series default
+ doors, revealing 
+\series bold
+a
+\series default
+ goat.
+ The host was instructed to open a door with a goat.
+ The host asks you whether you want to switch to one of the other closed
+ doors.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The value of the prize you receive is a random variable.
+ Derive the probability distribution if your strategy is to switch.
+\end_layout
+
+\begin_layout Enumerate
+Derive the probability distribution if your strategy is 
+\series bold
+not 
+\series default
+to switch.
+\end_layout
+
+\begin_layout Enumerate
+Should you switch?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Russian roulette II.
+
+\series default
+ Consider the following modification of the Russian roulette example: 
+\begin_inset Quotes eld
+\end_inset
+
+Your enemy challenges you to play Russian Roulette with a 6-cylinder pistol
+ (meaning it has room for 6 bullets).
+ He puts 
+\series bold
+3
+\series default
+ bullets into the gun in consecutive slots, and leaves the next 
+\series bold
+3
+\series default
+ slots blank.
+ He spins the barrel and hands you the gun.
+ You point the gun at yourself and pull the trigger.
+ It doesn't go off.
+ Your enemy tells you that you need to pull the trigger one more time, and
+ that you can choose to either spin the barrel at random, or not, before
+ pulling the trigger again.
+ Spinning the barrel will position the barrel in a random position.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What would you do: spin again, or pull the trigger without spinning? Derive
+ the relevant conditional probabilities.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Independence.
+
+\series default
+ This exercises requires self-study of the section 
+\begin_inset Quotes eld
+\end_inset
+
+Independence
+\begin_inset Quotes erd
+\end_inset
+
+ in Chapter 2 of Stock and Watson.
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two RVs, both with sample space 
+\begin_inset Formula $\{10,20\}$
+\end_inset
+
+.
+ You know that 
+\begin_inset Formula $P(X=10)=0.3$
+\end_inset
+
+ and 
+\begin_inset Formula $P(Y=10)=0.4$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent.
+ What is 
+\begin_inset Formula $P\left(X=10,Y=20\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent.
+ What is 
+\begin_inset Formula $P\left(X=10|Y=20\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are not independent, can you compute 
+\begin_inset Formula $P\left(X=10,Y=20\right)$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Linear functions of random variables.
+ 
+\series default
+Solve Exercise 2.3 in Stock and Watson (page 56).
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+A fair die and an unfair die.
+
+\series default
+ Imagine the following part of a game.
+ There are two dice.
+ One of them is fair, and one of them is unfair.
+ First, you randomly (blindfolded) select a die.
+ Second, you throw that die.
+ Let the RV 
+\begin_inset Formula $X$
+\end_inset
+
+ be the number of eyes that you ultimately throw, and let the RV 
+\begin_inset Formula $Y$
+\end_inset
+
+ denote which die you picked in the first step (0: fair die, 1: unfair die).
+ Then, we have the following joint probability distribution:
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y:$
+\end_inset
+
+ which die
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fair 
+\begin_inset Formula $\left(Y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unfair 
+\begin_inset Formula $(Y=1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of eyes, 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1/4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Two-step game
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Answer the following questions: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given that you have selected the unfair die, what is the probability of
+ throwing a 6?
+\end_layout
+
+\begin_layout Enumerate
+Given that you throw a 4, what is the probability that you selected the
+ fair die?
+\end_layout
+
+\begin_layout Enumerate
+What is the probability of throwing a 3, 
+\begin_inset Formula $P\left(X=3\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $E\left(\left.X\right|Y=1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left(\left.X\right|Y=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using the answer under (c), and the law of iterated expectations, compute
+ 
+\begin_inset Formula $E\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{var}\left(\left.X\right|Y=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Computer crashes.
+ 
+\series default
+Consider the joint probability distribution in Table 2.3 (A).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $E\left(\left.M\right|A=0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left(\left.M\right|A=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What do you conclude? / What does this mean?
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{var}\left(\left.M\right|A=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Covariance and correlation.
+
+\series default
+ Do exercise 2.9(c) from Stock and Watson, pages 29 and 30.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Practice with the Normal.
+
+\series default
+ Do exercise 2.10 (Stock and Watson, page 58).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Normal squared.
+ 
+\series default
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable, and 
+\begin_inset Formula $X\sim\text{Normal}\left(3,4\right)$
+\end_inset
+
+.
+ Compute 
+\begin_inset Formula $P\left(X^{2}>4\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Sample that is identical but not independent (i.n.i.d).
+
+\series default
+ Do exercise 2.26 (a) and (b), from Stock and Watson, page 62.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Waiting for the bus.
+
+\series default
+ [Questions (a)-(c) repeat lecture material].
+ You are taking the bus from stop A to stop B.
+ A bus comes by stop A every 15 minutes.
+ You arrive at a bus station.
+ Assume that you have no information about how long ago the last bus came
+ by, for example from the number of people currently waiting.
+ Let 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ be a random variable that represents the number of minutes you are going
+ to wait for the bus.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Why is 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ a random variable? Why is 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ a continuous random variable?
+\end_layout
+
+\begin_layout Enumerate
+What is the smallest value 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ can take? What is the largest value? 
+\end_layout
+
+\begin_layout Enumerate
+Draw the the probability density function (pdf) of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ (let's call it 
+\begin_inset Formula $f_{1}\left(x\right)$
+\end_inset
+
+) in a graph.
+ Make sure to note the values on the vertical axis.
+\end_layout
+
+\begin_layout Enumerate
+Consider the random variable 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ comes from a similar situation as 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, but now there is a bus every 
+\series bold
+10
+\series default
+ minutes.
+ Add the pdf for 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, say 
+\begin_inset Formula $f_{2}\left(x\right)$
+\end_inset
+
+, to the graph you drew under (c).
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $P\left(1\leq X_{1}\leq3\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $P\left(1\leq X_{2}\leq3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+In one graph, draw 
+\begin_inset Formula $F_{1}\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{2}\left(x\right)$
+\end_inset
+
+, the cumulative distribution functions (cdfs) of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Kahnemann and Tversky.
+ 
+\series default
+A certain town is served by two hospitals.
+ In the larger hospital about 45 babies are born each day, and in the smaller
+ hospital about 15 babies are born each day.
+ As you know, about 50 percent of all babies are boys.
+ However, the exact percentage varies from day to day.
+ Sometimes it may be higher than 50 percent, sometimes lower.
+ For a period of 1 year, each hospital recorded the days on which more than
+ 60 percent of the babies born were boys.
+ Which hospital do you think recorded more such days?
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+A.
+ the smaller hospital
+\end_layout
+
+\begin_layout Description
+B.
+ the bigger hospital
+\end_layout
+
+\begin_layout Description
+C.
+ about the same (within 5 percent of each other)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Three coin flips (Final exam, Fall 2013).
+
+\series default
+ You are about to flip 3 coins.
+ The random outcome is what the coins are showing.
+ For example, you could throw HHT: first two coins show heads, third shows
+ tails.
+ Or HTH, TTT, etcetera.
+ Consider the RV's:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $X_{1}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the number of heads showing on the 
+\series bold
+first two
+\series default
+ flips
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $X_{2}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+the numer of heads showing 
+\series bold
+times
+\series default
+ the number of tails showing
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the probability distribution for 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+? (Hint: You first need to determine the sample space.)
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{E}\left(X_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{Var}\left(X_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{Cov}\left(X_{1},X_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{E}\left(\left.X_{2}\right|X_{1}=2\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Stock and Watson, 2.5] 
+\begin_inset Quotes eld
+\end_inset
+
+In September, Seattle's daily high temperature has a mean of 59 degrees
+ Fahrenheit.
+ The standard deviation is 9 degrees Fahrenheit.
+\begin_inset Quotes erd
+\end_inset
+
+ Remember that, to convert from degrees Fahrenheit to degrees Celsius, we
+ need to subtract 32 and then multiply by 5/9, so
+\begin_inset Formula 
+\[
+T_{C}=\frac{5}{9}\times\left(T_{F}-32\right).
+\]
+
+\end_inset
+
+For the questions that follow, indicate which formulas you are using.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the mean of Seattle's daily high temperature in September in degrees
+ Celsius? 
+\end_layout
+
+\begin_layout Enumerate
+What is the standard deviation of Seattle's daily high temperature in September
+ in degrees Celsius? 
+\end_layout
+
+\begin_layout Enumerate
+What is the variance of Seattle's daily high temperature in September in
+ degrees Celsius? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Exam, Fall 2012).
+
+\series default
+ Consider the joint probability distribution of the random variables 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ given in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:jointPDF"
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+placement b
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=1$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=2$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=3$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}=1$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Joint probability distribution of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:jointPDF"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the probability that 
+\begin_inset Formula $X_{1}=0$
+\end_inset
+
+ given that 
+\begin_inset Formula $X_{2}=2$
+\end_inset
+
+? 
+\begin_inset Newline newline
+\end_inset
+
+ In other words, what is 
+\begin_inset Formula $P(X_{1}=0|X_{2}=2)$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+What is the conditional expectation of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ given that 
+\begin_inset Formula $X_{2}=3$
+\end_inset
+
+? In other words, what is 
+\begin_inset Formula $E(X_{1}|X_{2}=2)$
+\end_inset
+
+? 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Statistics
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Central Limit Theorem.
+ 
+\series default
+Do Stock and Watson exercises 2.17 and 3.1.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Confidence intervals.
+ 
+\series default
+Exercise 3.4 (a)-(c) on Stock and Watson, page 97, which requires you to
+ do 3.3 (a)-(b) on the same page.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Confidence intervals (2).
+
+\series default
+ Do exercises 3.8 and 3.13(a).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+A weighted estimator.
+ 
+\series default
+Do exercise 3.11 (Stock and Watson, page 99).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Comparing estimators (Final exam 2014).
+
+\series default
+ Suppose you want to know the mean value of 
+\begin_inset Formula $Y$
+\end_inset
+
+, 
+\begin_inset Formula $\text{E}\left(Y\right)=\mu_{Y}$
+\end_inset
+
+.
+ You have a random sample of size 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $\{Y_{1},\cdots,Y_{n}\}$
+\end_inset
+
+.
+ For simplicity, assume that 
+\begin_inset Formula $n=2$
+\end_inset
+
+.
+ Then, the sample average 
+\begin_inset Formula $\bar{Y}=\frac{1}{n}\sum_{i=1}^{n}Y_{i}$
+\end_inset
+
+, simplifies to 
+\begin_inset Formula $\bar{Y}=(Y_{1}+Y_{2})/2.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is the sample average unbiased for 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+? Explain.
+\end_layout
+
+\begin_layout Enumerate
+Now, consider 
+\begin_inset Formula $\tilde{Y}=\frac{1}{4}Y_{1}+\frac{1}{4}Y_{2}$
+\end_inset
+
+.
+ What is the variance of 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+On the basis of the variances, do you prefer 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+ or 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is wrong with 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Now, consider the estimator 
+\begin_inset Formula $\check{Y}=\left(\mu_{Y}+\bar{Y}\right)/2$
+\end_inset
+
+.
+ Why is this not a good estimator? (Hint: the answer has nothing to do with
+ efficiency, unbiasedness, or consistency.)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Stock and Watson 3.2.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson 3.14.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson 3.15.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson 2.7.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Most basic statistic question (Midterm 2014).
+ 
+\series default
+Assume that you have a random sample 
+\begin_inset Formula $(2,3,4)$
+\end_inset
+
+ for a RV 
+\begin_inset Formula $X$
+\end_inset
+
+ with mean 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{x}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For this sample, compute 
+\begin_inset Formula $\bar{X}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+For this sample, compute the sample variance.
+\end_layout
+
+\begin_layout Enumerate
+Construct a 90%-CI for 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ based on the sample mean and sample variance, assuming that the sample
+ is very, very large.
+\end_layout
+
+\begin_layout Enumerate
+What is the use of making the assumption that 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+very very large
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of the numbers in your answer to (c)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Scaled sample mean (Exam, Fall 2012).
+
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable with mean 
+\begin_inset Formula $E[X]=\mu$
+\end_inset
+
+.
+ We have a random sample of observations on 
+\begin_inset Formula $X$
+\end_inset
+
+, namely 
+\begin_inset Formula $(X_{1},\cdots,X_{n})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\bar{X}$
+\end_inset
+
+ denote the sample average, 
+\begin_inset Formula $\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+.
+ Now, let 
+\begin_inset Formula $\widetilde{X}=\frac{1}{n-2}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ be the scaled sample average.
+ Is 
+\begin_inset Formula $\widetilde{X}$
+\end_inset
+
+ unbiased?
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 3.9.
+\end_layout
+
+\begin_layout Section*
+Simple linear regression: Mechanics and fit
+\end_layout
+
+\begin_layout Enumerate
+(Wooldridge, Exercise 2.3) Table 1 presents a random sample of 8 observations
+ on students' ACT (American College Test) and GPA (grade point average)
+ scores.
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ACT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Students's ACT and GPA scores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Consider the model 
+\begin_inset Formula 
+\[
+GPA_{i}=\beta_{0}+\beta_{1}ACT+u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the OLS estimators 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ have a useful interpretation?
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+For each of the 8 observations, compute 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+.
+ Then, compute 
+\begin_inset Formula $\sum_{i=1}^{8}\hat{u}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the predicted value of 
+\begin_inset Formula $GPA$
+\end_inset
+
+ when 
+\begin_inset Formula $ACT=20$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+How much of the variation in 
+\begin_inset Formula $GPA$
+\end_inset
+
+ for these eight students is explained by 
+\begin_inset Formula $ACT$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consider the data in Table 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Artificial data.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Note that this data has some observations that depend on 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you compute 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ for arbitrary values of 
+\begin_inset Formula $k$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you explain what happens when 
+\begin_inset Formula $k$
+\end_inset
+
+ becomes very large?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Stock and Watson, 4.1 (a)-(c).
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, 4.2.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, 4.3.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.9.
+\end_layout
+
+\begin_layout Section*
+Simple linear regression: Estimation and inference
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.4.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.6.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.7.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 5.2 (a)-(d).
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 5.3
+\end_layout
+
+\begin_layout Enumerate
+(Final, Summer 2014) Consider the following estimated regression equation
+ that describes the relationship between a student's weight and height:
+ 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6\,HEIGHT\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A student has height 5.
+ What is the regression's prediction for that student's weight?
+\end_layout
+
+\begin_layout Enumerate
+In the sample, the sample average of HEIGHT is 4.
+ What can you say about the sample average for WEIGHT?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, an additional variable is included, is ID, a student's SFU ID.
+ Obviously, this is a nonsensical variable that is not in any way related
+ to a student's weight.
+ The new estimated regression equation is 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6\,HEIGHT+0.02\,ID\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Someone's weight has nothing to do with their SFU ID.
+ Still, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ went up from 0.74 to 0.75.
+ How is this possible? 
+\end_layout
+
+\begin_layout Enumerate
+On the other hand, the adjusted R-squared 
+\begin_inset Formula $\bar{R}^{2}$
+\end_inset
+
+ went down from 0.73 to 0.72.
+ Explain how it is possible that the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ can go up while the 
+\begin_inset Formula $\bar{R}^{2}$
+\end_inset
+
+ goes down.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If the student's SFU ID number is not related to a student's weight, should
+ the estimated coefficient not be equal to 0? How could it be that it is
+ 0.02? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Final, Summer 2012) This question tests your understanding of the concepts
+ involved in regression analysis.
+ Consider the model with one regressor,
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write down the population regression function.
+ Write down the sample regression function.
+\end_layout
+
+\begin_layout Enumerate
+What does Least Squares Assumption 1, 
+\begin_inset Formula $\text{E}\left(\left.u_{i}\right|X_{i}\right)=0$
+\end_inset
+
+, mean? In your answer, use the words 
+\begin_inset Quotes eld
+\end_inset
+
+other factors
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Describe the other two 
+\begin_inset Quotes eld
+\end_inset
+
+Least Squares Assumptions
+\begin_inset Quotes erd
+\end_inset
+
+? You only need to use one sentence for each assumption.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ a random variable? Is 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ an estimator? Is 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ a random variable? Is 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ a random variable? (First: 4x yes/no.
+ Then: short explanations if you are not sure about your yes/no answers.)
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Prediction and forecasting
+\end_layout
+
+\begin_layout Enumerate
+Exercise 14.1, page 571.
+\end_layout
+
+\begin_layout Enumerate
+14.7 (a), (b), and (d), on page 574.
+\end_layout
+
+\begin_layout Enumerate
+Consider the time series 
+\begin_inset Formula $\left(-1,1,-1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the first sample autocovariance.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you construct a time series that has its first sample autocovariance
+ equal to zero?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is the difference between a prediction and a forecast?
+\end_layout
+
+\begin_layout Section*
+Introduction to multiple linear regression
+\end_layout
+
+\begin_layout Enumerate
+Exercises 6.1-6.4.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.5.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.6.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.7.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.8.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.9.
+\end_layout
+
+\begin_layout Enumerate
+[Final, Summer 2014] Let 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ be an individual's wage, let 
+\begin_inset Formula $EDUC_{i}$
+\end_inset
+
+ be their education, and let 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ be a dummy variable that equals 1 if and only if that person is female.
+ Furthermore, let 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ be a dummy variable that equals 1 if and only if that person is male.
+ Consider the following model: 
+\begin_inset Formula 
+\[
+W_{i}=\beta_{0}+\beta_{1}EDUC_{i}+\beta_{2}F_{i}+\beta_{3}M_{i}+\epsilon_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the problem with using OLS to estimate the parameters in this regression
+ equation? 
+\end_layout
+
+\begin_layout Enumerate
+How do you solve this problem?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Final, Summer 2014] Consider the following estimated regression equation
+ that describes the relationship between a student's weight and height:
+ 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6.0\,HEIGHT\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A student has height 5.
+ What is the regression's prediction for that student's weight?
+\end_layout
+
+\begin_layout Enumerate
+In the sample, the sample average of HEIGHT is 4.
+ What can you say about the sample average for WEIGHT?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, an additional variable is included, is ID, a student's SFU ID.
+ Obviously, this is a nonsensical variable to include: it is not in any
+ way related to a student's weight.
+ The new estimated regression equation is 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =101.5+5.98\,HEIGHT+0.02\,ID\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Someone's weight has nothing to do with their SFU ID.
+ Still, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ went up from 0.74 to 0.75.
+ How is this possible? 
+\end_layout
+
+\begin_layout Enumerate
+If the post office box number is not related to a student's weight, should
+ the estimated coefficient not be equal to 0? How could it be that it is
+ 0.02? 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Topics in linear regression
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.2, skip (b).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.5, (a) and (c).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.7
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.10.
+\end_layout
+
+\begin_layout Enumerate
+[Final, Summer 2014] Let 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ be a dummy variable.
+ Consider the model that consists of the equation 
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}D_{i}+\beta_{3}D_{i}X_{i}+u_{i}
+\]
+
+\end_inset
+
+and the standard OLS assumptions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw a graph to visualize this model.
+ 
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Exercise 7.1, page 242.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 7.2, page 242.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 7.6, page 244.
+\end_layout
+
+\begin_layout Enumerate
+During the lectures, we have discussed that, in the model
+\begin_inset Formula 
+\[
+\log Y_{i}=\beta_{0}+\beta_{1}\log X_{i}+u_{i}
+\]
+
+\end_inset
+
+you can interpret 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ as approximately measuring the expected percentage change in 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ given a one-percent change in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+, c.p.
+ Similarly, we know that in the model
+\begin_inset Formula 
+\[
+\log Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i},
+\]
+
+\end_inset
+
+we can interpret 
+\begin_inset Formula $\beta_{1}\times100\%$
+\end_inset
+
+ as the expected percentage change in 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ for a one-unit change in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ What is the interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ (or 
+\begin_inset Formula $\beta_{1}\times100\%$
+\end_inset
+
+) in the model
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}\log X_{i}+u_{i},
+\]
+
+\end_inset
+
+known as the linear-log model?
+\end_layout
+
+\begin_layout Enumerate
+Exercise 8.7 (SW page 300).
+\end_layout
+
+\begin_layout Section*
+Instrumental variables
+\end_layout
+
+\begin_layout Enumerate
+Exercise 12.5
+\end_layout
+
+\begin_layout Enumerate
+Exercise 12.9
+\end_layout
+
+\begin_layout Enumerate
+Exercise 12.10
+\end_layout
+
+\begin_layout Section*
+Panel data
+\end_layout
+
+\begin_layout Enumerate
+(Final, Summer 2014).
+ Consider the example used in the chapter on panel data.
+ We have a panel data set on 
+\begin_inset Formula $n=48$
+\end_inset
+
+ U.S.
+ states during 
+\begin_inset Formula $T=7$
+\end_inset
+
+ periods, from 1982 up to and including 1988.
+ The total number of observations is 
+\begin_inset Formula $336$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is this a balanced panel? Explain.
+\end_layout
+
+\begin_layout Enumerate
+For each state, in each time period, let 
+\begin_inset Formula $Y_{it}$
+\end_inset
+
+ denote the number of annual traffic deaths per 10000 in the population.
+ Let 
+\begin_inset Formula $X_{it}$
+\end_inset
+
+ denote the beer tax in 1988 U.S.
+ dollars.
+ Temporarily ignore the data after 1982, so that we have a cross-section
+ of 48 states.
+ The estimated regression line gives
+\begin_inset Formula 
+\[
+\hat{Y}_{i,1982}=2.01+0.13X_{i,1982}.
+\]
+
+\end_inset
+
+If the Least Squares assumptions hold for this regression, how would you
+ interpret the 
+\begin_inset Formula $0.13$
+\end_inset
+
+? Include in your answer: 
+\begin_inset Quotes eld
+\end_inset
+
+tax on beer
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Alternatively, we can use fixed effects regression to estimate the effect
+ fixed effects regression line is
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}_{i,t} & = & \hat{\alpha}_{i}-0.66X_{i,t}.\\
+ &  & \phantom{\hat{\alpha}_{i}\,}\left(0.29\right)
+\end{eqnarray*}
+
+\end_inset
+
+How would you interpret the 
+\begin_inset Formula $-0.66$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Consider the results for the fixed effects regression.
+ Do you think that the Least Square assumptions hold, i.e.
+ do you believe that the 0.13 in the first result comes from an unbiased
+ estimator? if YES: explain what causes the difference between 0.13 and -0.66.
+ If NO: explain why the Least Square assumptions are unlikely to hold.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+This question is about the code that we used during the lecture of Wednesday,
+ July 17.
+ You can find it on the course website or directly through 
+\begin_inset CommandInset href
+LatexCommand href
+name "[this link]"
+target "http://www.sfu.ca/~cmuris/2013-Summer-333/codeHour27.zip"
+
+\end_inset
+
+.
+ We are going to investigate the output of the commands on lines 236 and
+ 250.
+ Remember that the data set we are using is a random sample of 935 
+\begin_inset Quotes eld
+\end_inset
+
+young men
+\begin_inset Quotes erd
+\end_inset
+
+ in the U.S.
+ in 1980.
+ A list of variables and descriptions is
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+# 1.
+ wage                     monthly earnings
+\end_layout
+
+\begin_layout Plain Layout
+
+# 2.
+ hours                    average weekly hours
+\end_layout
+
+\begin_layout Plain Layout
+
+# 3.
+ IQ                       IQ score
+\end_layout
+
+\begin_layout Plain Layout
+
+# 4.
+ KWW                      knowledge of world work score
+\end_layout
+
+\begin_layout Plain Layout
+
+# 5.
+ educ                     years of education
+\end_layout
+
+\begin_layout Plain Layout
+
+# 6.
+ exper                    years of work experience
+\end_layout
+
+\begin_layout Plain Layout
+
+# 7.
+ tenure                   years with current employer
+\end_layout
+
+\begin_layout Plain Layout
+
+# 8.
+ age                      age in years
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+# 12.
+ urban                    =1 if live in SMSA
+\end_layout
+
+\begin_layout Plain Layout
+
+# 13.
+ sibs                     number of siblings
+\end_layout
+
+\begin_layout Plain Layout
+
+# 14.
+ brthord                  birth order
+\end_layout
+
+\begin_layout Plain Layout
+
+# 15.
+ meduc                    mother's education
+\end_layout
+
+\begin_layout Plain Layout
+
+# 16.
+ feduc                    father's education
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+Here is the first regression and its output:
+\begin_inset listings
+lstparams "language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> summary(lm(IQ~brthord,data=wageData.2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Coefficients:
+\end_layout
+
+\begin_layout Plain Layout
+
+            Estimate Std.
+ Error t value Pr(>|t|)    
+\end_layout
+
+\begin_layout Plain Layout
+
+(Intercept) 105.6634     0.8699 121.470  < 2e-16 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+brthord      -1.6640     0.3129  -5.318 1.34e-07 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the question we are trying to answer?
+\end_layout
+
+\begin_layout Enumerate
+What results would you draw from this output, if you knew that all the OLS
+ assumptions were satisfied?
+\end_layout
+
+\begin_layout Enumerate
+Assumption (1) is unlikely to hold.
+ Why?
+\end_layout
+
+\begin_layout Enumerate
+To solve that problem, we are going to include additional regressors, namely
+ the education of both parents (
+\begin_inset Formula $feduc$
+\end_inset
+
+ and 
+\begin_inset Formula $meduc$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Could you make an argument that would support 
+\begin_inset Formula $\text{cov}\left(feduc,brthord\right)\neq0$
+\end_inset
+
+ or 
+\begin_inset Formula $\text{cov}\left(meduc,brthord\right)\neq0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Can you make an argument to support the statement 
+\begin_inset Quotes eld
+\end_inset
+
+The regression coefficients on 
+\begin_inset Formula $feduc$
+\end_inset
+
+ and 
+\begin_inset Formula $meduc$
+\end_inset
+
+ are likely to be different from zero.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The output from that regression follows:
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> summary(lm(IQ~brthord+feduc+meduc,data=wageData.2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Coefficients:
+\end_layout
+
+\begin_layout Plain Layout
+
+            Estimate Std.
+ Error t value Pr(>|t|)    
+\end_layout
+
+\begin_layout Plain Layout
+
+(Intercept)  85.4160     2.6170  32.639  < 2e-16 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+brthord      -1.0544     0.3712  -2.840 0.004647 ** 
+\end_layout
+
+\begin_layout Plain Layout
+
+feduc         0.9780     0.1970   4.963 8.83e-07 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+meduc         0.8602     0.2333   3.687 0.000245 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+If the OLS assumptions are valid, how do you interpret these results?
+\end_layout
+
+\begin_layout Enumerate
+Do you believe that the conclusion under (e) is correct? Why / why not?
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,487 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+BUEC-333, Summer 2014
+\begin_inset Newline newline
+\end_inset
+
+Hand-in assignment #1
+\end_layout
+
+\begin_layout Date
+Deadline: June 26, 12:30
+\end_layout
+
+\begin_layout Section*
+Rules
+\end_layout
+
+\begin_layout Enumerate
+Use the data that is provided on the course website, and read the accompanying
+ data description.
+\end_layout
+
+\begin_layout Enumerate
+Use 
+\series bold
+R
+\series default
+ to answer the questions.
+ Other software is not accepted.
+\end_layout
+
+\begin_layout Enumerate
+Using an answer from a fellow student or a tutor will result in a failing
+ grade for this 
+\series bold
+course.
+ 
+\series default
+(Not just this assignment.)
+\end_layout
+
+\begin_layout Enumerate
+Acknowledge your sources.
+ For example, if you use code from a website, then refer to that website
+ in your answer.
+\end_layout
+
+\begin_layout Enumerate
+The 
+\series bold
+open labs
+\series default
+ are there for you to get help and ask questions: use them!
+\end_layout
+
+\begin_layout Enumerate
+For each question: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Give a short written answer
+\end_layout
+
+\begin_layout Itemize
+Write (or type) the code that you used to get that outcome: 
+\series bold
+without
+\series default
+ code, you get 
+\series bold
+0 points.
+ 
+\series default
+Exceptions: purely theoretical questions, such as questions 3 and 4.
+\end_layout
+
+\begin_layout Itemize
+Attach a hard copy of the R output supporting the answer 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Setting
+\end_layout
+
+\begin_layout Standard
+You are going to investigate the effect of class size on student performance.
+ The background of the available data set can be found in the data description
+ file on the course website.
+ 
+\series bold
+Read the data description file!
+\series default
+ For an introduction to the topic, see the slides and your notes from week
+ 1.
+\end_layout
+
+\begin_layout Itemize
+read_scr: Average reading score 
+\end_layout
+
+\begin_layout Itemize
+math_scr: Average math score 
+\end_layout
+
+\begin_layout Itemize
+testscr: Average of reading and math score 
+\end_layout
+
+\begin_layout Itemize
+enrl_tot: Total number of students enrolled 
+\end_layout
+
+\begin_layout Itemize
+teachers: Total number of teachers (FTE) 
+\end_layout
+
+\begin_layout Itemize
+str: Number of students per teacher 
+\end_layout
+
+\begin_layout Itemize
+calw_pct: Percentage of students in CalWorks public assistance program 
+\end_layout
+
+\begin_layout Itemize
+meal_pct: Percentage of students qualifying for a reduced price lunch 
+\end_layout
+
+\begin_layout Itemize
+avginc: Average income, 1000 $ 
+\end_layout
+
+\begin_layout Itemize
+el_pct: Percentage of English learners 
+\end_layout
+
+\begin_layout Itemize
+computer: Number of computers
+\end_layout
+
+\begin_layout Itemize
+comp_stu: Number of computers per student 
+\end_layout
+
+\begin_layout Itemize
+expn_stu: Expenditure per student 
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Standard
+First, download the data set 
+\begin_inset Quotes eld
+\end_inset
+
+testscores_california_1999.csv
+\begin_inset Quotes erd
+\end_inset
+
+, from the course website.
+ There, you also find a description of the data.
+\end_layout
+
+\begin_layout Enumerate
+Install, then start RStudio.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+More information about R and RStudio at this section of the course website:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.sfu.ca/~cmuris/2013-Summer-333/index.html#R"
+target "http://www.sfu.ca/~cmuris/2013-Summer-333/index.html#R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Set your working directory to the folder where you saved your data.
+ Now, load and inspect the data.
+ You could, for example, cut and paste the following commands
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset listings
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+#Read the data file and save the results
+\end_layout
+
+\begin_layout Plain Layout
+
+csdata <- read.csv("testscores_california_1999.csv")
+\end_layout
+
+\begin_layout Plain Layout
+
+#Have a quick look at the data
+\end_layout
+
+\begin_layout Plain Layout
+
+#Just to check that the data import went well
+\end_layout
+
+\begin_layout Plain Layout
+
+#First 6 lines
+\end_layout
+
+\begin_layout Plain Layout
+
+head(csdata)
+\end_layout
+
+\begin_layout Plain Layout
+
+#Last 6 lines
+\end_layout
+
+\begin_layout Plain Layout
+
+tail(csdata)
+\end_layout
+
+\begin_layout Plain Layout
+
+#Display a summary of the data
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(csdata) 
+\end_layout
+
+\end_inset
+
+From the output from that last command, you can read the maximum value for
+ 
+\begin_inset Quotes eld
+\end_inset
+
+comp_stu
+\begin_inset Quotes erd
+\end_inset
+
+.
+ What is that value? What does it mean? Are you surprised?
+\end_layout
+
+\begin_layout Enumerate
+Give the sample mean, minimum, maximum, and sample standard deviation of
+ read_scr.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Remember: Always provide a short, written, answer; write/type the R code
+ you used to obtain the answer; and attach a hard copy of the R output that
+ supports your written answer.
+ Exception: purely theoretical questions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Is the sample standard deviation you computed under (2) an estimand, an
+ estimator, or an estimate?
+\end_layout
+
+\begin_layout Enumerate
+Is the number you got a random variable?
+\end_layout
+
+\begin_layout Enumerate
+Construct a 95% confidence interval for the mean of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Also, construct a 99% confidence interval for the mean of 
+\begin_inset Quotes eld
+\end_inset
+
+avg_inc
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For the previous question, what is the population you chose?
+\end_layout
+
+\begin_layout Enumerate
+From question (5): What is the interpretation of the 99% confidence interval
+ that you computed?
+\end_layout
+
+\begin_layout Enumerate
+Estimate the coefficients in the linear regression of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Include a constant.
+ Report the coefficient estimates and standard errors, and interpret the
+ coefficient estimates.
+\end_layout
+
+\begin_layout Enumerate
+Construct a 95% confidence interval for the regression coefficient of 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+You expect the coefficient of str to be negative.
+ Formulate an appropriate null and alternative hypothesis; formulate a decision
+ rule (use significance level of 5%); use R to compute the necessary values;
+ draw the conclusion.
+ 
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of the conclusion of the test in (10)? What do
+ you conclude about the effect of class size on student test performance?
+ 
+\end_layout
+
+\begin_layout Enumerate
+There other variables that could have an effect on student test scores.
+ List two or three such variables in this data set, and explain why they
+ could have an effect on test scores, Do you expect the effects to be positive
+ or negative?
+\end_layout
+
+\begin_layout Enumerate
+Estimate the coefficients in the linear regression of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+ and the variables you came up with under (12).
+ Include a constant.
+ Report the coefficient estimate and standard error for 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For bonus points, explain (or speculate about) the difference between your
+ answer under (13) versus (8).
+\end_layout
+
+\begin_layout Enumerate
+If you could gather additional data to answer this question in a better
+ way, what data would you gather?
+\end_layout
+
+\end_body
+\end_document

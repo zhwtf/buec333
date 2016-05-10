@@ -1,0 +1,714 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+BUEC 333, Test 3
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+August 5, 2015, 14:30-17:20
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Enumerate
+Data were collected from a random sample of 13 home sales from a community
+ in 2003.
+ Let 
+\begin_inset Formula $Price$
+\end_inset
+
+ denote the selling price (in $1000).
+ 
+\begin_inset Formula $BDR$
+\end_inset
+
+ denote the number of bedrooms.
+ 
+\begin_inset Formula $Bath$
+\end_inset
+
+ denote the number of bathrooms.
+ 
+\begin_inset Formula $Hsize$
+\end_inset
+
+ denote the size of the house (in square feet).
+ 
+\begin_inset Formula $Lsize$
+\end_inset
+
+ denote the lot size (in square feet).
+ 
+\begin_inset Formula $Age$
+\end_inset
+
+ denote the age of the house (in years), and 
+\begin_inset Formula $Poor$
+\end_inset
+
+ denotes a binary variable that is equal to 1 if the condition of the house
+ is reported as 
+\begin_inset Quotes eld
+\end_inset
+
+poor
+\begin_inset Quotes erd
+\end_inset
+
+.
+ An estimate regression for the for the 
+\series bold
+log 
+\series default
+of house prices yields:
+\begin_inset Formula 
+\begin{align*}
+\widehat{\ln\left(Price\right)} & =-9.2+0.047BDR+0.23Bath+0.16\ln\left(Hsize\right)+0.002\ln(Lsize)\\
+ & \phantom{=}+0.0091Age-0.11Poor,\\
+\bar{R}^{2} & =0.50,\\
+TSS & =100.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that a homeowner converts part of an existing family room into a
+ new bathroom.
+ What is the expected increase in the value of the house? 
+\series bold
+23%
+\end_layout
+
+\begin_layout Enumerate
+Suppose that a homeowner adds a bathroom, which also increases the size
+ of the house from 2000 square feet to 2200 square feet.
+ What is the expected increase in the value of the house? 
+\series bold
+1x0.23*100% + 10%*0.16 = 23% + 1.6% = 24.6%.
+\end_layout
+
+\begin_layout Enumerate
+Interpret the estimated coefficient on 
+\begin_inset Formula $Poor$
+\end_inset
+
+.
+ Use the words 
+\begin_inset Quotes eld
+\end_inset
+
+house price
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+All else equal, if a house goes from not being reported as 
+\begin_inset Quotes eld
+\end_inset
+
+poor
+\begin_inset Quotes erd
+\end_inset
+
+ to being reported as 
+\begin_inset Quotes eld
+\end_inset
+
+poor
+\begin_inset Quotes erd
+\end_inset
+
+, then the expected decrease in the house prices is 11%
+\end_layout
+
+\begin_layout Enumerate
+Compute the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+.
+ 
+\series bold
+n=13, k=6.
+ R-bar-sq = 1 - (n-1)/(n-k-1) * SSR / TSS so we learn that SSR = 0.25*TSS
+ = 25.
+ So R-squared = 0.75.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A researcher plans to study the causal effect of police on crime using data
+ from a random sample of U.S.
+ counties.
+ He plans to regress the county's crime rate on the (per capita) size of
+ the country's police force.
+ 
+\series bold
+Also, see the answers to the problem set in 
+\begin_inset Quotes eld
+\end_inset
+
+Introduction to Linear Regression, q.3
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain why this regression is likely to suffer from omitted variable bias.
+ Which variable would you add to the regression? 
+\series bold
+Several correct answers.
+ In what follows, I call the variable that you came up with 
+\begin_inset Quotes eld
+\end_inset
+
+vA
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For the variable under (a), explain why it satisfies the two conditions
+ for omitted variable bias to occur.
+ 
+\series bold
+argue that (i) cov(police,vA)
+\begin_inset Formula $\neq0$
+\end_inset
+
+ and that (ii) vA has a non-zero effect on crime after taking into account
+ 
+\begin_inset Quotes eld
+\end_inset
+
+police
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using your answers to (a) and (b) to determine whether the regression will
+ likely over- or underestimate the effect of police on the crime rate.
+ 
+\series bold
+use the OV formula.
+ use your answers to (i) and (ii) under (b) to argue for the sign of 
+\begin_inset Formula $\rho_{xu}$
+\end_inset
+
+.
+ For example, if you found that your vA has a positive correlation with
+ police, and has a positive effect on crime, then 
+\begin_inset Formula $\rho_{xu}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ will likely overestimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+This problem is inspired by the study of the gender gap in top corporate
+ jobs in Bertrand and Hallock (2001).
+ The study compares total compensation among top executives in a large set
+ of U.S.
+ public corporations in the 1990s.
+ 
+\series bold
+see problem set answer, 
+\begin_inset Quotes eld
+\end_inset
+
+Topics in Linear Regression
+\begin_inset Quotes erd
+\end_inset
+
+, question 10.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $Female$
+\end_inset
+
+ be an indicator variable that is equal to 1 for females and to 0 for males.
+ A regression of the logarithm of earnings onto 
+\begin_inset Formula $Female$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=6.48-0.44Female
+\]
+
+\end_inset
+
+where the estimated regression coefficient 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ has a standard error of 
+\begin_inset Formula $0.05$
+\end_inset
+
+.
+ Explain what the 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ means.
+\end_layout
+
+\begin_layout Enumerate
+Does this regression suggest that there is gender discrimination? Explain.
+\end_layout
+
+\begin_layout Enumerate
+Two new variables are added to the regression: 
+\begin_inset Formula $\log\left(MarketValue\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $MarketValue$
+\end_inset
+
+ is a measure of firm size, in millions; and 
+\begin_inset Formula $Return$
+\end_inset
+
+, the stock return, in percentage points.
+ The resulting estimated regression line is
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=3.68-0.28Female+0.37\log\left(MarketValue\right)+0.004Return
+\]
+
+\end_inset
+
+where the standard errors for the three regressors are 
+\begin_inset Formula $0.04$
+\end_inset
+
+, 
+\begin_inset Formula $0.004$
+\end_inset
+
+, and 
+\begin_inset Formula $0.003$
+\end_inset
+
+, respectively.
+ The coefficient estimate for 
+\begin_inset Formula $Female$
+\end_inset
+
+ has changed from 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ to 
+\begin_inset Formula $-0.28$
+\end_inset
+
+.
+ Why has it changed?
+\end_layout
+
+\begin_layout Enumerate
+Are large firms more likely to have female top executives than small firms?
+ Explain.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Using data on the SAT scores, personal and high school characteristic of
+ 4000 U.S.
+ students, we estimate the following regression:
+\begin_inset Formula 
+\[
+\widehat{SAT}=1028+19.30Hsize-2.19Hsize^{2}-45.09Female-169.81VisMin+62.31\times Female\times VisMin
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $SAT$
+\end_inset
+
+ is the student's SAT score, 
+\begin_inset Formula $Hsize$
+\end_inset
+
+ is the number of students in their high school graduating class (in hundreds),
+ 
+\begin_inset Formula $Female$
+\end_inset
+
+ is a gender dummy (1 if student is female, 0 otherwise) and 
+\begin_inset Formula $VisMin$
+\end_inset
+
+ is a dummy variable that is 1 if the student is part of a visible minority,
+ and 0 otherwise.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Can you estimate these coefficients using OLS? 
+\series bold
+Yes.
+ Although it looks nonlinear, you can compute the interactions and the squares
+ and run this regression.
+\end_layout
+
+\begin_layout Enumerate
+Interpret the coefficients on 
+\begin_inset Formula $Hsize$
+\end_inset
+
+ and 
+\begin_inset Formula $Hsize^{2}$
+\end_inset
+
+.
+ 
+\series bold
+Several correct answers are possible.
+ Example of an incorrect answer: if Hsize increase by 1, we expect SAT scores
+ to go up by 19.30 ceteris paribus.
+ Another incorrect answer: same as before, without 
+\begin_inset Quotes eld
+\end_inset
+
+ceteris paribus
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the best high school graduating class size for achieving a maximal
+ SAT score, all else equal? 
+\series bold
+Find the peak of the quadratic curve 19.30x-2.19x^2, which occurs at x=19.30/4.38.
+ Remember that class size is reported in hundreds.
+\end_layout
+
+\begin_layout Enumerate
+Interpret the coefficient estimate of -45.09 on 
+\begin_inset Formula $Female$
+\end_inset
+
+.
+ 
+\series bold
+All else equal, for somebody who is not a visible minority, the expected
+ SAT scores of women are expected to be 45.09 points lower.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Interpret the coefficient 62.31 on 
+\begin_inset Formula $Female\times VisMin$
+\end_inset
+
+.
+ 
+\series bold
+All else equal, for somebody who is a visible minority, the expected SAT
+ scores of women are expected to be 62.31-45.09
+\begin_inset Formula $\approx$
+\end_inset
+
+17.22 points higher.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A researcher is interested in the effect of military service on human capital.
+ He collects data from a random sample of 4000 workers aged 40 and runs
+ the OLS regression
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ is the worker's annual earnings and 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is a binary variable that is equal to 1 if the person served in the military
+ and is equal to 0 otherwise.
+ 
+\series bold
+See problem set answers, 
+\begin_inset Quotes eld
+\end_inset
+
+Instrumental variables
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain why the OLS estimates are likely to be unreliable.
+\end_layout
+
+\begin_layout Enumerate
+During the Vietnam War there was a draft, where priority for the draft was
+ determined by a national lottery.
+ (Birthdates were randomly selected and ordered 1 through 365.
+ Those with birthdates ordered first were drafter before those with birthdates
+ ordered second, and so forth.) Explain how the lottery might be used as
+ an instrument to estimate the effect of military service on earnings.
+ 
+\series bold
+Example of an incorrect answer: include the instrument (draft/lottery number)
+ as an additional variable in the regression.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Explain why you think that the instrument in (b) satisfies the conditions
+ an instrumental variable needs to satisfy.
+ First state the conditions, then explain why you think they hold for this
+ application.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Evans and Schwab (1995) studied the effect of attending a Catholic high
+ school on college grades (measured by 
+\begin_inset Formula $college$
+\end_inset
+
+).
+ Let 
+\begin_inset Formula $CathHS$
+\end_inset
+
+ be a binary variable equal to one if the student attends a Catholic high
+ school.
+ The associated regression model is:
+\begin_inset Formula 
+\[
+college=\beta_{0}+\beta_{1}CathHS+u.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Why might 
+\begin_inset Formula $CathHS$
+\end_inset
+
+ be correlated with 
+\begin_inset Formula $u$
+\end_inset
+
+? 
+\series bold
+Out of many answers, here is one.
+ A catholic school can be thought of as a private school.
+ There are all kinds of reasons that parents that have the required resources
+ send their kids to private school.
+ These reasons, and the presence of resources (high-income) in the family,
+ may be correlated with success in college.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $CathRel$
+\end_inset
+
+ be a binary variable equal to one if the student is Catholic.
+ Discuss the requirements needed for this to be a valid instrumental variable
+ for 
+\begin_inset Formula $CathHS$
+\end_inset
+
+.
+ 
+\series bold
+It needs to be correlated with the event of attending a Catholic high school.
+ The only effect it should have on performance in college is through attending
+ a catholic highschool.
+\end_layout
+
+\begin_layout Enumerate
+Being Catholic has a significant effect on attending a Catholic high school.
+ Do you think 
+\begin_inset Formula $CathRel$
+\end_inset
+
+ is a convincing instrument for 
+\begin_inset Formula $CathHS$
+\end_inset
+
+? Explain.
+ 
+\series bold
+Several answers are acceptable.
+ If you believe that being Catholic has no effect on performance in college,
+ other than through making it more likely that you attend Catholic High
+ school, then it would be a good instrument.
+ However, it is possible to make arguments against the validity of the instrumen
+ts as well.
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

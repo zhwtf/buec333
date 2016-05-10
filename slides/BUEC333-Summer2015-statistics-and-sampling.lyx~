@@ -1,0 +1,1428 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\mode<presentation>
+{
+\usetheme{default}
+        \setbeamercovered{transparent}
+}
+\AtBeginSection{\frame{\sectionpage}}
+
+
+\usepackage{times}\usepackage{amsfonts}\usepackage{url}\usepackage{multirow}\usepackage[margin=10pt,labelfont=bf]{caption}\usepackage{listings}
+
+\DeclareMathOperator{\hn}{H_0}
+\DeclareMathOperator{\ha}{H_A}
+
+%\AtBeginSection[]
+%{
+%   \begin{frame}
+%       \frametitle{Outline}
+%       \tableofcontents[currentsection]
+%   \end{frame}
+%}
+
+\title{BUEC-333\\Statistical analysis of economic data}
+\author{Summer 2015}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-1
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Probability vs.
+ statistics
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Probability
+\series default
+ is a set of tools to 
+\series bold
+describe
+\series default
+ the uncertain world around us 
+\end_layout
+
+\begin_layout Itemize
+We model those uncertain things by RVs 
+\end_layout
+
+\begin_layout Itemize
+Assume a distribution for the RV.
+ Then we can do some 
+\series bold
+computations
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+conditional mean 
+\end_layout
+
+\begin_layout Enumerate
+covariance 
+\end_layout
+
+\begin_layout Enumerate
+conditional probabilities 
+\end_layout
+
+\begin_layout Enumerate
+...
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+These are meaningful 
+\size larger
+IF 
+\size normal
+our model is true.
+ Theoretical.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Probability vs.
+ statistics
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Statistics
+\series default
+: use data to learn about the world 
+\end_layout
+
+\begin_layout Itemize
+Type of questions: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is a die fair or unfair? 
+\series bold
+hypothesis testing
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+If unfair, what is the probability of rolling a 3? 
+\series bold
+estimation
+\series default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Population / sample
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The 
+\series bold
+two
+\series default
+ main things I want you to take away from this course are: 
+\end_layout
+
+\begin_layout Enumerate
+Understanding the difference between a 
+\series bold
+population and a sample
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+Theoretical and practical understanding of linear regression 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Population / sample
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+population
+\series default
+ is the entire group of units of interest 
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+sample
+\series default
+ is the part of the population that we actually have measurements for 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Sampling: urn
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/homepage/buec333/slides/urn_1328592334.JPG
+	scale 30
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Percentage of purple balls?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example: light bulbs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+On a given day, we are doing quality control at a factory that produces
+ light bulbs 
+\end_layout
+
+\begin_layout Itemize
+We are interested in how long these bulbs last on average 
+\end_layout
+
+\begin_layout Itemize
+The population consists of 
+\series bold
+all the bulbs
+\series default
+ that the factory produces 
+\series bold
+that day
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+To get an idea about the duration of the bulbs, we randomly take a few and
+ see how long it takes before they run out 
+\end_layout
+
+\begin_layout Itemize
+Obviously, we are not going to try all the bulbs! 
+\end_layout
+
+\begin_layout Itemize
+We will try to say something about the population of 
+\series bold
+all
+\series default
+ bulbs produced that day, using the observations in our 
+\series bold
+sample
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+That is called 
+\series bold
+statistical inference
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Bulbs: population versus sample
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be the duration for a light bulb produced on the day we are testing 
+\end_layout
+
+\begin_layout Itemize
+If we would test 
+\series bold
+all
+\series default
+ the bulbs, we would 
+\series bold
+know
+\series default
+ the mean 
+\begin_inset Formula $E[X]=\mu_{X}$
+\end_inset
+
+ for our 
+\series bold
+population
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+We only have a 
+\series bold
+sample
+\series default
+ of all light bulbs.
+ 
+\end_layout
+
+\begin_layout Itemize
+The number 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ exists, but we do not know it! 
+\end_layout
+
+\begin_layout Itemize
+Instead, we look at the 
+\series bold
+sample average
+\series default
+, 
+\begin_inset Formula $\bar{X}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size larger
+The sample average is a random variable!
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+SAIARV
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\size giant
+The sample average is a random variable!
+\series default
+ 
+\size normal
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Sampling: non-random
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/chris/Dropbox/Work/homepage/buec333/slides/urn-nonrandom.jpg
+	scale 40
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Average number of calories in a candy?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bgroup
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+background canvas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bg=black
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+[plain]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+egroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Expectation, sample average
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+The mean is a 
+\series bold
+population
+\series default
+ quantity.
+ It is a 
+\series bold
+fixed
+\series default
+ number.
+ 
+\end_layout
+
+\begin_layout Itemize
+The average is a 
+\series bold
+sample
+\series default
+ quantity.
+ It is a 
+\series bold
+random variable
+\series default
+.
+ 
+\begin_inset VSpace 0.5cm*
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In statistics, we 
+\series bold
+estimate
+\series default
+: use the sample average to make a guess (
+\series bold
+estimate
+\series default
+) about the mean 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example: voting and polls
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Prior to 
+\series bold
+election
+\series default
+ day, we are interested in predicting what percentage of votes each candidate
+ gets 
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+population
+\series default
+ is: all voters 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+54%
+\series default
+ of voters is going to choose candidate A 
+\end_layout
+
+\begin_layout Itemize
+But we 
+\series bold
+do not know
+\series default
+ this number: it is the 
+\series bold
+population
+\series default
+ parameter 
+\end_layout
+
+\begin_layout Itemize
+It is not cost-effective (nor feasible) to ask 
+\series bold
+all
+\series default
+ the people 
+\end_layout
+
+\begin_layout Itemize
+We can obtain a 
+\series bold
+sample
+\series default
+ of 100 individuals, and ask them 
+\end_layout
+
+\begin_layout Itemize
+In that sample, we find that 
+\series bold
+59%
+\series default
+ of individuals would vote for candidate A 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example: voting (2)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Note 1: 59% 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 54% 
+\end_layout
+
+\begin_layout Itemize
+Note 2: Had I asked a different group of people, I would have had a 
+\series bold
+different
+\series default
+ number 
+\end_layout
+
+\begin_layout Itemize
+Note 3: 59% is our 
+\series bold
+best guess
+\series default
+.
+ It may be better to report a 
+\series bold
+confidence interval
+\series default
+ rather than our best guess.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+With 95% confidence, the percentage of people that would vote for candidate
+ A is in 
+\series bold
+between
+\series default
+ 53% and 65%.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Note 4: The reason that this is important, is that the uncertainty could
+ have been much 
+\series bold
+higher
+\series default
+.
+ The research might have only been able to conclude that the 95%-CI is 
+\series bold
+(10%,90%)
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Random sampling
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Assumption: data is gathered using 
+\series bold
+simple random sampling.
+ 
+\end_layout
+
+\begin_layout Itemize
+i.i.d.: 
+\series bold
+i
+\series default
+ndependently and 
+\series bold
+i
+\series default
+dentically 
+\series bold
+d
+\series default
+istributed 
+\end_layout
+
+\begin_layout Itemize
+For more, read p.
+ 43+44.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

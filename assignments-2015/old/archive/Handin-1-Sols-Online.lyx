@@ -1,0 +1,438 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+BUEC-333, Summer 2013
+\begin_inset Newline newline
+\end_inset
+
+Hand-in assignment #1
+\end_layout
+
+\begin_layout Date
+Grade distribution and tiny solutions
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Standard
+First, download the data set 
+\begin_inset Quotes eld
+\end_inset
+
+testscores_california_1999.csv
+\begin_inset Quotes erd
+\end_inset
+
+, from the course website.
+ There, you also find a description of the data.
+ Second, reread the slides and notes of Lecture 1.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Install, then start RStudio.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+More information about R and RStudio at this section of the course website:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.sfu.ca/~cmuris/2013-Summer-333/index.html#R"
+target "http://www.sfu.ca/~cmuris/2013-Summer-333/index.html#R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Set your working directory to the folder where you saved your data.
+ Now, load and inspect the data.
+ You could, for example, cut and paste the following commands
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset listings
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+#Read the data file and save the results
+\end_layout
+
+\begin_layout Plain Layout
+
+csdata <- read.csv("testscores_california_1999.csv")
+\end_layout
+
+\begin_layout Plain Layout
+
+#Have a quick look at the data
+\end_layout
+
+\begin_layout Plain Layout
+
+#Just to check that the data import went well
+\end_layout
+
+\begin_layout Plain Layout
+
+#First 6 lines
+\end_layout
+
+\begin_layout Plain Layout
+
+head(csdata)
+\end_layout
+
+\begin_layout Plain Layout
+
+#Last 6 lines
+\end_layout
+
+\begin_layout Plain Layout
+
+tail(csdata)
+\end_layout
+
+\begin_layout Plain Layout
+
+#Display a summary of the data
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(csdata) 
+\end_layout
+
+\end_inset
+
+From the output from that last command, you can read the maximum value for
+ 
+\begin_inset Quotes eld
+\end_inset
+
+comp_stu
+\begin_inset Quotes erd
+\end_inset
+
+.
+ What is that value? What does it mean? Are you surprised?
+\series bold
+ 1 point.
+ You'd expect them to write something like: this is long ago, so there were
+ not a lot of computers (per student) yet.
+ Any reasonable answer goes.
+\end_layout
+
+\begin_layout Enumerate
+Give the sample mean, minimum, maximum, and sample standard deviation of
+ read_scr.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Remember: Always provide a short, written, answer; write/type the R code
+ you used to obtain the answer; and attach a hard copy of the R output that
+ supports your written answer.
+ Exception: purely theoretical questions.
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+1 point.
+\end_layout
+
+\begin_layout Enumerate
+Is the sample standard deviation you computed under (2) an estimand, an
+ estimator, or an estimate? 
+\series bold
+1 point.
+ Estimate.
+ No excuses!
+\end_layout
+
+\begin_layout Enumerate
+Is the number you got a random variable? 
+\series bold
+1 point.
+ No! Once you have the number, it is not random anymore.
+ Basically the same as 3.
+\end_layout
+
+\begin_layout Enumerate
+Construct a 95% confidence interval for the mean of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Also, construct a 99% confidence interval for the mean of 
+\begin_inset Quotes eld
+\end_inset
+
+avg_inc
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+2 points.
+\end_layout
+
+\begin_layout Enumerate
+For the previous question, what is the population you chose? 
+\series bold
+1 point.
+\end_layout
+
+\begin_layout Enumerate
+From question (5): What is the interpretation of the 99% confidence interval
+ that you computed? 
+\series bold
+2 points.
+ A very wrong answer (0 points): 
+\begin_inset Quotes eld
+\end_inset
+
+There is a 99% probability that the true parameter / 
+\begin_inset Formula $\mu$
+\end_inset
+
+ lies in the interval.
+ Perfect answer: 
+\begin_inset Quotes eld
+\end_inset
+
+If you repeat this procedure with 100 different samples, then the true parameter
+ will lie in 99 of those intervals, on average.
+\begin_inset Quotes erd
+\end_inset
+
+ Or something that uses the word 
+\begin_inset Quotes eld
+\end_inset
+
+coverage probability
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 1 point: something in between, far enough away from the 0-point answer.
+\end_layout
+
+\begin_layout Enumerate
+Estimate the coefficients in the linear regression of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Include a constant.
+ Report the coefficient estimates and standard errors, and interpret the
+ coefficient estimates.
+ 
+\series bold
+2 points.
+ 1 point for the estimate and standard error.
+ 1 point for the interpretation.
+ 0 points if that interpretation is not precise.
+\end_layout
+
+\begin_layout Enumerate
+Construct a 95% confidence interval for the regression coefficient of 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+1 point.
+\end_layout
+
+\begin_layout Enumerate
+You expect the coefficient of str to be negative.
+ Formulate an appropriate null and alternative hypothesis; formulate a decision
+ rule (use significance level of 5%); use R to compute the necessary values;
+ draw the conclusion.
+ 
+\series bold
+2 points.
+ 1 for setting up the hypotheses, and drawing the conclusion.
+ 1 point for all the mechanics in between.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of the conclusion of the test in (10)? What do
+ you conclude about the effect of class size on student test performance?
+ 
+\series bold
+1 point for a reasonable answer
+\end_layout
+
+\begin_layout Enumerate
+There other variables that could have an effect on student test scores.
+ List two or three such variables in this data set, and explain why they
+ could have an effect on test scores, Do you expect the effects to be positive
+ or negative? 
+\series bold
+2 points for an answer that is very good.
+ 1 point for somebody who mentions reasonable variables but does not give
+ an explanation why they would matter.
+\end_layout
+
+\begin_layout Enumerate
+Estimate the coefficients in the linear regression of 
+\begin_inset Quotes eld
+\end_inset
+
+read_scr
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+ and the variables you came up with under (12).
+ Include a constant.
+ Report the coefficient estimate and standard error for 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+1 point.
+\end_layout
+
+\begin_layout Enumerate
+For bonus points, explain (or speculate about) the difference between your
+ answer under (13) versus (8).
+ 
+\series bold
+1 bonus point for 
+\begin_inset Quotes eld
+\end_inset
+
+omitted variables
+\begin_inset Quotes erd
+\end_inset
+
+ or something that smells like it.
+ (I only started talking about OV this week.
+ That's why it is a bonus question.)
+\end_layout
+
+\begin_layout Enumerate
+If you could gather additional data to answer this question in a better
+ way, what data would you gather? 
+\series bold
+1 point max.
+\end_layout
+
+\end_body
+\end_document

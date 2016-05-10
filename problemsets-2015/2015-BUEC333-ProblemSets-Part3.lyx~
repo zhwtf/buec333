@@ -1,0 +1,829 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem sets for BUEC 333
+\begin_inset Newline newline
+\end_inset
+
+Part 3: Multiple linear regression and causality
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ I will indicate the relevant exercises for each week at the end of the
+ Wednesday lecture.
+ Numbered exercises are back-of-chapter exercises from Stock and Watson.
+ Try to complete the exercises before going to the tutorials.
+ In the tutorials, the TAs will help you if you have any difficulties.
+\end_layout
+
+\begin_layout Section*
+Introduction to multiple linear regression
+\end_layout
+
+\begin_layout Enumerate
+Exercises 6.1-6.4.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.5.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.6.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.7.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.8.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 6.9.
+\end_layout
+
+\begin_layout Enumerate
+[Final, Summer 2014] Let 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ be an individual's wage, let 
+\begin_inset Formula $EDUC_{i}$
+\end_inset
+
+ be their education, and let 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ be a dummy variable that equals 1 if and only if that person is female.
+ Furthermore, let 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ be a dummy variable that equals 1 if and only if that person is male.
+ Consider the following model: 
+\begin_inset Formula 
+\[
+W_{i}=\beta_{0}+\beta_{1}EDUC_{i}+\beta_{2}F_{i}+\beta_{3}M_{i}+\epsilon_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the problem with using OLS to estimate the parameters in this regression
+ equation? 
+\end_layout
+
+\begin_layout Enumerate
+How do you solve this problem?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Final, Summer 2014] Consider the following estimated regression equation
+ that describes the relationship between a student's weight and height:
+ 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6.0\,HEIGHT\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A student has height 5.
+ What is the regression's prediction for that student's weight?
+\end_layout
+
+\begin_layout Enumerate
+In the sample, the sample average of HEIGHT is 4.
+ What can you say about the sample average for WEIGHT?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, an additional variable is included, is ID, a student's SFU ID.
+ Obviously, this is a nonsensical variable to include: it is not in any
+ way related to a student's weight.
+ The new estimated regression equation is 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =101.5+5.98\,HEIGHT+0.02\,ID\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Someone's weight has nothing to do with their SFU ID.
+ Still, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ went up from 0.74 to 0.75.
+ How is this possible? 
+\end_layout
+
+\begin_layout Enumerate
+If the post office box number is not related to a student's weight, should
+ the estimated coefficient not be equal to 0? How could it be that it is
+ 0.02? 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Topics in linear regression
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.2, skip (b).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.5, (a) and (c).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.7
+\end_layout
+
+\begin_layout Enumerate
+Exercise 5.10.
+\end_layout
+
+\begin_layout Enumerate
+[Final, Summer 2014] Let 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ be a dummy variable.
+ Consider the model that consists of the equation 
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}D_{i}+\beta_{3}D_{i}X_{i}+u_{i}
+\]
+
+\end_inset
+
+and the standard OLS assumptions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw a graph to visualize this model.
+ 
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Exercise 7.1, page 242.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 7.2, page 242.
+\end_layout
+
+\begin_layout Enumerate
+Exercise 7.6, page 244.
+\end_layout
+
+\begin_layout Enumerate
+During the lectures, we have discussed that, in the model
+\begin_inset Formula 
+\[
+\log Y_{i}=\beta_{0}+\beta_{1}\log X_{i}+u_{i}
+\]
+
+\end_inset
+
+you can interpret 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ as approximately measuring the expected percentage change in 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ given a one-percent change in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+, c.p.
+ Similarly, we know that in the model
+\begin_inset Formula 
+\[
+\log Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i},
+\]
+
+\end_inset
+
+we can interpret 
+\begin_inset Formula $\beta_{1}\times100\%$
+\end_inset
+
+ as the expected percentage change in 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ for a one-unit change in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ What is the interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ (or 
+\begin_inset Formula $\beta_{1}\times100\%$
+\end_inset
+
+) in the model
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}\log X_{i}+u_{i},
+\]
+
+\end_inset
+
+known as the linear-log model?
+\end_layout
+
+\begin_layout Enumerate
+Exercise 8.7 (SW page 300).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 9.3 (SW page 342).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 9.7 (SW page 343).
+\end_layout
+
+\begin_layout Enumerate
+Exercise 9.10 (SW page 343).
+\end_layout
+
+\begin_layout Section*
+Instrumental variables
+\end_layout
+
+\begin_layout Enumerate
+TBA
+\end_layout
+
+\begin_layout Section*
+Panel data
+\end_layout
+
+\begin_layout Enumerate
+(Final, Summer 2014).
+ Consider the example used in the chapter on panel data.
+ We have a panel data set on 
+\begin_inset Formula $n=48$
+\end_inset
+
+ U.S.
+ states during 
+\begin_inset Formula $T=7$
+\end_inset
+
+ periods, from 1982 up to and including 1988.
+ The total number of observations is 
+\begin_inset Formula $336$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is this a balanced panel? Explain.
+\end_layout
+
+\begin_layout Enumerate
+For each state, in each time period, let 
+\begin_inset Formula $Y_{it}$
+\end_inset
+
+ denote the number of annual traffic deaths per 10000 in the population.
+ Let 
+\begin_inset Formula $X_{it}$
+\end_inset
+
+ denote the beer tax in 1988 U.S.
+ dollars.
+ Temporarily ignore the data after 1982, so that we have a cross-section
+ of 48 states.
+ The estimated regression line gives
+\begin_inset Formula 
+\[
+\hat{Y}_{i,1982}=2.01+0.13X_{i,1982}.
+\]
+
+\end_inset
+
+If the Least Squares assumptions hold for this regression, how would you
+ interpret the 
+\begin_inset Formula $0.13$
+\end_inset
+
+? Include in your answer: 
+\begin_inset Quotes eld
+\end_inset
+
+tax on beer
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Alternatively, we can use fixed effects regression to estimate the effect
+ fixed effects regression line is
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}_{i,t} & = & \hat{\alpha}_{i}-0.66X_{i,t}.\\
+ &  & \phantom{\hat{\alpha}_{i}\,}\left(0.29\right)
+\end{eqnarray*}
+
+\end_inset
+
+How would you interpret the 
+\begin_inset Formula $-0.66$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Consider the results for the fixed effects regression.
+ Do you think that the Least Square assumptions hold, i.e.
+ do you believe that the 0.13 in the first result comes from an unbiased
+ estimator? if YES: explain what causes the difference between 0.13 and -0.66.
+ If NO: explain why the Least Square assumptions are unlikely to hold.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+This question is about the code that we used during the lecture of Wednesday,
+ July 17.
+ You can find it on the course website or directly through 
+\begin_inset CommandInset href
+LatexCommand href
+name "[this link]"
+target "http://www.sfu.ca/~cmuris/2013-Summer-333/codeHour27.zip"
+
+\end_inset
+
+.
+ We are going to investigate the output of the commands on lines 236 and
+ 250.
+ Remember that the data set we are using is a random sample of 935 
+\begin_inset Quotes eld
+\end_inset
+
+young men
+\begin_inset Quotes erd
+\end_inset
+
+ in the U.S.
+ in 1980.
+ A list of variables and descriptions is
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+# 1.
+ wage                     monthly earnings
+\end_layout
+
+\begin_layout Plain Layout
+
+# 2.
+ hours                    average weekly hours
+\end_layout
+
+\begin_layout Plain Layout
+
+# 3.
+ IQ                       IQ score
+\end_layout
+
+\begin_layout Plain Layout
+
+# 4.
+ KWW                      knowledge of world work score
+\end_layout
+
+\begin_layout Plain Layout
+
+# 5.
+ educ                     years of education
+\end_layout
+
+\begin_layout Plain Layout
+
+# 6.
+ exper                    years of work experience
+\end_layout
+
+\begin_layout Plain Layout
+
+# 7.
+ tenure                   years with current employer
+\end_layout
+
+\begin_layout Plain Layout
+
+# 8.
+ age                      age in years
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+# 12.
+ urban                    =1 if live in SMSA
+\end_layout
+
+\begin_layout Plain Layout
+
+# 13.
+ sibs                     number of siblings
+\end_layout
+
+\begin_layout Plain Layout
+
+# 14.
+ brthord                  birth order
+\end_layout
+
+\begin_layout Plain Layout
+
+# 15.
+ meduc                    mother's education
+\end_layout
+
+\begin_layout Plain Layout
+
+# 16.
+ feduc                    father's education
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+Here is the first regression and its output:
+\begin_inset listings
+lstparams "language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> summary(lm(IQ~brthord,data=wageData.2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Coefficients:
+\end_layout
+
+\begin_layout Plain Layout
+
+            Estimate Std.
+ Error t value Pr(>|t|)    
+\end_layout
+
+\begin_layout Plain Layout
+
+(Intercept) 105.6634     0.8699 121.470  < 2e-16 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+brthord      -1.6640     0.3129  -5.318 1.34e-07 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the question we are trying to answer?
+\end_layout
+
+\begin_layout Enumerate
+What results would you draw from this output, if you knew that all the OLS
+ assumptions were satisfied?
+\end_layout
+
+\begin_layout Enumerate
+Assumption (1) is unlikely to hold.
+ Why?
+\end_layout
+
+\begin_layout Enumerate
+To solve that problem, we are going to include additional regressors, namely
+ the education of both parents (
+\begin_inset Formula $feduc$
+\end_inset
+
+ and 
+\begin_inset Formula $meduc$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Could you make an argument that would support 
+\begin_inset Formula $\text{cov}\left(feduc,brthord\right)\neq0$
+\end_inset
+
+ or 
+\begin_inset Formula $\text{cov}\left(meduc,brthord\right)\neq0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Can you make an argument to support the statement 
+\begin_inset Quotes eld
+\end_inset
+
+The regression coefficients on 
+\begin_inset Formula $feduc$
+\end_inset
+
+ and 
+\begin_inset Formula $meduc$
+\end_inset
+
+ are likely to be different from zero.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The output from that regression follows:
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=R,numbers=left,numberstyle={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> summary(lm(IQ~brthord+feduc+meduc,data=wageData.2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Coefficients:
+\end_layout
+
+\begin_layout Plain Layout
+
+            Estimate Std.
+ Error t value Pr(>|t|)    
+\end_layout
+
+\begin_layout Plain Layout
+
+(Intercept)  85.4160     2.6170  32.639  < 2e-16 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+brthord      -1.0544     0.3712  -2.840 0.004647 ** 
+\end_layout
+
+\begin_layout Plain Layout
+
+feduc         0.9780     0.1970   4.963 8.83e-07 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+meduc         0.8602     0.2333   3.687 0.000245 ***
+\end_layout
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[...]
+\end_layout
+
+\end_inset
+
+If the OLS assumptions are valid, how do you interpret these results?
+\end_layout
+
+\begin_layout Enumerate
+Do you believe that the conclusion under (e) is correct? Why / why not?
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

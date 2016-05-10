@@ -7,6 +7,14 @@ title: ""
 
 This is the course website for BUEC 333, Summer 2016. 
 
+<br><br>
+
+* My office: WMC 3639
+* My office hours: Thursdays, 10:00-12:00.
+* Email: Do not email me. Talk to me before or after class, in the breaks, or during my office hours.
+* [Syllabus](./admin/Syllabus-BUEC333-Summer2016.pdf)
+* [Regrade request form](./admin/regradingForm.pdf)
+
 #### Schedule
 
 | Week of  |         | Topic                          | Event     |
@@ -29,25 +37,98 @@ This is the course website for BUEC 333, Summer 2016.
 
 #### Weekly material {.tabset .tabset-pills}
 
+Readings and exercises are from Stock and Watson, "Introduction to Econometrics", Third Edition (Updated).
+
 <br>
 
 ##### Week 1
 
-Dates: May 9-15
-
-Topic: Introduction and Probability theory. PT baby!
-
-Readings: Stock and Watson, Chapters 1 and 2
+* Topic: Introduction and Probability theory.
+* Self-study: 1, 2.1, 2.2 (skip "Other measures...")
+* In-class: 2.3, 2.4 (only "Normal distribution")
+* In-class exercises: 2.2, 2.6, 2.10, 2.22
+* Tutorial exercises: No tutorials, but you are welcome to my office hours with questions about next week's tutorial exercises.
+* Lab: No labs, but see next week's if you want a head start.
 
 ##### Week 2
 
-Dates: May 16-22
-
-Topic: Statistics
-
-Readings: Stock and Watson, Chapter 3
+* Topic: Sampling
+* Self-study: 2.5
+* In-class: 2.6, 3.1
+* In-class exercises: TBD
+* Tutorial exercises: 2.1, 2.3, 2.7, 2.9, 2.20, 2.26
+* Lab: Follow steps 1-5 (or 6!) at [swirl](http://swirlstats.com/students.html) and go through the course "R Programming"
 
 ##### Week 3
 
-etc... 
+* Topic: Statistics
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 4
+
+* Topic: Linear regression: Mechanics
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 5
+
+* Topic: Linear regression: Statistics
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 6
+
+* Topic: Multiple linear regression
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 7
+
+* Topic: Multiple linear regression (2)
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 8
+
+* Topic: Internal and external validity
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 9
+
+* Topic: Instrumental variables
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
+##### Week 10
+
+* Topic: Time series
+* Self-study: TBD
+* In-class: TBD
+* In-class exercises: TBD
+* Tutorial exercises: TBD
+* Lab: TBD
+
 

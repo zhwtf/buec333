@@ -1,0 +1,1074 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem sets for BUEC 333
+\begin_inset Newline newline
+\end_inset
+
+Part 2: Linear regression, one covariate
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ I will indicate the relevant exercises for each week at the end of the
+ Wednesday lecture.
+ Numbered exercises are back-of-chapter exercises from Stock and Watson.
+ Try to complete the exercises before going to the tutorials.
+ In the tutorials, the TAs will help you if you have any difficulties.
+\end_layout
+
+\begin_layout Section*
+Mechanics and fit
+\end_layout
+
+\begin_layout Enumerate
+(Wooldridge, Exercise 2.3) Table 1 presents a random sample of 8 observations
+ on students' ACT (American College Test) and GPA (grade point average)
+ scores.
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ACT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Students's ACT and GPA scores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Consider the model 
+\begin_inset Formula 
+\[
+GPA_{i}=\beta_{0}+\beta_{1}ACT+u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the OLS estimators 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ have a useful interpretation?
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+For each of the 8 observations, compute 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+.
+ Then, compute 
+\begin_inset Formula $\sum_{i=1}^{8}\hat{u}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the predicted value of 
+\begin_inset Formula $GPA$
+\end_inset
+
+ when 
+\begin_inset Formula $ACT=20$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+How much of the variation in 
+\begin_inset Formula $GPA$
+\end_inset
+
+ for these eight students is explained by 
+\begin_inset Formula $ACT$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consider the data in Table 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Artificial data.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Note that this data has some observations that depend on 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you compute 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ for arbitrary values of 
+\begin_inset Formula $k$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $k=10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you explain what happens when 
+\begin_inset Formula $k$
+\end_inset
+
+ becomes very large?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Stock and Watson, 4.1 (a)-(c).
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, 4.2.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, 4.3.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.9.
+\end_layout
+
+\begin_layout Section*
+Estimation and inference
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.4.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.6.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 4.7.
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 5.2 (a)-(d).
+\end_layout
+
+\begin_layout Enumerate
+Stock and Watson, Exercise 5.3
+\end_layout
+
+\begin_layout Enumerate
+(Final, Summer 2014) Consider the following estimated regression equation
+ that describes the relationship between a student's weight and height:
+ 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6\,HEIGHT\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A student has height 5.
+ What is the regression's prediction for that student's weight?
+\end_layout
+
+\begin_layout Enumerate
+In the sample, the sample average of HEIGHT is 4.
+ What can you say about the sample average for WEIGHT?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, an additional variable is included, is ID, a student's SFU ID.
+ Obviously, this is a nonsensical variable that is not in any way related
+ to a student's weight.
+ The new estimated regression equation is 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6\,HEIGHT+0.02\,ID\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Someone's weight has nothing to do with their SFU ID.
+ Still, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ went up from 0.74 to 0.75.
+ How is this possible? 
+\end_layout
+
+\begin_layout Enumerate
+On the other hand, the adjusted R-squared 
+\begin_inset Formula $\bar{R}^{2}$
+\end_inset
+
+ went down from 0.73 to 0.72.
+ Explain how it is possible that the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ can go up while the 
+\begin_inset Formula $\bar{R}^{2}$
+\end_inset
+
+ goes down.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If the student's SFU ID number is not related to a student's weight, should
+ the estimated coefficient not be equal to 0? How could it be that it is
+ 0.02? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Final, Summer 2012) This question tests your understanding of the concepts
+ involved in regression analysis.
+ Consider the model with one regressor,
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+u_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write down the population regression function.
+ Write down the sample regression function.
+\end_layout
+
+\begin_layout Enumerate
+What does Least Squares Assumption 1, 
+\begin_inset Formula $\text{E}\left(\left.u_{i}\right|X_{i}\right)=0$
+\end_inset
+
+, mean? In your answer, use the words 
+\begin_inset Quotes eld
+\end_inset
+
+other factors
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Describe the other two 
+\begin_inset Quotes eld
+\end_inset
+
+Least Squares Assumptions
+\begin_inset Quotes erd
+\end_inset
+
+? You only need to use one sentence for each assumption.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ a random variable? Is 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ an estimator? Is 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ a random variable? Is 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ a random variable? (First: 4x yes/no.
+ Then: short explanations if you are not sure about your yes/no answers.)
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Prediction and forecasting
+\end_layout
+
+\begin_layout Enumerate
+Exercise 14.1, page 571.
+\end_layout
+
+\begin_layout Enumerate
+14.7 (a), (b), and (d), on page 574.
+\end_layout
+
+\begin_layout Enumerate
+Consider the time series 
+\begin_inset Formula $\left(-1,1,-1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the first sample autocovariance.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you construct a time series that has its first sample autocovariance
+ equal to zero?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is the difference between a prediction and a forecast?
+\end_layout
+
+\end_body
+\end_document

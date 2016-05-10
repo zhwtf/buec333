@@ -1,10 +1,24 @@
 ---
-title: "Learning R"
+title: "Hand-in assignments"
 ---
 
 <br>
 
-An important part of this course is about using the methods you learn in a statistical computing environment called "R". On this page, I provide some information to help you get started.
+In this course, you will learn how to use a statistical computing environment called "R" to implement the tools you learn in this course. 
 
 
-[Post assignments here?]
+We use R, with RStudio, because it is free, and because it works on all major operating systems (OSX, Linux, Windows). 
+
+I will demonstrate using R during the lectures, there are dedicated computer labs, and there are two hand-in assignments. This page provides additional details. 
+
+#### Useful resources
+
+* R can de downloaded from its [official website](http://www.r-project.org)
+* A free, cross-platform, user-friendly frontend for R is RStudio. It can be downloaded [here](http://www.rstudio.com)
+* You will be learning R from within R, using [swirl](http://swirlstats.com/students.html)
+* An excellent way to learn R is by studying "Introduction", "Basics", and "Linear regression" in 
+    "Applied econometrics with R" by Christian Kleiber and Achim Zeileis. It is available online through the SFU library through [this link](http://link.springer.com/book/10.1007/978-0-387-77318-6/page/1)
+
+#### Hand-in assignments
+
+TBD.

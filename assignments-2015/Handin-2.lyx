@@ -1,0 +1,471 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\begin_modules
+sweave
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+BUEC-333, Summer 2015
+\begin_inset Newline newline
+\end_inset
+
+Hand-in assignment 2
+\end_layout
+
+\begin_layout Date
+Deadline: Start of Test 3
+\end_layout
+
+\begin_layout Section*
+Rules
+\end_layout
+
+\begin_layout Enumerate
+Use R to answer the questions.
+ Other software is not accepted.
+\end_layout
+
+\begin_layout Enumerate
+Hand in a hardcopy of typed answers, font Times New Roman, font size 12,
+ single-spaced.
+\end_layout
+
+\begin_layout Enumerate
+Upload code and hand in a hardcopy, following the instructions for assignment
+ 1.
+\end_layout
+
+\begin_layout Enumerate
+Re-read the plagiarism instructions from assignment 1.
+\end_layout
+
+\begin_layout Section*
+Unions
+\end_layout
+
+\begin_layout Standard
+At the moment this assignment is posted, the TSSU is considering a strike,
+ threatening to withhold grades (including your grades for this assignment!).
+ One of the reasons to form a union, and one of the reasons to organize
+ a strike, is to increase your bargaining power in labor negotiations with
+ the employer.
+ It is sometimes believed that unions and strikes improve the wages of the
+ members of that union.
+ In this assignment, you are going to investigate the effects of unions
+ and strikes on wages empirically using linear regression in R.
+ To get started, start R and make sure that the package 
+\series bold
+foreign
+\series default
+ is installed by issuing the command
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE,eval=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+install.packages("foreign")
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that this package is installed, load the data for our analysis of unions.
+ A description of this data can be found in Table 1 of this paper: 
+\begin_inset CommandInset href
+LatexCommand href
+name "[link]"
+target "http://www.sfu.ca/~cmuris/buec333/vella-verbeek.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+## Load the "foreign" software
+\end_layout
+
+\begin_layout Plain Layout
+
+require(foreign)
+\end_layout
+
+\begin_layout Plain Layout
+
+## Download the data from my website and store it in a data.frame.
+\end_layout
+
+\begin_layout Plain Layout
+
+unionData <- read.dta("http://fmwww.bc.edu/ec-p/data/wooldridge/wagepan.dta")
+\end_layout
+
+\begin_layout Plain Layout
+
+## Delete missing data
+\end_layout
+
+\begin_layout Plain Layout
+
+unionData <- na.omit(unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get an idea about the data set, use 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+summary
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+head
+\begin_inset Quotes erd
+\end_inset
+
+, etc.
+ Once you are familiar with the data, answer the following questions:
+\end_layout
+
+\begin_layout Enumerate
+Before we start the assignment, enter the following two lines of code and
+ copy the output that R returns into your assignment:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE,eval=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+timestamp()
+\end_layout
+
+\begin_layout Plain Layout
+
+getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+There is no variable that contains the wage, as only the log of wage is
+ provided.
+ Generate a new variable, 
+\begin_inset Quotes eld
+\end_inset
+
+unionData$wage
+\begin_inset Quotes erd
+\end_inset
+
+, that contains the hourly wage in US dollars.
+\end_layout
+
+\begin_layout Enumerate
+Make a scatterplot (you can use the package 
+\begin_inset Quotes eld
+\end_inset
+
+ggplot
+\begin_inset Quotes erd
+\end_inset
+
+, for example) of 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+ and the variable 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+, which measures whether somebody is a part of a union or not.
+ What do you conclude from this scatterplot? Does it make a difference when
+ you do it for the log og wage? [Include code and the plot you made.]
+\end_layout
+
+\begin_layout Enumerate
+Run a regression of 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Interpret the regression coefficient estimate for 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Report the 90% confidence interval for the regression coefficient estimate
+ of union: what do you conclude?
+\end_layout
+
+\begin_layout Enumerate
+Do the same for 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+I prefer the model with 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+ over the model with 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+.
+ However, there is a problem because we did not include any variables other
+ than 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Explain what the problems are with this, from a theoretical/statistical
+ point of view.
+\end_layout
+
+\begin_layout Enumerate
+Run a regression of 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+ on union, hours, year, married, occ1, occ2, occ3, occ4, occ5, occ6, occ7,
+ occ8, occ9.
+ R refuses to give an estimate for the regression coefficient on occ9.
+ Why?
+\end_layout
+
+\begin_layout Enumerate
+Interpret the estimate of the regression coefficient of 
+\begin_inset Quotes eld
+\end_inset
+
+year
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+I wonder whether I should include a person's work experience, as measured
+ by the variable 
+\begin_inset Quotes eld
+\end_inset
+
+exper
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Try it, and argue why it should or should not be included.
+ You can be informal.
+\end_layout
+
+\begin_layout Enumerate
+The relationship between wages and experience seems suspicious.
+ There may still be an omitted variable problem.
+ Include 
+\begin_inset Quotes eld
+\end_inset
+
+educ
+\begin_inset Quotes erd
+\end_inset
+
+.
+ What do you conclude about education and experience, and their relationship
+ with wages?
+\end_layout
+
+\begin_layout Enumerate
+Based on your results in this assignment, in your opinion, are unions good
+ for employees' wages?
+\end_layout
+
+\end_body
+\end_document

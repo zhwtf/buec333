@@ -1,0 +1,861 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+%==================== Preamble Begins ====================
+
+%\begin{fonts}
+\usepackage{microtype}
+\usepackage{paralist}
+%\end{fonts}
+
+%\begin{layout}
+ % Default line space is set to 1.5
+
+
+\usepackage{fancyhdr}% for making fancy header/footer
+\usepackage{lastpage}% for page numbering style
+
+\fancyhf{} % clear default texts in header aned footer
+\renewcommand{\headrulewidth}{0pt} % remove border line in headerb
+\cfoot{Page \thepage\ of \pageref*{LastPage}} % text in center footer
+%\end{layout}
+
+%\begin{math}
+\usepackage{amsthm}\usepackage{nicefrac}\usepackage{xparse}% to define \given
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace} 
+\DeclarePairedDelimiter{\paren}{(}{)}
+\DeclarePairedDelimiter{\braket}{\langle}{\rangle}
+\DeclarePairedDelimiter{\sqbrac}{[}{]}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\NewDocumentCommand\given{s}{%
+  \IfBooleanTF#1%
+  {\;\middle\vert\;}% star version
+  {\mid}% no-star version
+}
+%\end{math}
+
+%\begin{graphics}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hypcap]{caption}
+\usepackage[labelformat=simple]{subcaption}
+% autoref as "Fig 1(a)" instead of "Fig 1a"
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+%\end{graphics}
+
+%\begin{misc and macros}
+\usepackage{tikz}
+\usepackage{enumitem}
+% \setlist[1]{noitemsep,leftmargin=2\parindent}
+% \setlist[2]{noitemsep,leftmargin=\parindent,partopsep=0pt}
+\setlist[enumerate,1]{label=(\alph*)}
+\usepackage{booktabs}
+%\end{misc and macros}
+
+%\begin{hyperlinks and PDF properties}
+
+%\end{hyperlinks and PDF properties}
+
+
+%==================== Preamble Ends ====================
+
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman palatino
+\font_sans default
+\font_typewriter mathpazo
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 0
+\pdf_quoted_options "pagebackref,citecolor=blue!50!black,linkcolor=blue!50!black,urlcolor=blue!50!black,"
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 2
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Introduction to Multiple Linear Regression
+\end_layout
+
+\begin_layout Standard
+1. Stock & Watson 6.1--6.4 
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.1
+\end_layout
+
+\end_inset
+
+Recall that 
+\begin_inset Formula \begin{equation*}
+    \bar R^2=1-\frac{n-1}{n-k-1}(1-R^2).
+  \end{equation*}
+\end_inset
+
+Thus, the values of 
+\begin_inset Formula $\bar R^2$
+\end_inset
+
+ are 
+\begin_inset Formula $0.162$
+\end_inset
+
+, 
+\begin_inset Formula $0.180$
+\end_inset
+
+, 
+\begin_inset Formula $0.181$
+\end_inset
+
+ for columns (1)--(3).
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.2
+\end_layout
+
+\end_inset
+
+(a) Workers with college degrees earn 
+\begin_inset Formula $\$8.31$
+\end_inset
+
+/hour more, on average, than workers with only high school degrees.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) Men earn 
+\begin_inset Formula $\$3.85$
+\end_inset
+
+/hour more, on average, than women.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.3
+\end_layout
+
+\end_inset
+
+(a) On average, a worker earns 
+\begin_inset Formula $\$0.51$
+\end_inset
+
+/hour more for each year he ages.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) Sally's earnings prediction is 
+\begin_inset Formula $1.87+8.32\times1-3.81\times1+0.51\times29=\$21.17$
+\end_inset
+
+/hour. Betsy's earnings prediction is 
+\begin_inset Formula $1.87+8.32\times1-3.81\times1+0.51\times34=\$23.72$
+\end_inset
+
+/hour.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.4
+\end_layout
+
+\end_inset
+
+(a) Workers in the Northeast earn 
+\begin_inset Formula $\$0.18$
+\end_inset
+
+ more per hour than workers in the West, on average, controlling for other variables in the regression. Workers in the Midwest earn 
+\begin_inset Formula $\$1.23$
+\end_inset
+
+ less per hour than workers in the West, on average, controlling for other variables in the regression. Workers in the South earn 
+\begin_inset Formula $\$0.43$
+\end_inset
+
+ less than workers in the West, controlling for other variables in the regression.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) The regressor 
+\begin_inset Formula $\mathit{West}$
+\end_inset
+
+ is omitted to avoid perfect multicollinearity. If 
+\begin_inset Formula $\mathit{West}$
+\end_inset
+
+ is included, then the intercept can be written as a perfect linear function of the four regional regressors.
+\end_layout
+
+\begin_layout Standard
+(c) The expected difference in earnings between Juanita and Jennifer is 
+\begin_inset Formula \begin{equation*}
+    -0.43-(-1.23)=\$0.80\text{/hour}
+  \end{equation*}
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+2. Stock & Watson 6.5 
+\end_layout
+
+\begin_layout Enumerate
+The expected increase in the value of the house is 23,400 dollars (note that 
+\shape italic
+Price
+\shape default
+ is in 1000 dollars). 
+\end_layout
+
+\begin_layout Enumerate
+The expected increase in the value of the house is 
+\begin_inset Formula $23,400 + 15,600 = 39,000$
+\end_inset
+
+ dollars. 
+\end_layout
+
+\begin_layout Enumerate
+The loss in value is 48,800 dollars. 
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $R^{2}=1-\frac{n-k-1}{n-1}\left(1-\bar{R}^{2}\right)=0.728$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+3. Stock & Watson 6.6 
+\end_layout
+
+\begin_layout Enumerate
+There are other important determinants of a country's crime rate, including demographic characteristics of the population.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the crime rate is positively affected by the fraction of young males i nthe population, and that counties with high crime rates tend to hire more police. In this case, the size of the police force is likely to be positively correlated with the fraction of young males in the population leading to a positive value for the omitted variable bias, so that 
+\begin_inset Formula $\hat\beta_1>\beta_1$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+6. Stock & Watson 6.9 
+\end_layout
+
+\begin_layout Itemize
+For omitted variable bias to occur, two conditions must be true: 
+\begin_inset Formula $X_1$
+\end_inset
+
+ (the included regressor) is correlated with the omitted variable, and the omitted variable is a determinant of the dependent variable. Since 
+\begin_inset Formula $X_1$
+\end_inset
+
+ and 
+\begin_inset Formula $X_2$
+\end_inset
+
+ are uncorrelated, the estimator of 
+\begin_inset Formula $\beta_1$
+\end_inset
+
+ does not suffer from omitted variable bias. 
+\end_layout
+
+\begin_layout Standard
+7. Final, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+Dummy variable trap / perfect multicollinearity 
+\end_layout
+
+\begin_layout Enumerate
+Exclude either 
+\begin_inset Formula $F_i$
+\end_inset
+
+ or 
+\begin_inset Formula $M_i$
+\end_inset
+
+, or drop the constant 
+\begin_inset Formula $\beta_0$
+\end_inset
+
+ from the regression equation. 
+\end_layout
+
+\begin_layout Standard
+8. Final Q5, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $100+6\times 5=130$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $124$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+In multiple regression, the 
+\begin_inset Formula $R^2$
+\end_inset
+
+ increases whenever a regressor is added, unless the estimated coefficient on the added regressor is exactly zero. To see this, think about starting with one regressor and then adding a second. When you use OLS to estimate the model with both regressors, OLS finds the values of the coefficients that minimize the sum of squared residuals. If OLS happens to choose the coefficient on the new regressor to be exactly zero, then the SSR will be the same whether or not the second variable is included in the regression. But if OLS chooses any value other than zero, then it must be that this value reduced the SSR relative to the regression that excludes this regressor. In practice, it is extremely unusual for an estimated coefficient to be exactly zero, so in general the SSR will decrease when a new regressor is added. But this means that the 
+\begin_inset Formula $R^2$
+\end_inset
+
+ generally increases (and never decreases) when a new regressor is added.
+\end_layout
+
+\begin_layout Enumerate
+Sampling variability. Even if 
+\begin_inset Formula $\beta_{ID}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat\beta_{ID}\sim\mathcal N(0,\sigma_{\hat\beta}^2)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Topics in Linear Regression
+\end_layout
+
+\begin_layout Standard
+5. Final Q6, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+Assuming 
+\begin_inset Formula $\beta_0,\beta_1,\beta_2,\beta_3$
+\end_inset
+
+ are all positive, then 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tikzpicture}[font=
+\backslash
+footnotesize,>=latex]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    
+\backslash
+draw[thick](0,1)node[left]{$
+\backslash
+beta_0$}--(6,2)node[right,align=center]{$E(Y_i
+\backslash
+given X_i,D_i=0)$
+\backslash
+
+\backslash
+with slope $
+\backslash
+beta_1$};
+\end_layout
+
+\begin_layout Plain Layout
+    
+\backslash
+draw[thick](0,2)node[left]{$
+\backslash
+beta_0+
+\backslash
+beta_2$}--(6,4.5)node[right,align=center]{$E(Y_i
+\backslash
+given X_i,D_i=1)$
+\backslash
+
+\backslash
+with slope $
+\backslash
+beta_1+
+\backslash
+beta_3$};
+\end_layout
+
+\begin_layout Plain Layout
+    
+\backslash
+draw[<->](0,5)node[left]{$Y_i$}--(0,0)--(9,0)node[below]{$X_i$};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Difference in slopes 
+\begin_inset Formula $\frac{\partial E(Y_i\given X_i,D_i)}{\partial X_i}$
+\end_inset
+
+ between 
+\begin_inset Formula $E(Y_i\given X_i,D_i=1)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(Y_i\given X_i,D_i=0)$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+7. Stock & Watson 7.2 
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Formula $t$
+\end_inset
+
+-statistic is 
+\begin_inset Formula $8.31/0.23=36.1>1.96$
+\end_inset
+
+, so the coefficient is statistically significant at the 
+\begin_inset Formula $5\%$
+\end_inset
+
+ level. The 
+\begin_inset Formula $95\%$
+\end_inset
+
+ confidence interval is 
+\begin_inset Formula $8.31\pm (1.96\times0.23)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Formula $t$
+\end_inset
+
+-statistic is 
+\begin_inset Formula $-3.85/0.23=-16.7>1.96$
+\end_inset
+
+, so the coefficient is statistically significant at the 
+\begin_inset Formula $5\%$
+\end_inset
+
+ level. The 
+\begin_inset Formula $95\%$
+\end_inset
+
+ confidence interval is 
+\begin_inset Formula $-3.85\pm (1.96\times0.23)$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+9. 
+\begin_inset Formula $\beta_1$
+\end_inset
+
+ measures the expected unit change in 
+\begin_inset Formula $Y_i$
+\end_inset
+
+ given a one-percent change in 
+\begin_inset Formula $X_i$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+15pt
+\end_layout
+
+\begin_layout Standard
+10. Stock & Watson 8.7 
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{inparaenum}
+\end_layout
+
+\end_inset
+
+[(i)] 
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $ln(Earnings)$
+\end_inset
+
+ for females are, on average, 0.44 lower for men than for women.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The error term has a standard deviation of 2.65 (measured in log-points).
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Yes. But the regression does not control for many factors (size of firm, industry, profitability, experience and so forth).
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+No. In isolation, these results do not imply gender discrimination. Gender discrimination means that two workers, identical in every way but gender, are paid different wages. Thus, it is also important to control for characteristics of the workers that may affect their productivity (education, years of experience, etc.) If these characteristics are systematically different between men and women, then they may be responsible for the difference in mean wages. (If this were true, it would raise an interesting and important question of why women tend to have less education or less experience than men, but that is a question about something other than gender discrimination.) These are potentially important omitted variables in the regression that will lead to bias in the OLS coefficient estimator for Female.
+\begin_inset Newline newline
+\end_inset
+
+ Since these characteristics were not controlled for in the statistical analysis, it is premature to reach a conclusion about gender discrimination. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{inparaenum}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{inparaenum}
+\end_layout
+
+\end_inset
+
+[(i)] 
+\end_layout
+
+\begin_layout Enumerate
+If MarketValue increases by 1%, earnings increase by 0.37%.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Female is correlated with the two new included variables and at least one of the variables is important for explaining 
+\begin_inset Formula $ln(Earnings)$
+\end_inset
+
+. Thus the regression in part (a) suffered from omitted variable bias. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{inparaenum}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Forgetting about the effect or Return, whose effects seems small and statistically insignificant, the omitted variable bias formula (see equation (6.1)) suggests that Female is negatively correlated with 
+\begin_inset Formula $ln(MarketValue)$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Section
+Intrumental Variables
+\end_layout
+
+\begin_layout Standard
+1. Stock & Watson 12.5 
+\end_layout
+
+\begin_layout Enumerate
+Instrument relevance. 
+\begin_inset Formula $Z_i$
+\end_inset
+
+ does not enter the population regression for 
+\begin_inset Formula $X_i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $\hat X_i$
+\end_inset
+
+ will be perfectly collinear with 
+\begin_inset Formula $W_i$
+\end_inset
+
+. Alternatively, the first stage regression suffers from perfect multicollinearity.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $W_i$
+\end_inset
+
+ is perfectly multicollinear with the constant term.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $Z_i$
+\end_inset
+
+ violates instrument exogeneity, because it's correlated with the error term. 
+\end_layout
+
+\begin_layout Standard
+2. Stock & Watson 12.9 
+\end_layout
+
+\begin_layout Enumerate
+There are other factors that could affect both the choice to serve in the military and annual earnings. One example could be education, although this could be included in the regression as a control variable. Another variable is “ability” which is difficult to measure, and thus difficult to control for in the regression.
+\end_layout
+
+\begin_layout Enumerate
+The draft was determined by a national lottery so the choice of serving in the military was random. Because it was randomly selected, the lottery number is uncorrelated with individual characteristics that may affect earning and hence the instrument is exogenous. Because it affected the probability of serving in the military, the lottery number is relevant. 
+\end_layout
+
+\begin_layout Standard
+3. Stock & Watson 12.10 
+\begin_inset Formula \begin{align*}
+\hat{\beta}_{1}^{TSLS}&=\frac{s_{ZY}}{s_{ZX}}\\
+&\xrightarrow{p}\frac{cov(Z_{i},Y_{i})}{cov(Z_{i},X_{i})}\\
+&=\frac{cov(Z_{i},\beta_{0}+\beta_{1}X_{i}+\beta_{2}W_{i}+u_{i})}{cov(Z_{i},X_{i})}\\
+&=\frac{\beta_{1}cov(Z_{i},X_{i})+\beta_{2}cov(Z_{i},W_{i})}{cov(Z_{i},X_{i})}
+\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $cov(Z_{i},W_{i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}^{TSLS}\xrightarrow{p}\beta_{1},$
+\end_inset
+
+ the IV estimator is consistent. 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $cov(Z_{i},W_{i})\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}^{TSLS}\xrightarrow{p}\frac{\beta_{1}cov(Z_{i},X_{i})+\beta_{2}cov(Z_{i},W_{i})}{cov(Z_{i},X_{i})},$
+\end_inset
+
+ the IV estimator is not consistent. 
+\end_layout
+
+\end_body
+\end_document

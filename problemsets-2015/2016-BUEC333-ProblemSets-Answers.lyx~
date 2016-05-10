@@ -1,0 +1,2088 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename 2015-BUEC333-ProblemSets-Part1-Answers.pdf
+	extra LaTeX "pages={1-7}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+OLS: Mechanics and Fit
+\end_layout
+
+\begin_layout Standard
+1.
+ Let 
+\begin_inset Formula $GPA$
+\end_inset
+
+ be 
+\begin_inset Formula $Y$
+\end_inset
+
+ and 
+\begin_inset Formula $ACT$
+\end_inset
+
+ be 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\bar{Y}=3.21$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{X}=25.88$
+\end_inset
+
+, 
+\begin_inset Formula $s_{XY}=5.8125$
+\end_inset
+
+, 
+\begin_inset Formula $s_{X}^{2}=56.875$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{1}=\frac{s_{XY}}{s_{X}^{2}}=\frac{\sum_{i}(X_{i}-\bar{X})(Y_{i}-\bar{Y})}{\sum_{i}(X_{i}-\bar{X})^{2}}\qquad\text{and}\qquad\hat{\beta}_{0}=\bar{Y}-\hat{\beta}_{1}\bar{X}\label{OLS}
+\end{equation}
+
+\end_inset
+
+Thus 
+\begin_inset Formula $\hat{\beta}_{1}=0.1022$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{0}=0.5681$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+No
+\end_layout
+
+\begin_layout Enumerate
+A one unit increase in 
+\begin_inset Formula $ACT$
+\end_inset
+
+ is, on average, associated with a 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ unit increase in 
+\begin_inset Formula $GPA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Observation specific values are in the table below 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Student 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{Y}_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7143 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0857 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.0209 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3791 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.2253 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.2252 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.3275 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1725 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5319 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0681 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.1231 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1231 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.1231 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.4231 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6341 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0659 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\sum_{i}\hat{u}_{i}=-0.0001$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{Y}(X=20)=0.5681+0.1022(20)=2.6121$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ESS=0.5940$
+\end_inset
+
+, 
+\begin_inset Formula $TSS=1.0288$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula 
+\[
+R^{2}=\frac{ESS}{TSS}=\frac{\sum_{i}(\hat{Y}_{i}-\bar{Y})^{2}}{\sum_{i}(Y_{i}-\bar{Y})^{2}}
+\]
+
+\end_inset
+
+Thus 
+\begin_inset Formula $R^{2}=0.5774$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $\bar{X}=\bar{Y}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=2$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\dots,6$
+\end_inset
+
+, 
+\begin_inset Formula $Y_{i}=X_{i}$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\hat{\beta}_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}=1$
+\end_inset
+
+), 
+\begin_inset Formula $\hat{u}_{i}=Y_{i}-\hat{Y}_{i}=Y_{i}-X_{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $SSR=\sum_{i}\hat{u}_{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $R^{2}=1-\frac{SSR}{TSS}=1-0=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Given the formulae in equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "OLS"
+
+\end_inset
+
+ above, 
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{5+k}{7},\qquad\text{and}\qquad\hat{\beta}_{0}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=1$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{0}=0,\hat{\beta}_{1}=\frac{6}{7},\hat{Y}_{i}=\frac{6}{7}X_{i}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $R^{2}=\frac{ESS}{TSS}=\frac{144/7}{22}=\frac{72}{77}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=3$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{0}=0,\hat{\beta}_{1}=\frac{8}{7},\hat{Y}_{i}=\frac{8}{7}X_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R^{2}=\frac{256/7}{38}=\frac{128}{133}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=10$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{0}=0,\hat{\beta}_{1}=\frac{15}{7},\hat{Y}_{i}=\frac{15}{7}X_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R^{2}=\frac{900/7}{220}=\frac{45}{77}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Given that 
+\begin_inset Formula $\hat{\beta}_{0}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta}_{1}=\frac{5+k}{7}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}\to\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+.
+ That is, the fitted line converges to a vertical line going through the
+ origin.
+ And since 
+\begin_inset Formula $\hat{Y}_{i}=\frac{5+k}{7}X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $ESS=\frac{1}{7}(100+4k^{2}+40k)$
+\end_inset
+
+, 
+\begin_inset Formula $TSS=20+2k^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula 
+\[
+R^{2}=\frac{50+20k+2k^{2}}{70+7k^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $R^{2}\to\frac{2}{7}$
+\end_inset
+
+ as 
+\begin_inset Formula $k\to\infty$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+3.
+ Stock & Watson 4.1 
+\end_layout
+
+\begin_layout Enumerate
+The predicted average test score is 
+\begin_inset Formula 
+\[
+\widehat{TestScore}=520.4-5.82\times22=392.36
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The predicted change in the classroom average test score is 
+\begin_inset Formula 
+\[
+\Delta\widehat{TestScore}=(-5.82\times19)-(-5.82\times23)=23.28
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Using the formula for 
+\begin_inset Formula $\hat{\beta}_{0}$
+\end_inset
+
+ in equation (4.8), we know the sample average of the test score across the
+ 100 classroom is 
+\begin_inset Formula 
+\[
+\overline{TestScore}=\hat{\beta}_{0}+\hat{\beta}_{1}\overline{CS}=520.4-5.82\times21.4=395.85
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+OLS: Estimation and Inference
+\end_layout
+
+\begin_layout Standard
+1.
+ Stock & Watson 4.4
+\end_layout
+
+\begin_layout Standard
+2.
+ Stock & Watson 4.6 
+\begin_inset Formula 
+\begin{align*}
+E(Y_{i}\given X_{i}) & =E(\beta_{0}+\beta_{1}X_{i}+u_{i}\given X_{i})\\
+ & =E(\beta_{0}\given X_{i})+E(\beta_{1}X_{i}\given X_{i})+E(u_{i}\given X_{i})\\
+ & =\beta_{0}+\beta_{1}X_{i}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Stock & Watson 4.7 
+\begin_inset Formula 
+\begin{align*}
+E(\hat{\beta}_{0}) & =E(\bar{Y}-\hat{\beta}_{1}\bar{X})\\
+ & =E\sqbrac*{\paren*{\beta_{0}+\beta_{1}\bar{X}+\frac{1}{n}\sum_{i}u_{i}}-\hat{\beta}_{1}\bar{X}}\\
+ & =\beta_{0}+\underbrace{E(\beta_{1}-\hat{\beta}_{1})}_{\mathclap{\substack{=0\text{ since \ensuremath{\hat{\beta}_{1}}}\\
+\text{is unbiased}
+}
+}}\bar{X}+\frac{1}{n}\sum_{i}\underbrace{E(u_{i})}_{\mathclap{\substack{=0\\
+\text{by assumption}
+}
+}}\\
+ & =\beta_{0}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Stock & Watson 5.2 (a)-(d) 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{align*}
+\beta_{1} & =E(Wage_{i}\given Male_{i}=1)-E(Wage_{i}\given Male_{i}=0)\\
+ & =\text{difference in mean earnings between men and women}\\
+ & =\text{wage gender gap}
+\end{align*}
+
+\end_inset
+
+The estimated gender gap 
+\begin_inset Formula $=\hat{\beta}_{1}=\$2.12\,\text{/hour}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{0}:\beta_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $H_{1}:\beta\ne0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $t=\frac{2.12-0}{0.36}=5.89$
+\end_inset
+
+, 
+\begin_inset Formula $p\text{-value}=\Pr(Z\le-5.89)\times2\approx0<0.01$
+\end_inset
+
+.
+ Thus reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ at 
+\begin_inset Formula $\alpha=1\%$
+\end_inset
+
+.
+ That is, the estimated gender gap is significantly different from 0.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\set{2.12\pm1.96\times0.36}=(1.4144,2.8256)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{Wage}=\hat{\beta}_{0}+\hat{\beta}_{1}\overline{Male}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ For women: 
+\begin_inset Formula 
+\[
+Male_{i}=0\Rightarrow\overline{Male}=0\Rightarrow\overline{Wage}=\hat{\beta}_{0}+\hat{\beta}_{1}\times0=\$12.52\text{/hour}
+\]
+
+\end_inset
+
+For men: 
+\begin_inset Formula 
+\[
+Male_{i}=1\Rightarrow\overline{Male}=1\Rightarrow\overline{Wage}=\hat{\beta}_{0}+\hat{\beta}_{1}=\$14.64\text{/hour}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ Stock & Watson 5.3 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+The 99% confidence interval is 
+\begin_inset Formula $1.5\times\{3.94\pm2.58\times0.31\}$
+\end_inset
+
+ or 
+\begin_inset Formula 
+\begin{align*}
+4.71\text{lbs}\le WeightGain\le7.11\text{lbs}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a.
+\end_layout
+
+\end_inset
+
+130 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b.
+\end_layout
+
+\end_inset
+
+124 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c.
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ never decreases.
+ This question relies on Chapter 6 knowledge.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+d.
+\end_layout
+
+\end_inset
+
+No, the estimator is a random variable.
+ 
+\end_layout
+
+\begin_layout Standard
+7.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a-c.
+\end_layout
+
+\end_inset
+
+See book.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+d.
+\end_layout
+
+\end_inset
+
+No.
+ Yes.
+ Yes.
+ Last one: yes, because it depends on 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Prediction and Forecasting
+\end_layout
+
+\begin_layout Standard
+1.
+ Stock & Watson 14.1 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ is stationary so its probability distribution does not change over time.
+ As a results expected value of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{t-1}$
+\end_inset
+
+ are the same.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+Y_{t}=\beta_{0}+\beta_{1}Y_{t-1}+u_{t}\Rightarrow E(Y_{t})=\beta_{0}+\beta_{1}E(Y_{t-1})
+\]
+
+\end_inset
+
+From (a) we know 
+\begin_inset Formula $E(Y_{t})=E(Y_{t-1})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Rightarrow E(Y_{t})=\beta_{0}+\beta_{1}E(Y_{t})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Rightarrow(1-\beta_{1})E(Y_{t})=\beta_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Rightarrow E(Y_{t})=\beta_{0}/(1-\beta_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+2.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Using the result from 1(b), 
+\begin_inset Formula $E(Y_{t})=\frac{\beta_{0}}{1-\beta_{1}}=\frac{2.5}{1-0.7}=8.33$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $Var(Y_{t})=Var(0.7Y_{t-1}+u_{t})=0.7^{2}Var(Y_{t-1})+Var(u_{t})=0.49Var(Y_{t})+Var(u_{t})$
+\end_inset
+
+ (Note that 
+\begin_inset Formula $Var(Y_{t})=Var(Y_{t-1})$
+\end_inset
+
+ because 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ is stationary.)
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $(1-0.49)Var(Y_{t})=9$
+\end_inset
+
+, 
+\begin_inset space \space{}
+\end_inset
+
+and therefore 
+\begin_inset Formula $Var(Y_{t})=9/(1-0.49)=17.647$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Cov(Y_{t},Y_{t-1})=Cov(2.5+0.7Y_{t-1}+u_{t},Y_{t-1})=0.7Var(Y_{t-1})+Cov(u_{t},Y_{t-1})=0.7Var(Y_{t})=0.7\times17.647=12.3529$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $Cov(Y_{t,}Y_{t-2})=Cov(2.5+0.7(2.5+0.7Y_{t-2}+u_{t-1})+u_{t},Y_{t-2})=Cov(0.49Y_{t-2}+0.7u_{t-1}+u_{t},Y_{t-2})=0.49Cov(Y_{t-2},Y_{t-2})+0.7Cov(u_{t-1,}Y_{t-2})+Cov(u_{t},Y_{t-2})=0.49Var(Y_{t-2})=0.49Var(Y_{t})=0.49\times17.647=8.64703$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(not assigned)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{T+1|T}=E(Y_{T+1}|Y_{T},Y_{T-1},...)=E(2.5+0.7Y_{T}+u_{t}|Y_{T,}Y_{T-1,...})=2.5+0.7Y_{T}=2.5+0.7\times102.3=74.11$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+3.
+ Let 
+\begin_inset Formula $(Y_{1},Y_{2},Y_{3})=(-1,1,-1)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Recall that 
+\begin_inset Formula 
+\[
+\widehat{\mathrm{cov}(Y_{t},Y_{t-j})}=\frac{1}{T}\sum_{t=j+1}^{T}(Y_{t}-\bar{Y}_{j+1:T})(Y_{t-j}-\bar{Y}_{1:T-j})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $T=3$
+\end_inset
+
+ and 
+\begin_inset Formula $j=1$
+\end_inset
+
+ for this question (and note that both 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+s equal zero).
+ Applying this formula we get 
+\begin_inset Formula 
+\[
+\widehat{\mathrm{cov}(Y_{t},Y_{t-1})}=\frac{1}{3}\sqbrac[\Big]{(Y_{2}-0)(Y_{1}-0)+(Y_{3}-0)(Y_{2}-0)}=-\frac{2}{3}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Recall that 
+\begin_inset Formula 
+\[
+\hat{\rho}_{j}=\frac{\widehat{\mathrm{cov}(Y_{t},Y_{t-j})}}{\widehat{\mathrm{var}(Y_{t})}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $j=1$
+\end_inset
+
+ for this question.
+ Since 
+\begin_inset Formula $\bar{Y}=\frac{1}{3}(-1+1-1)=-\frac{1}{3}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\widehat{\mathrm{var}(Y_{t})}=\frac{1}{2}\sqbrac*{\paren*{-1+\frac{1}{3}}^{2}+\paren*{1+\frac{1}{3}}^{2}+\paren*{-1+\frac{1}{3}}^{2}}=\frac{4}{3}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\[
+\hat{\rho}_{1}=\frac{-2/3}{4/3}=-\frac{1}{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Yes, consider 
+\begin_inset Formula $(0,0,0,0,0)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+4.
+ See 
+\begin_inset Quotes eld
+\end_inset
+
+forecasts and predicted values
+\begin_inset Quotes erd
+\end_inset
+
+ on p.533 of Stock & Watson.
+\end_layout
+
+\begin_layout Section*
+Introduction to Multiple Linear Regression
+\end_layout
+
+\begin_layout Standard
+1.
+ Stock & Watson 6.1--6.4 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.1
+\end_layout
+
+\end_inset
+
+Recall that 
+\begin_inset Formula 
+\[
+\bar{R}^{2}=1-\frac{n-1}{n-k-1}(1-R^{2}).
+\]
+
+\end_inset
+
+Thus, the values of 
+\begin_inset Formula $\bar{R}^{2}$
+\end_inset
+
+ are 
+\begin_inset Formula $0.162$
+\end_inset
+
+, 
+\begin_inset Formula $0.180$
+\end_inset
+
+, 
+\begin_inset Formula $0.181$
+\end_inset
+
+ for columns (1)--(3).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.2
+\end_layout
+
+\end_inset
+
+(a) Workers with college degrees earn 
+\begin_inset Formula $\$8.31$
+\end_inset
+
+/hour more, on average, than workers with only high school degrees.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) Men earn 
+\begin_inset Formula $\$3.85$
+\end_inset
+
+/hour more, on average, than women.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.3
+\end_layout
+
+\end_inset
+
+(a) On average, a worker earns 
+\begin_inset Formula $\$0.51$
+\end_inset
+
+/hour more for each year he ages.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) Sally's earnings prediction is 
+\begin_inset Formula $1.87+8.32\times1-3.81\times1+0.51\times29=\$21.17$
+\end_inset
+
+/hour.
+ Betsy's earnings prediction is 
+\begin_inset Formula $1.87+8.32\times1-3.81\times1+0.51\times34=\$23.72$
+\end_inset
+
+/hour.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.4
+\end_layout
+
+\end_inset
+
+(a) Workers in the Northeast earn 
+\begin_inset Formula $\$0.18$
+\end_inset
+
+ more per hour than workers in the West, on average, controlling for other
+ variables in the regression.
+ Workers in the Midwest earn 
+\begin_inset Formula $\$1.23$
+\end_inset
+
+ less per hour than workers in the West, on average, controlling for other
+ variables in the regression.
+ Workers in the South earn 
+\begin_inset Formula $\$0.43$
+\end_inset
+
+ less than workers in the West, controlling for other variables in the regressio
+n.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) The regressor 
+\begin_inset Formula $\mathit{West}$
+\end_inset
+
+ is omitted to avoid perfect multicollinearity.
+ If 
+\begin_inset Formula $\mathit{West}$
+\end_inset
+
+ is included, then the intercept can be written as a perfect linear function
+ of the four regional regressors.
+\end_layout
+
+\begin_layout Standard
+(c) The expected difference in earnings between Juanita and Jennifer is
+ 
+\begin_inset Formula 
+\[
+-0.43-(-1.23)=\$0.80\text{/hour}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+2.
+ Stock & Watson 6.5 
+\end_layout
+
+\begin_layout Enumerate
+The expected increase in the value of the house is 23,400 dollars (note
+ that 
+\shape italic
+Price
+\shape default
+ is in 1000 dollars).
+ 
+\end_layout
+
+\begin_layout Enumerate
+The expected increase in the value of the house is 
+\begin_inset Formula $23,400+15,600=39,000$
+\end_inset
+
+ dollars.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The loss in value is 48,800 dollars.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{2}=1-\frac{n-k-1}{n-1}\left(1-\bar{R}^{2}\right)=0.728$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+3.
+ Stock & Watson 6.6 
+\end_layout
+
+\begin_layout Enumerate
+There are other important determinants of a country's crime rate, including
+ demographic characteristics of the population.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the crime rate is positively affected by the fraction of young
+ males i nthe population, and that counties with high crime rates tend to
+ hire more police.
+ In this case, the size of the police force is likely to be positively correlate
+d with the fraction of young males in the population leading to a positive
+ value for the omitted variable bias, so that 
+\begin_inset Formula $\hat{\beta}_{1}>\beta_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+6.
+ Stock & Watson 6.9 
+\end_layout
+
+\begin_layout Itemize
+For omitted variable bias to occur, two conditions must be true: 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ (the included regressor) is correlated with the omitted variable, and the
+ omitted variable is a determinant of the dependent variable.
+ Since 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ are uncorrelated, the estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ does not suffer from omitted variable bias.
+ 
+\end_layout
+
+\begin_layout Standard
+7.
+ Final, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+Dummy variable trap / perfect multicollinearity 
+\end_layout
+
+\begin_layout Enumerate
+Exclude either 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ or 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+, or drop the constant 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+ from the regression equation.
+ 
+\end_layout
+
+\begin_layout Standard
+8.
+ Final Q5, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $100+6\times5=130$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $124$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+In multiple regression, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ increases whenever a regressor is added, unless the estimated coefficient
+ on the added regressor is exactly zero.
+ To see this, think about starting with one regressor and then adding a
+ second.
+ When you use OLS to estimate the model with both regressors, OLS finds
+ the values of the coefficients that minimize the sum of squared residuals.
+ If OLS happens to choose the coefficient on the new regressor to be exactly
+ zero, then the SSR will be the same whether or not the second variable
+ is included in the regression.
+ But if OLS chooses any value other than zero, then it must be that this
+ value reduced the SSR relative to the regression that excludes this regressor.
+ In practice, it is extremely unusual for an estimated coefficient to be
+ exactly zero, so in general the SSR will decrease when a new regressor
+ is added.
+ But this means that the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ generally increases (and never decreases) when a new regressor is added.
+\end_layout
+
+\begin_layout Enumerate
+Sampling variability.
+ Even if 
+\begin_inset Formula $\beta_{ID}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{ID}\sim\mathcal{N}(0,\sigma_{\hat{\beta}}^{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+Topics in Linear Regression
+\end_layout
+
+\begin_layout Standard
+5.
+ Final Q6, Summer 2014 
+\end_layout
+
+\begin_layout Enumerate
+Assuming 
+\begin_inset Formula $\beta_{0},\beta_{1},\beta_{2},\beta_{3}$
+\end_inset
+
+ are all positive, then 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[font=
+\backslash
+footnotesize,>=latex]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[thick](0,1)node[left]{$
+\backslash
+beta_0$}--(6,2)node[right,align=center]{$E(Y_i
+\backslash
+given X_i,D_i=0)$
+\backslash
+
+\backslash
+with slope $
+\backslash
+beta_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[thick](0,2)node[left]{$
+\backslash
+beta_0+
+\backslash
+beta_2$}--(6,4.5)node[right,align=center]{$E(Y_i
+\backslash
+given X_i,D_i=1)$
+\backslash
+
+\backslash
+with slope $
+\backslash
+beta_1+
+\backslash
+beta_3$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[<->](0,5)node[left]{$Y_i$}--(0,0)--(9,0)node[below]{$X_i$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Difference in slopes 
+\begin_inset Formula $\frac{\partial E(Y_{i}\given X_{i},D_{i})}{\partial X_{i}}$
+\end_inset
+
+ between 
+\begin_inset Formula $E(Y_{i}\given X_{i},D_{i}=1)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(Y_{i}\given X_{i},D_{i}=0)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+7.
+ Stock & Watson 7.2 
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Formula $t$
+\end_inset
+
+-statistic is 
+\begin_inset Formula $8.31/0.23=36.1>1.96$
+\end_inset
+
+, so the coefficient is statistically significant at the 
+\begin_inset Formula $5\%$
+\end_inset
+
+ level.
+ The 
+\begin_inset Formula $95\%$
+\end_inset
+
+ confidence interval is 
+\begin_inset Formula $8.31\pm(1.96\times0.23)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Formula $t$
+\end_inset
+
+-statistic is 
+\begin_inset Formula $-3.85/0.23=-16.7>1.96$
+\end_inset
+
+, so the coefficient is statistically significant at the 
+\begin_inset Formula $5\%$
+\end_inset
+
+ level.
+ The 
+\begin_inset Formula $95\%$
+\end_inset
+
+ confidence interval is 
+\begin_inset Formula $-3.85\pm(1.96\times0.23)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+9.
+ 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ measures the expected unit change in 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ given a one-percent change in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+15pt
+\end_layout
+
+\begin_layout Standard
+10.
+ Stock & Watson 8.7 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{inparaenum}
+\end_layout
+
+\end_inset
+
+[(i)] 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ln(Earnings)$
+\end_inset
+
+ for females are, on average, 0.44 lower for men than for women.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The error term has a standard deviation of 2.65 (measured in log-points).
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Yes.
+ But the regression does not control for many factors (size of firm, industry,
+ profitability, experience and so forth).
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+No.
+ In isolation, these results do not imply gender discrimination.
+ Gender discrimination means that two workers, identical in every way but
+ gender, are paid different wages.
+ Thus, it is also important to control for characteristics of the workers
+ that may affect their productivity (education, years of experience, etc.)
+ If these characteristics are systematically different between men and women,
+ then they may be responsible for the difference in mean wages.
+ (If this were true, it would raise an interesting and important question
+ of why women tend to have less education or less experience than men, but
+ that is a question about something other than gender discrimination.) These
+ are potentially important omitted variables in the regression that will
+ lead to bias in the OLS coefficient estimator for Female.
+\begin_inset Newline newline
+\end_inset
+
+ Since these characteristics were not controlled for in the statistical
+ analysis, it is premature to reach a conclusion about gender discrimination.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{inparaenum}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{inparaenum}
+\end_layout
+
+\end_inset
+
+[(i)] 
+\end_layout
+
+\begin_layout Enumerate
+If MarketValue increases by 1%, earnings increase by 0.37%.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Female is correlated with the two new included variables and at least one
+ of the variables is important for explaining 
+\begin_inset Formula $ln(Earnings)$
+\end_inset
+
+.
+ Thus the regression in part (a) suffered from omitted variable bias.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{inparaenum}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Forgetting about the effect or Return, whose effects seems small and statistical
+ly insignificant, the omitted variable bias formula (see equation (6.1))
+ suggests that Female is negatively correlated with 
+\begin_inset Formula $ln(MarketValue)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Intrumental Variables
+\end_layout
+
+\begin_layout Standard
+1.
+ Stock & Watson 12.5 
+\end_layout
+
+\begin_layout Enumerate
+Instrument relevance.
+ 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ does not enter the population regression for 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{X}_{i}$
+\end_inset
+
+ will be perfectly collinear with 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+.
+ Alternatively, the first stage regression suffers from perfect multicollinearit
+y.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ is perfectly multicollinear with the constant term.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ violates instrument exogeneity, because it's correlated with the error
+ term.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ Stock & Watson 12.9 
+\end_layout
+
+\begin_layout Enumerate
+There are other factors that could affect both the choice to serve in the
+ military and annual earnings.
+ One example could be education, although this could be included in the
+ regression as a control variable.
+ Another variable is “ability” which is difficult to measure, and thus difficult
+ to control for in the regression.
+\end_layout
+
+\begin_layout Enumerate
+The draft was determined by a national lottery so the choice of serving
+ in the military was random.
+ Because it was randomly selected, the lottery number is uncorrelated with
+ individual characteristics that may affect earning and hence the instrument
+ is exogenous.
+ Because it affected the probability of serving in the military, the lottery
+ number is relevant.
+ 
+\end_layout
+
+\begin_layout Standard
+3.
+ Stock & Watson 12.10 
+\begin_inset Formula 
+\begin{align*}
+\hat{\beta}_{1}^{TSLS} & =\frac{s_{ZY}}{s_{ZX}}\\
+ & \xrightarrow{p}\frac{cov(Z_{i},Y_{i})}{cov(Z_{i},X_{i})}\\
+ & =\frac{cov(Z_{i},\beta_{0}+\beta_{1}X_{i}+\beta_{2}W_{i}+u_{i})}{cov(Z_{i},X_{i})}\\
+ & =\frac{\beta_{1}cov(Z_{i},X_{i})+\beta_{2}cov(Z_{i},W_{i})}{cov(Z_{i},X_{i})}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $cov(Z_{i},W_{i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}^{TSLS}\xrightarrow{p}\beta_{1},$
+\end_inset
+
+ the IV estimator is consistent.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $cov(Z_{i},W_{i})\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{1}^{TSLS}\xrightarrow{p}\frac{\beta_{1}cov(Z_{i},X_{i})+\beta_{2}cov(Z_{i},W_{i})}{cov(Z_{i},X_{i})},$
+\end_inset
+
+ the IV estimator is not consistent.
+ 
+\end_layout
+
+\end_body
+\end_document

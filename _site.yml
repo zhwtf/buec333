@@ -8,18 +8,10 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Learning R"
+    - text: "Hand-ins"
       href: learnr.html
-    - text: "Dates"
-      href: dates.html
     - text: "Old exams"
       href: exams.html
-    - text: "Docs"
-      menu:
-      - text: Syllabus
-        href: syllabus.html
-      - text: "Contact"
-        href: contact.html
   right:
     - text: "Built with"
       menu:

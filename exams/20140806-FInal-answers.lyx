@@ -1,0 +1,798 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+Final BUEC 333.
+ Version D.
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+August 11, 2014, 12:00-15:00
+\end_layout
+
+\begin_layout Section*
+Questions
+\end_layout
+
+\begin_layout Enumerate
+Consider the example used in the chapter on panel data.
+ We have a panel data set on 
+\begin_inset Formula $n=48$
+\end_inset
+
+ U.S.
+ states during 
+\begin_inset Formula $T=7$
+\end_inset
+
+ periods, from 1982 up to and including 1988.
+ The total number of observations is 
+\begin_inset Formula $336$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is this a balanced panel? Explain.
+ 
+\series bold
+Yes: 7*48=336, so there are not gaps.
+\end_layout
+
+\begin_layout Enumerate
+For each state, in each time period, let 
+\begin_inset Formula $Y_{it}$
+\end_inset
+
+ denote the number of annual traffic deaths per 10000 in the population.
+ Let 
+\begin_inset Formula $X_{it}$
+\end_inset
+
+ denote the beer tax in 1988 U.S.
+ dollars.
+ Temporarily ignore the data after 1982, so that we have a cross-section
+ of 48 states.
+ The estimated regression line gives
+\begin_inset Formula 
+\[
+\hat{Y}_{i,1982}=2.01+0.13X_{i,1982}.
+\]
+
+\end_inset
+
+Alternatively, we can use fixed effects regression to estimate the effect
+ fixed effects regression line is
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{Y}_{i,t} & = & \hat{\alpha}_{i}-0.66X_{i,t}.\\
+ &  & \phantom{\hat{\alpha}_{i}\,}\left(0.29\right)
+\end{eqnarray*}
+
+\end_inset
+
+Do you think that the Least Square assumptions hold, i.e.
+ do you believe that the 0.13 in the first result comes from an unbiased
+ estimator? If YES: explain what causes the difference between 0.13 and -0.66.
+ If NO: explain why the Least Square assumptions are unlikely to hold.
+ Include in your answer: 
+\begin_inset Quotes eld
+\end_inset
+
+tax on beer
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+They do not hold: there are omitted variables that the FE accounts for.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Based on SW, 14.7] Suppose that 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ follows the stationary AR(1) model
+\begin_inset Formula 
+\[
+Y_{t}=3.9+0.5Y_{t-1}+u_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is i.i.d.
+ with 
+\begin_inset Formula $E\left(u_{i}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{var}\left(u_{i}\right)=9.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the mean and variance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ 
+\series bold
+E(Yt) = 3.9/(1-0.5)=7.8.
+ Var(Yt) = 9 / (3/4) = 12
+\end_layout
+
+\begin_layout Enumerate
+Compute the first autocovariance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ 
+\series bold
+Cov(Yt,Yt-1)=0.5*12=6
+\end_layout
+
+\begin_layout Enumerate
+Compute the second autocovariance of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ 
+\series bold
+Cov(Yt,Yt-1)=0.5^2*12 = 3
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Stock and Watson, 2.5] 
+\begin_inset Quotes eld
+\end_inset
+
+In September, Seattle's daily high temperature has a mean of 59 degrees
+ Fahrenheit.
+ The standard deviation is 9 degrees Fahrenheit.
+\begin_inset Quotes erd
+\end_inset
+
+ Remember that, to convert from degrees Fahrenheit to degrees Celsius, we
+ need to subtract 32 and then multiply by 5/9, so
+\begin_inset Formula 
+\[
+T_{C}=\frac{5}{9}\times\left(T_{F}-32\right).
+\]
+
+\end_inset
+
+For the questions that follow, indicate which formulas you are using.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the mean of Seattle's daily high temperature in September in degrees
+ Celsius? 
+\series bold
+5/9*(59-32)=15
+\end_layout
+
+\begin_layout Enumerate
+What is the standard deviation of Seattle's daily high temperature in September
+ in degrees Celsius? 
+\series bold
+5/9*9=5
+\end_layout
+
+\begin_layout Enumerate
+What is the variance of Seattle's daily high temperature in September in
+ degrees Celsius? 
+\series bold
+5*5=25
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose you want to estimate the population mean of 
+\begin_inset Formula $Y$
+\end_inset
+
+, 
+\begin_inset Formula $\text{E}\left(Y\right)=\mu_{Y}$
+\end_inset
+
+.
+ You have a random sample of size 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $\{Y_{1},\cdots,Y_{n}\}$
+\end_inset
+
+.
+ For simplicity, assume that 
+\begin_inset Formula $n=2$
+\end_inset
+
+.
+ Then, the sample average 
+\begin_inset Formula $\bar{Y}=\frac{1}{n}\sum_{i=1}^{n}Y_{i}$
+\end_inset
+
+, simplifies to 
+\begin_inset Formula $\bar{Y}=(Y_{1}+Y_{2})/2.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is the sample average 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+ unbiased for 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+? Explain.
+ 
+\series bold
+E(1/2(Y1+Y2))=1/2 E(Y1+Y2) = 1/2 * (E(Y1) + E(Y2)) = 1/2 * 2 mu = mu
+\end_layout
+
+\begin_layout Enumerate
+Now, consider 
+\begin_inset Formula $\tilde{Y}=\frac{1}{4}Y_{1}+\frac{1}{4}Y_{2}$
+\end_inset
+
+.
+ What is the variance of 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+? On the basis of the variances, do you prefer 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+ or 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+? 
+\series bold
+1/8 
+\begin_inset Formula $\sigma_{Y}^{2}$
+\end_inset
+
+, which is smaller than 
+\begin_inset Formula $var\left(\bar{Y}\right)$
+\end_inset
+
+, so you prefer 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is wrong with 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+? 
+\series bold
+It is biased
+\end_layout
+
+\begin_layout Enumerate
+Now, consider the estimator 
+\begin_inset Formula $\check{Y}=\left(\mu_{Y}+\bar{Y}\right)/2$
+\end_inset
+
+.
+ Why is this not a good estimator? (Hint: the answer has nothing to do with
+ efficiency, unbiasedness, or consistency.) 
+\series bold
+The estimator is based on the unknown quantity that you are trying to estimate!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consider the following estimated regression equation that describes the
+ relationship between a student's weight and height: 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =100+6.0\,HEIGHT\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A student has height 5.
+ What is the regression's prediction for that student's weight?
+\series bold
+ 100+6*5=130
+\end_layout
+
+\begin_layout Enumerate
+In the sample, the sample average of HEIGHT is 4.
+ What can you say about the sample average for WEIGHT? 
+\series bold
+124
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now, an additional variable is included, is ID, a student's SFU ID.
+ Obviously, this is a nonsensical variable to include: it is not in any
+ way related to a student's weight.
+ The new estimated regression equation is 
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\widehat{WEIGHT} & =101.5+5.98\,HEIGHT+0.02\,ID\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Someone's weight has nothing to do with their SFU ID.
+ Still, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ went up from 0.74 to 0.75.
+ How is this possible? 
+\series bold
+The R^2 never decreases
+\end_layout
+
+\begin_layout Enumerate
+If the post office box number is not related to a student's weight, should
+ the estimated coefficient not be equal to 0? How could it be that it is
+ 0.02? 
+\series bold
+Sampling variability.
+ Even if 
+\begin_inset Formula $\beta_{ID}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}_{ID}\sim\mathcal{N}\left(0,\sigma_{\hat{\beta}}^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ be a dummy variable.
+ Consider the model that consists of the equation 
+\begin_inset Formula 
+\[
+Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}D_{i}+\beta_{3}D_{i}X_{i}+u_{i}
+\]
+
+\end_inset
+
+and the standard OLS assumptions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw a graph to visualize this model.
+ 
+\series bold
+One graph, two lines.
+ One is labelled 
+\begin_inset Formula $E\left(Y_{i}|X_{i},D_{,i}=1\right)$
+\end_inset
+
+, the other 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left(Y_{i}|X_{i},D_{i}=0\right)$
+\end_inset
+
+
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ The horizontal axis is labelled 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ The two lines have different slopes, and different intercepts.
+ The intercepts (
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{0}+\beta_{2}$
+\end_inset
+
+) and slopes 
+\begin_inset Formula $\left(\beta_{1},\beta_{1}+\beta_{3}\right)$
+\end_inset
+
+ are clearly marked in the graph.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+? 
+\series bold
+Difference in slopes 
+\begin_inset Formula $\partial E\left(Y_{i}|X_{i},D_{,i}\right)/\partial X_{i}$
+\end_inset
+
+ between 
+\begin_inset Formula $E\left(Y_{i}|X_{i},D_{,i}=1\right)$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left(Y_{i}|X_{i},D_{i}=0\right)$
+\end_inset
+
+
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+[Based on SW, Exercise 8.7] This problem is inspired by the study of the
+ gender gap in top corporate jobs in Bertrand and Hallock (2001).
+ The study compares total compensation among top executives in a large set
+ of U.S.
+ public corporations in the 1990s.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $Female$
+\end_inset
+
+ be an indicator variable that is equal to 1 for females and to 0 for males.
+ A regression of the logarithm of earnings onto 
+\begin_inset Formula $Female$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=6.48-0.44Female
+\]
+
+\end_inset
+
+where the estimated regression coefficient 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ has a standard error of 
+\begin_inset Formula $0.05$
+\end_inset
+
+.
+ Explain what the 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ means.
+ 
+\series bold
+In expectation, c.p., women earn 44% less.
+\end_layout
+
+\begin_layout Enumerate
+Does this regression suggest that there is gender discrimination? Explain.
+ 
+\series bold
+No: omitted variables.
+\end_layout
+
+\begin_layout Enumerate
+Two new variables are added to the regression: 
+\begin_inset Formula $\log\left(MarketValue\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $MarketValue$
+\end_inset
+
+ is a measure of firm size, in millions; and 
+\begin_inset Formula $Return$
+\end_inset
+
+, the stock return, in percentage points.
+ The resulting estimated regression line is
+\begin_inset Formula 
+\[
+\widehat{\log\left(Earnings\right)}=3.68-0.28Female+0.37\log\left(MarketValue\right)+0.004Return
+\]
+
+\end_inset
+
+where the standard errors for the three regressors are 
+\begin_inset Formula $0.04$
+\end_inset
+
+, 
+\begin_inset Formula $0.004$
+\end_inset
+
+, and 
+\begin_inset Formula $0.003$
+\end_inset
+
+, respectively.
+ The coefficient estimate for 
+\begin_inset Formula $Female$
+\end_inset
+
+ has changed from 
+\begin_inset Formula $-0.44$
+\end_inset
+
+ to 
+\begin_inset Formula $-0.28$
+\end_inset
+
+.
+ Why has it changed? 
+\series bold
+Omitted variables in the first regression
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A mixed bag of questions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describe the difference between 
+\begin_inset Quotes eld
+\end_inset
+
+internal validity
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+external validity
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+Book
+\end_layout
+
+\begin_layout Enumerate
+List two threats to internal validity.
+ (The book lists five).
+ 
+\series bold
+Book
+\end_layout
+
+\begin_layout Enumerate
+What are the two conditions an instrumental variable must satisfy?
+\series bold
+ (1) Relevance and validity, OR (2) E
+\begin_inset Formula $\left(u_{i}|Z_{i}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $Cov\left(Z_{i},X_{i}\right)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+In the context of your second hand-in assignment, consider the following
+ code and output.
+ Why are there 
+\begin_inset Quotes eld
+\end_inset
+
+NA
+\begin_inset Quotes erd
+\end_inset
+
+s in the row for 
+\begin_inset Quotes eld
+\end_inset
+
+occ9
+\begin_inset Quotes erd
+\end_inset
+
+? 
+\series bold
+Multicollinearity / dummy variable trap.
+\end_layout
+
+\end_body
+\end_document

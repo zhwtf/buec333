@@ -1,0 +1,821 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\begin_modules
+sweave
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+BUEC-333, Fall 2012
+\begin_inset Newline newline
+\end_inset
+
+Hand-in assignment #2
+\begin_inset Newline newline
+\end_inset
+
+Solutions + Point distribution
+\end_layout
+
+\begin_layout Date
+Deadline: July 24, 14:30
+\end_layout
+
+\begin_layout Section*
+Rules
+\end_layout
+
+\begin_layout Enumerate
+Use the data that is provided on the course website
+\end_layout
+
+\begin_layout Enumerate
+Use R to answer the questions.
+ Other software is not accepted.
+\end_layout
+
+\begin_layout Enumerate
+Hand in a hardcopy of typed answers, font Times New Roman, font size 12.
+\end_layout
+
+\begin_layout Enumerate
+For 
+\series bold
+each
+\series default
+ question: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If applicable: copy-paste the code that you used to get that outcome: 
+\series bold
+without
+\series default
+ code, you get 
+\series bold
+0 points
+\end_layout
+
+\begin_layout Enumerate
+If applicable: copy-paste the R output supporting the answer (this might
+ involve tables and pictures)
+\end_layout
+
+\begin_layout Enumerate
+Type 
+\series bold
+2 or 3 lines 
+\series default
+of explanation: 
+\series bold
+fewer than 2 lines, or more than 3 lines: 0 points
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Part I: Unions
+\end_layout
+
+\begin_layout Standard
+Last Fall, the labor unions CUPE and TSSU were on strike.
+ One of the reasons to form a union, and one of the reasons to organize
+ a strike, is to increase your bargaining power in labor negotiations with
+ the employer.
+ It is sometimes believed that unions and strikes improve the wages of the
+ members of that union.
+ In this assignment, you are going to investigate the effects of unions
+ and strikes on wages empirically using linear regression in R.
+ Load the data for our analysis of unions.
+ A description of this data can be found in Table 1 of this paper: 
+\begin_inset CommandInset href
+LatexCommand href
+name "[link]"
+target "http://www2.dse.unibo.it/bontempi/didattica/PanelEPELM/vella-verbeek.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+## Load the "foreign" software
+\end_layout
+
+\begin_layout Plain Layout
+
+require(foreign)
+\end_layout
+
+\begin_layout Plain Layout
+
+require(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+## Download the data from my website and store it in a data.frame.
+\end_layout
+
+\begin_layout Plain Layout
+
+unionData <- read.dta("http://www.sfu.ca/~cmuris/2013-Summer-333/wagepan.dta")
+\end_layout
+
+\begin_layout Plain Layout
+
+## Delete missing data
+\end_layout
+
+\begin_layout Plain Layout
+
+unionData <- na.omit(unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get an idea about the data set, use 
+\begin_inset Quotes eld
+\end_inset
+
+str
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+summary
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+head
+\begin_inset Quotes erd
+\end_inset
+
+, etc.
+ Once you are familiar with the data, answer the following questions:
+\end_layout
+
+\begin_layout Enumerate
+There is no variable that contains the wage, as only the log of wage is
+ provided.
+ Generate a new variable, 
+\begin_inset Quotes eld
+\end_inset
+
+unionData$wage
+\begin_inset Quotes erd
+\end_inset
+
+, that contains the hourly wage in US dollars.
+
+\series bold
+ 1 point for the formula that follows or an alternative that gives the same
+ result.
+
+\series default
+ 
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+## Construct a new variable containing wage
+\end_layout
+
+\begin_layout Plain Layout
+
+unionData$wage <- exp(unionData$lwage)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(unionData$wage)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Make a scatterplot (you can use the package 
+\begin_inset Quotes eld
+\end_inset
+
+ggplot
+\begin_inset Quotes erd
+\end_inset
+
+, for example) of 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+ and the variable 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+, which measures whether somebody is a part of a union or not.
+ What do you conclude from this scatterplot? Does it make a difference when
+ you do it for the log og wage? [Include code and the plot you made.
+
+\series bold
+ 1 point for the obvious plot that follows, and then 1 point if they conclude
+ that (i) it is difficult to say anything based on that graph (ii) find
+ an alternative way to say something about the relationship.
+
+\series default
+ 
+\series bold
+-1 if they use 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+ without an explanation.
+\series default
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE,fig=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+require(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+qplot(union,wage,data=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Run a regression of 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Interpret the regression coefficient estimate for 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+3 points.
+ 1 point for the code+output, 1 point for the interpretation of coefficient
+ estimate, 1 point for the CI.
+ -1 if they forget 
+\begin_inset Quotes eld
+\end_inset
+
+ceteris paribus
+\begin_inset Quotes erd
+\end_inset
+
+.
+\series default
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reg <- lm(wage~union,data=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(reg)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Report the 90% confidence interval for the regression coefficient estimate
+ of union: what do you conclude? 
+\series bold
+1 point, by hand or using commands like 
+\begin_inset Quotes eld
+\end_inset
+
+conf.int
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Conclusion is about statistical significance, so that there is a true effect
+ of unions on wage.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+confint(reg,2,level=0.90)
+\end_layout
+
+\begin_layout Plain Layout
+
+0.86652+1.64*c(-.11216,.11216)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Do the same for 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+2 points.
+ -1 if the coefficient of union is not interpreted as a semi-elasticity.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reg.log <- lm(lwage~union,data=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(reg.log)
+\end_layout
+
+\begin_layout Plain Layout
+
+confint(reg.log,2,level=0.90)
+\end_layout
+
+\begin_layout Plain Layout
+
+0.179264+1.64*c(-.018584,.018584)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+I prefer the model with 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+ over the model with 
+\begin_inset Quotes eld
+\end_inset
+
+wage
+\begin_inset Quotes erd
+\end_inset
+
+.
+ However, there is a problem because we did not include any variables other
+ than 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Explain what the problems are with this, from a theoretical/statistical
+ point of view.
+ 
+\series bold
+1 point.
+ Omitted variable bias.
+ BONUS point for an example of such an omitted variable.
+ For example, 
+\begin_inset Quotes eld
+\end_inset
+
+age
+\begin_inset Quotes erd
+\end_inset
+
+ could be one: older people generally earn more, and are more likely to
+ be member of a union (?).
+\end_layout
+
+\begin_layout Enumerate
+Run a regression of 
+\begin_inset Quotes eld
+\end_inset
+
+lwage
+\begin_inset Quotes erd
+\end_inset
+
+ on union, hours, year, occ1, occ2, occ3, occ4, occ5, occ6, occ7, occ8,
+ occ9.
+ R refuses to give an estimate for the regression coefficient on occ9.
+ Why? 
+\series bold
+1 point.
+ Multicollinearity.
+ occ1+...+oc99=1.
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reg3 <- lm(lwage~union+hours+year+occ1+occ2+occ3+occ4+occ5+occ6+occ7+occ8+occ9,d
+ata=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(reg3)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Interpret the estimate of the regression coefficient of 
+\begin_inset Quotes eld
+\end_inset
+
+year
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\series bold
+1 point.
+ Everything else constant, wages have increased by 5.95% per year.
+\end_layout
+
+\begin_layout Enumerate
+I wonder whether I should include a person's work experience, as measured
+ by the variable 
+\begin_inset Quotes eld
+\end_inset
+
+exper
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Try it, and argue why it should or should not be included.
+ You can be informal.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reg4 <- lm(lwage~union+hours+year+exper+occ1+occ2+occ3+occ4+occ5+occ6+occ7+occ8+
+occ9,data=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(reg4)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+1 point.
+ I would accept several arguments here.
+ One would be: include, because coefficient estimate is statistically significan
+tly different from zero, and including it also affects the estimate for
+ 
+\begin_inset Quotes eld
+\end_inset
+
+union
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Well-explained reference to change in the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ are also acceptable.
+ Alternatively, it would be ok if they said not to include it, for example
+ because the sign does not make sense (you'd expect it to be positive).
+\end_layout
+
+\begin_layout Enumerate
+The relationship between wages and experience seems suspicious.
+ There may still be an omitted variable problem.
+ Include 
+\begin_inset Quotes eld
+\end_inset
+
+educ
+\begin_inset Quotes erd
+\end_inset
+
+.
+ What do you conclude about education and experience, and their relationship
+ with wages.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+reg5 <- lm(lwage~union+hours+year+exper+educ+occ1+occ2+occ3+occ4+occ5+occ6+occ7+
+occ8+occ9,data=unionData)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(reg5)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+2 points.
+ EDUC was an omitted variable.
+ It is negatively correlated with work experience (the years you spent in
+ school detract from your years of work experience) and we expect it to
+ matter for wages, also after conditioning on work experience.
+ Conclude that both the years of schooling and work experience have positive
+ effects on a person's wages, in expectation, ceteris paribus.
+\end_layout
+
+\begin_layout Enumerate
+Are unions good for employees' wages? 
+\series bold
+2 points.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,20 @@
+---
+title: ""
+---
+
+<br><br><br>
+
+Use these old exams with *extreme caution*. Summer 2016 deviates substantially from the way I taught this course until now. The exams from 2012 are particularly unrepresentative.
+
+* [Summer 2015, Test 1 ](./exams/20150603-BUEC333-Test1-Sol.pdf)
+* [Summer 2015, Test 2](./exams/20150603-BUEC333-Test2-withsols.pdf)
+* [Summer 2015, Test 3](./exams/20150805-BUEC333-Test3-sols.pdf)
+* [Summer 2014, midterm](./exams/20140619_midterm333_answers.pdf)
+* [Summer 2014, final](./exams/20140806-FInal-answers.pdf)
+* [Summer 2013, midterm](./exams/20130613_midterm333_sols.pdf)
+* [Summer 2013, final](./exams/20130808_final333.pdf), and [answers](./exams/20130808_Answers_Final_333.pdf)
+* [Fall 2012, midterm](./exams/20121015_midterm333_A_sols.pdf)
+* [Fall 2012, final](./exams/201212-buec333-fall-2012-final.pdf)
+* [Spring 2012, midterm](./exams/20120224_midterm_BUEC333_spring2012.pdf), [solutions](./exams/20120224_midterm_BUEC333_spring2012_sol.pdf)
+* [Spring 2012, final](./exams/201204-buec333-spring-2012-d200-final.pdf), [answers](./exams/201204-buec333-spring-2012-d200-final-solutions.pdf)
+
