@@ -49,6 +49,8 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * In-class exercises: 2.2, 2.6, 2.10, 2.22
 * Tutorial exercises: No tutorials, but you are welcome to my office hours with questions about next week's tutorial exercises.
 * Lab: No labs, but see next week's if you want a head start.
+* More material:
+  - [intro slides](./slides/week1-intro.pdf)
 
 ##### Week 2
 
