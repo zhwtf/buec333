@@ -22,3 +22,7 @@ I will demonstrate using R during the lectures, there are dedicated computer lab
 #### Hand-in assignments
 
 TBD.
+
+#### In-class code
+
+TBA.
