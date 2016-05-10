@@ -7,13 +7,15 @@ title: ""
 
 This is the course website for BUEC 333, Summer 2016. 
 
-<br><br>
+<br>
 
 * My office: WMC 3639
 * My office hours: Thursdays, 10:00-12:00.
 * Email: Do not email me. Talk to me before or after class, in the breaks, or during my office hours.
 * [Syllabus](./admin/Syllabus-BUEC333-Summer2016.pdf)
 * [Regrade request form](./admin/regradingForm.pdf)
+
+<br>
 
 #### Schedule
 
