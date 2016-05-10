@@ -5,11 +5,25 @@ title: ""
 <br>
 <br>
 
-This is the course website for BUEC 333, Summer 2016. Please check back often for updates.
+This is the course website for BUEC 333, Summer 2016. 
 
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">...</a>
-</div>
+#### Schedule
+
+| Week of  |         | Topic                          | Event     |
+|----------|---------|--------------------------------|-----------|
+| May 9    | Week 1  | Probability Theory             |           |
+| May 16   | Week 2  | Sampling                       |           |
+| May 23   | Week 3  | Statistics                     |           |
+| May 30   | Week 4  | Linear regression: Mechanics   |           |
+| June 6   | Week 5  | Linear regression: Statistics  |           |
+| June 13  | Test 1  |                                | Test 1    |
+| June 20  | Week 6  | Multiple linear regression     | Hand-in 1 |
+| June 27  | Week 7  | Multiple linear regression (2) |           |
+| July 4   | Week 8  | Validity                       |           |
+| July 11  | Week 9  | Instrumental variables         |           |
+| July 18  | Week 10 | Time series                    |           |
+| July 25  | Test 2  |                                | Test 2    |
+| August 1 | Week 11 | To be determined               | Hand-in 2 |
 
 <br>
 
