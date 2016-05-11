@@ -508,8 +508,25 @@ status collapsed
 
 \end_inset
 
- Goal: To help you read Stock and Watson.
- Three parts
+ 
+\series bold
+Goal
+\series default
+: To help you read Stock and Watson.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{1cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
