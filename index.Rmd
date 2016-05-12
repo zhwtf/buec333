@@ -48,9 +48,9 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Introduction and Probability theory.
 * Self-study: 1, 2.1, 2.2 (skip "Other measures...")
-* In-class: 2.3, 2.4 (only "Normal distribution")
-* In-class exercises: 2.2, 2.6, 2.10, 2.22
-* Tutorial exercises: No tutorials, but you are welcome to my office hours with questions about next week's tutorial exercises.
+* In-class: 2.3 (skip: "Means and sums of random variables")
+* In-class exercises: 2.2, 2.6
+* Tutorial exercises: No tutorials, see "Week 1" under Week 2's tutorials.
 * Lab: No labs, but see next week's if you want a head start.
 * More material:
     - [intro slides](./slides/week1-intro.pdf)
@@ -59,16 +59,18 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Sampling
 * Self-study: 2.5
-* In-class: 2.6, 3.1
-* In-class exercises: TBD
-* Tutorial exercises: 2.1, 2.3, 2.7, 2.9, 2.20, 2.26
+* In-class: 2.3 ("Means and sums of random variables"), 2.4 ("Normal distribution"), 2.6, 3.1
+* In-class exercises: 2.10 (a)+(c), 2.22, 2.17
+* Tutorial exercises: 
+    - Related to Week 1: 2.1, 2.9, 2.20
+    - Related to week 2: 2.3, 2.7, 2.10(b)+(d), 2.18, 2.23
 * Lab: Follow steps 1-5 (or 6!) at [swirl](http://swirlstats.com/students.html) and go through the course "R Programming"
 
 ##### Week 3
 
 * Topic: Statistics
-* Self-study: TBD
-* In-class: TBD
+* Self-study: 3.2
+* In-class: 3.3, 3.4, 3.5
 * In-class exercises: TBD
 * Tutorial exercises: TBD
 * Lab: TBD
