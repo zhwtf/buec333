@@ -72,11 +72,11 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 ##### Week 3
 
 * Topic: Statistics
-* Self-study: 3.1
-* In-class: 3.2, 3.3, 3.4
-* In-class exercises: TBD
-* Tutorial exercises: TBD
-* Lab: Finish the "R "
+* Self-study: 3.2 (skip "One-sided alternatives")
+* In-class: 3.1, 3.3, 3.4
+* In-class exercises: 3.5, 3.10, 3.13
+* Tutorial exercises: 3.1, 3.3, 3.4, 3.8, 3.9, 3.16
+* Lab: Finish the "R Programming" course in Swirl. 
 
 ##### Week 4
 
