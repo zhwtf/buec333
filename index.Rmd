@@ -65,15 +65,18 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
     - Related to Week 1: 2.1, 2.9, 2.20
     - Related to week 2: 2.3, 2.7, 2.10(b)+(d), 2.18, 2.23
 * Lab: Follow steps 1-5 (or 6!) at [swirl](http://swirlstats.com/students.html) and go through the course "R Programming"
+* More material:
+    - [CLT demonstration](http://blog.vctr.me/posts/central-limit-theorem.html)
+    - Expectation of $Y=aX+b$ for a continnuous RV $X$: [pdf](./notes/expectation-of-a-linear-transformation-of-a-continuous-random-variable.pdf)
 
 ##### Week 3
 
 * Topic: Statistics
-* Self-study: 3.2
-* In-class: 3.3, 3.4, 3.5
+* Self-study: 3.1
+* In-class: 3.2, 3.3, 3.4
 * In-class exercises: TBD
 * Tutorial exercises: TBD
-* Lab: TBD
+* Lab: Finish the "R "
 
 ##### Week 4
 
