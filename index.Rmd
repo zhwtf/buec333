@@ -33,8 +33,8 @@ This is the course website for BUEC 333, Summer 2016.
 | June 13  | Test 1  |                                | Test 1    |
 | June 20  | Week 6  | Multiple linear regression     | Hand-in 1 |
 | June 27  | Week 7  | Multiple linear regression (2) |           |
-| July 4   | Week 8  | Validity                       |           |
-| July 11  | Week 9  | Instrumental variables         |           |
+| July 4   | Week 8  | Instrumental variables      |           |
+| July 11  | Week 9  | Validity          |           |
 | July 18  | Week 10 | Time series                    |           |
 | July 25  | Test 2  |                                | Test 2    |
 | August 1 | Week 11 | To be determined               | Hand-in 2 |

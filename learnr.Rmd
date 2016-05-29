@@ -6,7 +6,6 @@ title: "Hand-in assignments"
 
 In this course, you will learn how to use a statistical computing environment called "R" to implement the tools you learn in this course. 
 
-
 We use R, with RStudio, because it is free, and because it works on all major operating systems (OSX, Linux, Windows). 
 
 I will demonstrate using R during the lectures, there are dedicated computer labs, and there are two hand-in assignments. This page provides additional details. 
@@ -21,8 +20,4 @@ I will demonstrate using R during the lectures, there are dedicated computer lab
 
 #### Hand-in assignments
 
-TBD.
-
-#### In-class code
-
-TBA.
+[Hand-in assignment 1](./assignments/Handin-1.pdf)
