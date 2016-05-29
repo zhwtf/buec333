@@ -128,7 +128,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 ##### Week 8
 
-* Topic: Internal and external validity
+* Topic: Instrumental variables
 * Self-study: TBD
 * In-class: TBD
 * In-class exercises: TBD
@@ -137,7 +137,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 ##### Week 9
 
-* Topic: Instrumental variables
+* Topic: Internal and external validity
 * Self-study: TBD
 * In-class: TBD
 * In-class exercises: TBD
