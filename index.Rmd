@@ -93,6 +93,8 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * Lab: You will learn 
     - basic data operations (load, arrange/organize, and subset data)
     - computing summary statistics of variables: mean, variance, ...
+* Additional material:
+    - Here is a great (but slightly outdated) video on RMarkdown: [video](https://youtu.be/-apyD5f9nwg)
 
 
 ##### Week 5
