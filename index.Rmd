@@ -87,7 +87,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Linear regression: Mechanics
 * Self-study: 4.1
-* In-class: 4.2, 4.3, 4.4
+* In-class: 4.2, 4.3
 * In-class exercises: 4.4, 4.5, 4.7
 * Tutorial exercises: 4.1, 4.2, 4.3, 4.9
 * Lab: You will learn 
@@ -101,7 +101,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Linear regression: Statistics
 * Self-study: 4.5
-* In-class: 5.1, 5.2, 5.3
+* In-class: 4.4,e5.1, 5.2, 5.3
 * In-class exercises: TBD
 * Tutorial exercises: TBD
 * Lab: You will learn about visualization, and about regression. 

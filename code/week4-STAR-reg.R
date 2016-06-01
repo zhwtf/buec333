@@ -103,6 +103,7 @@ ggsave("nice_plot.pdf",width=10,height=10)
 ?lm
 
 ols_classsize <- lm(testscr ~ class_size,data=school_df)
+#                     Y         X
 summary(ols_classsize)
 
 # Based on today's lecture,
