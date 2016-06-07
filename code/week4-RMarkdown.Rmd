@@ -1,6 +1,6 @@
 ---
 title: "Hand-in assignment 0"
-author: "Chris Muris"
+author: "Chris Muris, SFU ID 301112345, Section D203"
 date: "May 31, 2016"
 output: html_document
 ---

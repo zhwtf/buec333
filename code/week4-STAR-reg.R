@@ -88,7 +88,7 @@ cbind(colMeans(small_df[,vars]),
 #   class size.
 
 plot <- ggplot(data=school_df,aes(x=class_size,y=testscr)) +
-           geom_point() + 
+           geom_point() +
            geom_smooth(method="lm",se=FALSE)
 
 plot

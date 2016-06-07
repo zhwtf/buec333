@@ -14,7 +14,7 @@ This is the course website for BUEC 333, Summer 2016.
 * No email: talk to me before or after class, in the breaks, or during my office hours.
 * [Syllabus](./admin/Syllabus-BUEC333-Summer2016.pdf)
 * [Regrade request form](./admin/regradingForm.pdf)
-* Open labs: In WMC's second floor lab, starting week 4, with
+* Open labs: In WMC 2506, from week 4, with
     - Tim on Wednesdays 14:30-17:20
     - Meiyu on Fridays 13:30-16:20
    
@@ -93,21 +93,23 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * Lab: You will learn 
     - basic data operations (load, arrange/organize, and subset data)
     - computing summary statistics of variables: mean, variance, ...
-* Additional material:
+* More material:
     - Here is a great (but slightly outdated) video on RMarkdown: [video](https://youtu.be/-apyD5f9nwg)
+    - In-class R [code](./code/week4-STAR-reg.R), and a bit of [Markdown](./code/week4-RMarkdown.Rmd)
 
 
 ##### Week 5
 
 * Topic: Linear regression: Statistics
 * Self-study: 4.5
-* In-class: 4.4,e5.1, 5.2, 5.3
+* In-class: 4.4, 5.1, 5.2, 5.3
 * In-class exercises: TBD
 * Tutorial exercises: TBD
 * Lab: You will learn about visualization, and about regression. 
     - plots and interpretation
     - predict outcomes based on observed data
     - regressions: run, display and interpret results, confidence intervals and testing
+    - [script](./labfiles/BasicExercises2.R) and [data](./labfiles/testdata.csv)
 
 
 ##### Week 6
