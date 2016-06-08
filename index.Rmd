@@ -15,8 +15,8 @@ This is the course website for BUEC 333, Summer 2016.
 * [Syllabus](./admin/Syllabus-BUEC333-Summer2016.pdf)
 * [Regrade request form](./admin/regradingForm.pdf)
 * Open labs: In WMC 2506, from week 4, with
-    - Tim on Wednesdays 14:30-17:20
-    - Meiyu on Fridays 13:30-16:20
+    - D100: Tim on Wednesdays 14:30-17:20
+    - D200: Meiyu on Fridays 13:30-16:20
    
 <br>
 <br>
