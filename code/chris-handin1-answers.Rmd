@@ -1,0 +1,48 @@
+---
+title: "Hand in assignment 1"
+author: 'Chris Muris, SFU ID, Section #'
+date: "June 9, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Empirical exercises 3.1
+
+In this exercise, I am going to ...
+
+First, I load the data into R, and compute the average hourly wages in 1992 and 2002.
+
+```{r}
+require(haven)
+CPS_data <- read_dta("cps92_12.dta")
+
+# ahe = average hourly earnings
+# Average earnings for everybody in the sample
+mean(CPS_data$ahe)
+
+# Average for people in 2012
+mean(CPS_data$ahe[CPS_data$year==1992])
+mean(CPS_data$ahe[CPS_data$year==2012])
+
+```
+
+I conclude that the average hourly earnings (ahe) in 1992 are 11.62 and that they increased to 19.80 in 2012.
+
+Next, we compute the standard deviation for ahe in 1992 and in 2012.
+
+```{r}
+s_ahe_92 <- sd(CPS_data$ahe[CPS_data$year==1992])
+s_ahe_12 <- sd(CPS_data$ahe[CPS_data$year==2012])
+print(c(s_ahe_92,s_ahe_12))
+```
+
+The standard deviation has also increased! We are now going to use the standard deviation to construct a confidence interval.
+
+
+
+## Next section
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word 
