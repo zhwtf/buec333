@@ -10,7 +10,8 @@ require(ggplot2)
 ## Load and inspect the data, 
 wageData <- read.dta("WAGE1.DTA")
 wageData$female <- as.factor(wageData$female)
-summary(wageData)
+#summary(wageData)
+mean(wageData$wage)
 
 ##################################
 ## Data from 1976, USA (Current POpulation Survey), 526 workers.

@@ -1,0 +1,31 @@
+---
+title: "Hand-in assignment 1"
+author: "Chris Muris, 301185530, Section D109"
+date: "June 9, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+In question 1, we are asked to compute the average wage... 
+
+First, I will load the data.
+
+```{r}
+## Clear workspace, load packages
+rm(list=ls())
+require(foreign)
+require(ggplot2)
+
+## Load and inspect the data, 
+wageData <- read.dta("WAGE1.DTA")
+wageData$female <- as.factor(wageData$female)
+#summary(wageData)
+mean(wageData$wage)
+```
+
+I conclude that the average wage in this sample is 5.8961.

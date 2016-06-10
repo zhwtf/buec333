@@ -1,0 +1,36 @@
+---
+title: "Hand in assignment 1"
+author: "Obaid"
+date: "June 9, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Empirical Exercise 3.1
+
+In the first question, we are asked to construct a confidence interval for the average wage. Below, I load the data and construct the 95% confidence interval.
+
+```{r}
+rm(list=ls())
+#install.packages("foreign")
+require(foreign)
+CPS_data <- read.dta("cps92_08.dta")
+
+# Compute average hourly earnings
+Xbar <- mean(CPS_data$ahe)
+
+# Get the SE
+se_Xbar <- sqrt(var(CPS_data$ahe) / nrow(CPS_data))
+
+# Confidence intervals
+c(Xbar-1.96*se_Xbar,Xbar+1.96*se_Xbar)
+```
+
+For this sample, the 95% confidence interval is given by 15.18 to 15.47.
+
+## Question 4.1
+
+Blah blah.
