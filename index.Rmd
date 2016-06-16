@@ -115,46 +115,54 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 ##### Week 6
 
 * Topic: Multiple linear regression
-* Self-study: TBD
-* In-class: TBD
-* In-class exercises: TBD
-* Tutorial exercises: TBD
-* Lab: TBD
+* Self-study: Sections 6.1 and 6.2
+* In-class: Sections 6.3, 6.4, 6.5, 6.6, 6.7
+* In-class exercises: 6.5 and 6.6
+* Tutorial exercises: 6.1, 6.2, 6.3, 6.4, 6.9
+* Lab: Final week for HI1.
 
 ##### Week 7
 
-* Topic: Multiple linear regression (2)
-* Self-study: TBD
-* In-class: TBD
-* In-class exercises: TBD
-* Tutorial exercises: TBD
+* Topic: MLR (2), nonlinear regression
+* Self-study: 7.1, 7.5, 7.6
+* In-class: 8.1, 8.2, 8.3 (until "Interactions between two continuous variables")
+* In-class exercises: 7.11, 8.7
+* Tutorial exercises: 7.1, 7.2, 7.3, 7.5, 8.1, 8.2 
 * Lab: TBD
 
 ##### Week 8
 
 * Topic: Instrumental variables
-* Self-study: TBD
-* In-class: TBD
-* In-class exercises: TBD
-* Tutorial exercises: TBD
+* Self-study: 12.1
+* In-class: 12.2, 12.4, 12.5
+* In-class exercises: Wooldridge 15.2 and 15.7 
+* Tutorial exercises: 12.2, 12.9
 * Lab: TBD
 
 ##### Week 9
 
 * Topic: Internal and external validity
-* Self-study: TBD
-* In-class: TBD
-* In-class exercises: TBD
-* Tutorial exercises: TBD
+* Self-study: 9.1, 9.2, 9.3, 9.4
+* In-class: Exercises only (week 9 + recap weeks 6-8)
+* In-class exercises: (Wk 9:) 9.6, (Wk 6:) 6.6, (Wk 7:) 8.4, 8.5. Old exams: Summer 2015, Test 3, questions 4 and 6.
+* Tutorial exercises: 9.1, 9.2, 9.7, 9.11
 * Lab: TBD
 
 ##### Week 10
 
-* Topic: Time series
+* Topic: Panel data
+* Self-study: Section 10.1
+* In-class: Sections 10.2, 10.3, 10.4, 10.5
+* In-class exercises: Section 10.6
+* Tutorial exercises: 10.3, ...
+* Lab: TBD
+
+#### Week 11
+
+* Topic: Time series, or other (by request)
 * Self-study: TBD
 * In-class: TBD
 * In-class exercises: TBD
 * Tutorial exercises: TBD
 * Lab: TBD
-
 
