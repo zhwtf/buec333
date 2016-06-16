@@ -4,8 +4,10 @@ title: ""
 
 <br><br><br>
 
-Use these old exams with *extreme caution*. Summer 2016 deviates substantially from the way I taught this course until now. The exams from 2012 are particularly unrepresentative.
+Use these old exams with *extreme caution*. The current version of this course deviates substantially from the way I taught this course until now. The exams from 2012 are particularly unrepresentative.
 
+* [Summer 2015, Test1 D100](./exams/20160613-BUEC333-D100-Test1.pdf)
+* [Summer 2015, Test1 D200 with solutions](./exams/20160613-BUEC333-D200-Test1_Solutions.pdf)
 * [Summer 2015, Test 1 ](./exams/20150603-BUEC333-Test1-Sol.pdf)
 * [Summer 2015, Test 2](./exams/20150603-BUEC333-Test2-withsols.pdf)
 * [Summer 2015, Test 3](./exams/20150805-BUEC333-Test3-sols.pdf)

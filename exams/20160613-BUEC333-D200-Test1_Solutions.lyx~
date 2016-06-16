@@ -1,0 +1,968 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+BUEC 333-D200, Test 1
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+June 15, 2016, 14:30-17:20
+\end_layout
+
+\begin_layout Section
+Week 1: Probability theory
+\end_layout
+
+\begin_layout Standard
+Consider the joint probability distribution of the random variables 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ given in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:jointPDF"
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=1$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=2$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{2}=3$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}=0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}=1$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Joint probability distribution of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:jointPDF"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+What is the probability that 
+\begin_inset Formula $X_{1}=0$
+\end_inset
+
+ given that 
+\begin_inset Formula $X_{2}=2$
+\end_inset
+
+? 
+\series bold
+P(X1=0|X2=2)=P(X1=0,X2=2)/P(X2=2)=0.1/(0.1+0.3)=0.25
+\end_layout
+
+\begin_layout Enumerate
+What is the conditional expectation of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ given that 
+\begin_inset Formula $X_{2}=2$
+\end_inset
+
+? 
+\series bold
+P(X1=1|X2=2)=1-P(X1=0|X2=2)=0.75.
+ So E(X1|X2=2)=0.75
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\text{Var}\left(\left.X_{1}\right|X_{2}=3\right)$
+\end_inset
+
+.
+ 
+\series bold
+Since P(X1=0|X2=3)=1, the conditional variance is 0.
+\end_layout
+
+\begin_layout Enumerate
+Compute the covariance between 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+ Get as far as you can without a calculator.
+ 
+\series bold
+E(X1)=0.6.
+ E(X2)=0.5+2*0.4+3*0.1=1.6.
+ Cov(X1,X2)=0.2*(1-1.6) ...
+\end_layout
+
+\begin_layout Section
+Week 2: Sampling
+\end_layout
+
+\begin_layout Standard
+Suppose that 
+\begin_inset Formula $Y_{1},\cdots,Y_{n}$
+\end_inset
+
+ are independent random variables with a common mean 
+\begin_inset Formula $\mu_{Y}$
+\end_inset
+
+, but with different variances: 
+\begin_inset Formula 
+\begin{align*}
+\text{Var}\left(Y_{1}\right) & =\sigma_{1}^{2}\\
+\text{Var}\left(Y_{2}\right) & =\sigma_{2}^{2}\\
+\vdots\\
+\text{Var}\left(Y_{n}\right) & =\sigma_{n}^{2}
+\end{align*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Are the random variables 
+\begin_inset Formula $\left(Y_{1},\cdots,Y_{n}\right)$
+\end_inset
+
+ i.i.d.? 
+\series bold
+No, they are not 
+\begin_inset Quotes eld
+\end_inset
+
+identical
+\begin_inset Quotes erd
+\end_inset
+
+, as they have different variances.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $n=3$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $E\left(\bar{Y}\right)=\mu_{Y}$
+\end_inset
+
+.
+ 
+\series bold
+E((Y1+Y2+Y3)/3)=1/3*(E(Y1)+E(Y2)+E(Y3)=1/3*3*mu=mu.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $n=2$
+\end_inset
+
+.
+ What is the variance of the sample mean 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+? 
+\series bold
+Var(1/2*Y1 + 1/2*Y2)=1/4 sigma^2_1+1/4 sigma^2_2
+\end_layout
+
+\begin_layout Enumerate
+For qeustions 4 and 5, assume that 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and that 
+\begin_inset Formula $\sigma_{1}^{2}=1$
+\end_inset
+
+ and that 
+\begin_inset Formula $\sigma_{2}^{2}=100.$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Consider the estimator 
+\begin_inset Formula $\tilde{Y}=Y_{1}$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+ unbiased? 
+\series bold
+Yes, since E(Y-tilde)=E(Y1)=mu_Y
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\tilde{Y}$
+\end_inset
+
+ is more efficient than 
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+.
+ 
+\series bold
+Var(Y-tilde)=Var(Y1)=sigma^2_1=1.
+ Using (3), Var(Y-bar)=100/4+1/4=25.25>1.
+ Since Var(Y-tilde)<Var(Y-bar), T-tilde is more efficient.
+\end_layout
+
+\begin_layout Section
+Week 3: Statistics
+\end_layout
+
+\begin_layout Standard
+For this question, remember that a Bernoulli random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ has 
+\begin_inset Formula $\text{Var}\left(Y\right)=p\left(1-p\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $p=P\left(Y=1\right)$
+\end_inset
+
+.
+ Therefore, given an estimator 
+\begin_inset Formula $\hat{p}$
+\end_inset
+
+ for 
+\begin_inset Formula $p$
+\end_inset
+
+, the estimator for the variance is 
+\begin_inset Formula $s_{Y}=\hat{p}\left(1-\hat{p}\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Would you use the library more if the hours were extended?
+\begin_inset Quotes erd
+\end_inset
+
+ In a random sample of 100 SFU freshmen, a sample proportion of 
+\begin_inset Formula $\hat{p}_{1}=0.5$
+\end_inset
+
+ answered that they would use the library more.
+ A random sample of 
+\begin_inset Formula $100$
+\end_inset
+
+ SFU sophomores was also obtained.
+ Out of them, 80 responded that they would use the library more, for a sample
+ proportion of 
+\begin_inset Formula $\hat{p}_{2}=0.8$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Denote by 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ the population proportion of SFU freshmen that would use the library more
+ if hours were extended.
+ Construct a 95% confidence interval for 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+.
+ (As far as you can get without a calculator.) 
+\series bold
+Lower bound of 95%-CI is given by X-bar - 1.96 SE(X) which in this case is
+ p-hat - 1.96*phat(1-phat)/sqrt(n) = 0.5-1.96*0.5*(0.5) / 10.
+ Similar for upper bound.
+\end_layout
+
+\begin_layout Enumerate
+Test the null hypothesis 
+\begin_inset Formula $H_{0}:p_{1}=0.10$
+\end_inset
+
+ against the two-sided alternative 
+\begin_inset Formula $H_{1}:p_{1}\neq0.10$
+\end_inset
+
+.
+ (Answer this question without computing the 
+\begin_inset Formula $p-$
+\end_inset
+
+value: you do not have access to the book's Table 1!) 
+\series bold
+From your
+\end_layout
+
+\begin_layout Enumerate
+What is the probability that 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+, the true population proportion, is in the interval computed in (1)? If
+ you did not answer the previous question, assume that the correct answer
+ is 
+\begin_inset Formula $[0.4,0.6]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+How would you test whether there is a statistically significant difference
+ between freshmen and sophomores in their response?
+\end_layout
+
+\begin_layout Section
+Week 4: Linear regression (mechanics)
+\end_layout
+
+\begin_layout Standard
+You are given the following random sample:
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sample for week 4 question.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For this sample:
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the sum of squared residuals.
+\end_layout
+
+\begin_layout Enumerate
+Without changing the values of 
+\begin_inset Formula $X_{1},X_{2},X_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+, give values for 
+\begin_inset Formula $Y_{2},Y_{3}$
+\end_inset
+
+ that give 
+\begin_inset Formula $R^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Week 5: Linear regression (statistics)
+\end_layout
+
+\begin_layout Standard
+The questions is about the results of a regression of the weight of infants
+ (newborn babies) and the smoking behavior of the mother.
+ We have data on 
+\begin_inset Formula $n=1388$
+\end_inset
+
+ pregnancies.
+ The dependent variable is 
+\begin_inset Formula $bwght$
+\end_inset
+
+, the weight of the baby when it is born, in ounces.
+ The explanatory variable is 
+\begin_inset Formula $cigs$
+\end_inset
+
+, the number of cigarettes smoked per day by the mother.
+ We obtain the following results:
+\begin_inset Formula 
+\begin{align*}
+\widehat{bwght} & =119.77-0.5\times cigs\\
+ & \,\,\,\,\,\,\,\,\,\left(20.6\right)\,\,\,\left(0.1\right).
+\end{align*}
+
+\end_inset
+
+Answer the following questions:
+\end_layout
+
+\begin_layout Enumerate
+The underlying model is 
+\begin_inset Formula $bwght_{i}=\beta_{0}+\beta_{1}\times cigs_{i}+u_{i}$
+\end_inset
+
+.
+ Give two examples of factors that are captured by 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Use factors that are specific to this example, so 
+\begin_inset Quotes eld
+\end_inset
+
+it is an error term
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+other stuff
+\begin_inset Quotes erd
+\end_inset
+
+ are not correct answers.
+ 
+\end_layout
+
+\begin_layout Enumerate
+State Least Squares Assumption 1 using either math or words.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Construct a 95% confidence interval for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+, assuming that Assumption 1 holds?
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+, assuming that Assumption 1 does not hold?
+\end_layout
+
+\begin_layout Section
+Self-study
+\end_layout
+
+\begin_layout Enumerate
+[Section 4.5] Under the Least Squares Assumptions, what is the expectation
+ of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+? Is 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ consistent?
+\end_layout
+
+\begin_layout Enumerate
+What is a cumulative probability distribution? Use math and words.
+\end_layout
+
+\end_body
+\end_document

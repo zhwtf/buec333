@@ -1,0 +1,204 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Cheat sheet for BUEC 333, Summer 2016
+\end_layout
+
+\begin_layout Section*
+Key Concept 2.3
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X,$
+\end_inset
+
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ be random variables, let 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{x}^{2}$
+\end_inset
+
+ be the mean and variance of 
+\begin_inset Formula $X$
+\end_inset
+
+, let 
+\begin_inset Formula $\sigma_{XY}$
+\end_inset
+
+ be the covariance between 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ (and so forth for the other variables), and let 
+\begin_inset Formula $a,$
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+, and 
+\begin_inset Formula $c$
+\end_inset
+
+ be constants.
+ The following facts follow from the definitions of the mean, variance,
+ and covariance: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+E(a+bX+cY) & =a+b\mu_{X}+c\mu_{Y},\\
+\text{Var}\left(aX+bY\right) & =a^{2}\sigma_{X}^{2}+2ab\sigma_{XY}+b^{2}\sigma_{Y}^{2},\\
+E\left(Y^{2}\right) & =\sigma_{Y}^{2}+\mu_{Y}^{2},\\
+\text{Cov}\left(a+bX+cV,Y\right) & =b\sigma_{XY}+c\sigma_{VY},\\
+E\left(XY\right) & =\sigma_{XY}+\mu_{X}\mu_{Y},\text{ and }
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Other formulas
+\end_layout
+
+\begin_layout Enumerate
+The OLS estimators:
+\begin_inset Formula 
+\begin{align*}
+\hat{\beta}_{0} & =\bar{Y}-\hat{\beta}_{1}\bar{X}\\
+\hat{\beta_{1}} & =\frac{\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)\left(Y_{i}-\bar{Y}\right)}{\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The standard error of the regression:
+\begin_inset Formula 
+\[
+SER=\sqrt{SSR/(n-2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Critical values for confidence intervals
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+90%: 1.64
+\end_layout
+
+\begin_layout Enumerate
+95%: 1.96
+\end_layout
+
+\begin_layout Enumerate
+99%: 2.58
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
