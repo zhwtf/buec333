@@ -144,7 +144,11 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * Topic: Internal and external validity
 * Self-study: 9.1, 9.2, 9.3, 9.4
 * In-class: Exercises only (week 9 + recap weeks 6-8)
-* In-class exercises: (Wk 9:) 9.6, (Wk 6:) 6.6, (Wk 7:) 8.4, 8.5. Old exams: Summer 2015, Test 3, questions 4 and 6.
+* In-class exercises: 
+    - Wk 9: 9.6
+    - Wk 6: 6.6
+    - Wk 7: 8.4, 8.5
+    - Old exams: Summer 2015, Test 3, Q4+6
 * Tutorial exercises: 9.1, 9.2, 9.7, 9.11
 * Lab: TBD
 
@@ -157,7 +161,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * Tutorial exercises: 10.3, ...
 * Lab: TBD
 
-#### Week 11
+##### Week 11
 
 * Topic: Time series, or other (by request)
 * Self-study: TBD
