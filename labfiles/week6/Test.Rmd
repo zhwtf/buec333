@@ -1,0 +1,64 @@
+---
+title: "Test Document"
+author: "Tim Schulz"
+date: "June 15, 2016"
+output: html_document
+---
+
+
+
+## Example Table 1
+
+Column 1    Column 2    Column 3
+--------- ----------  -----------
+left      right       centre
+0         1           2
+`code`    text        'blah'
+
+Table: This is the caption
+
+
+## Example 2
+
+----------    ----------    ----------    ----------
+       now    the             first             line
+determines    the           text          allignment.
+Just need     a dashed      line in the   end.
+----------    ----------    ----------    ----------
+
+Table: Another Caption
+
+
+## Example 3
+
+--------------------------------------------------
+Left                  Centre                 Right
+Header                Header                Header
+------------      -------------     --------------
+First             row               Some multiline
+                                    content. Just
+                                    need enough
+                                    text in here.
+                                    
+Second            row               Another two
+                                    lines
+--------------------------------------------------
+
+Table: This caption can also go over
+multiple lines.
+
+
+## Example 4
+
++---------------+--------------+---------------+
+| Header 1      | Header 2     | Header 3      |
++===============+==============+===============+
+| Some          | text         |  something    |
+|               |              |  coverting    |
+|               |              |  multiple     |
+|               |              |  lines        |
++---------------+--------------+---------------+
+|some more      | stuff        |               |
++---------------+--------------+---------------+
+
+: Caption

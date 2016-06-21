@@ -120,6 +120,8 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * In-class exercises: 6.5 and 6.6
 * Tutorial exercises: 6.1, 6.2, 6.3, 6.4, 6.9
 * Lab: Final week for HI1.
+    - [script](./labfiles/week5/script.R)
+    - [Markdown](./labfiles/week5/Test.Rmd)
 
 ##### Week 7
 
