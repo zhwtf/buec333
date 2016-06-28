@@ -130,7 +130,11 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * In-class: 8.1, 8.2, 8.3 (until "Interactions between two continuous variables")
 * In-class exercises: 7.11, 8.7
 * Tutorial exercises: 7.1, 7.2, 7.3, 7.5, 8.1, 8.2 
-* Lab: TBD
+* Lab: Focus on questions 6.1 and 7.1 in your hand-in assignment.
+* More material
+    - Hockey player salary [script](./code/week7-1-hockey.R) and [hockey data](./code/NHL1998-99.csv) + [yield data](./code/yield.txt)
+    - Quadratic regression [script](./code/week7-2-nonlinear-yield.R)
+    - Log wage regression [script](./code/week7-3-logs.R), [data1](./code/WAGE1.DTA), [data2](./code/WAGE2.DTA)
 
 ##### Week 8
 

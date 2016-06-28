@@ -3,6 +3,7 @@
 rm(list=ls())
 require(foreign)
 require(ggplot2)
+library(stargazer)
 
 ## Load the data. We are interested in the
 wageData <- read.dta("WAGE1.DTA")
@@ -77,9 +78,6 @@ summary(model1)
 #      omitted variable bias.)
 
 # Interpretation of the coefficient of educ:
-#   This requires an understanding of "logs", because we include
-#      log of wages. We deal with this next week. For now, 
-#      take it from me that:
 #   increasing the years of education by 1 raises the hourly wage
 #   by 8%, ceteris paribus.
 #
@@ -105,6 +103,9 @@ summary(model2)
 # Step 3: Are the returns to education different for men and for women?
 model3 <- lm(lwage~educ+female+female*educ,data=wageData)
 summary(model3)
+
+stargazer(model1,model2,model3,type="text",keep.stat=c("n"))
+
 #
 # Should we include this interaction term?
 #
@@ -137,7 +138,7 @@ summary(wageData)
 # 23. expersq                  exper^2
 # 24. tenursq                  tenure^2
 
-model4 <- lm(lwage~educ+female+ ???,data=wageData)
+#model4 <- lm(lwage~educ+female+ ???,data=wageData)
 
 summary(lm(lwage~educ+female+female*educ,data=wageData))
 summary(lm(lwage~educ+female+exper+married,data=wageData))
@@ -202,11 +203,21 @@ model1 <- lm(lwage~educ,data=wageData.2)
 summary(model1)
 # Q: An explanation for why it is much lower?
 
+
+#####
+#
+# Q: What is the omitted variable in this regression?
+#
+#
+####
+
 # We have argued that there is an omitted variable bias
 # in this relationship: "ability" may be driven by both.
 # This data set measures IQ, which could be a proxy.
 model2 <- lm(lwage~educ+IQ,data=wageData.2)
 summary(model2)
+
+stargazer(model1,model2,keep.stat=c("n"),type="text")
 #
 # Q: What do you conclude?
 
@@ -230,13 +241,32 @@ summary(lm(lwage~educ+IQ+KWW+age+tenure,data=wageData.2))
 #   http://www.foxnews.com/health/2011/09/23/survey-birth-order-affects-job-salary/
 summary(lm(lwage~educ+IQ+KWW+age+tenure+brthord,data=wageData.2))
 
+####
+#### BONUS
+####
 #### Actually, are first-borns smarter?
 # Yes, says the news:
 # http://www.nbcnews.com/id/38683279/ns/health-childrens_health/t/sorry-kid-first-borns-really-are-smarter/
-summary(lm(IQ~brthord,data=wageData.2))
+iq_order <- lm(IQ~brthord,data=wageData.2)
+summary(iq_order)
 # Q: ?
 
+#
+#
+#
+#
+#
 # Q: Can you come up with an omitted variable?
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # ? PARENT'S EDUCATION?
 # - Perhaps higher educated parents have fewer/more children?
 #   That makes their children more likely to be "first-born".
@@ -247,7 +277,10 @@ summary(lm(IQ~brthord,data=wageData.2))
 summary(lm(sibs~feduc+meduc,data=wageData.2))
 
 # And then resolve this omitted variable problem by:
-summary(lm(IQ~brthord+feduc+meduc,data=wageData.2))
+iq_order_ov <- lm(IQ~brthord+feduc+meduc,data=wageData.2)
+summary(iq_order_ov)
+
+stargazer(iq_order,iq_order_ov,type="text",keep.stat = c("n"))
 
 
 
