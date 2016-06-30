@@ -165,7 +165,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * In-class: Sections 10.2, 10.3, 10.4, 10.5
 * In-class exercises: Section 10.6
 * Tutorial exercises: 10.3, ...
-* Lab: Focus on exericse 10.1
+* Lab: Focus on exercise 10.1
 
 ##### Week 11
 
