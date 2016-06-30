@@ -82,7 +82,7 @@ summary(model2)
 # Note R^2 did not really go up. Let's stick with "points" only.
 
 
-# Omitted variables (1) -------------------------------------------------------
+# Output from multiple models -------------------------------------------------------
 
 # Do you think that we can improve on this model?
 # I am worried about omitted variables. How about including a dummy for
@@ -93,8 +93,19 @@ summary(model3)
 # Show the regression output side-by-side
 library(stargazer)
 stargazer(model1,model3,
-          title="Results: OV bias",type="text")
+          title="Results: OV bias",type="text",keep.stat=c("n"))
 
+
+
+# What other variables would you include?
+model4 <- lm(SALARY~Points+Position+AGE+Years_EXP,data=hockeyData)
+summary(model4)
+
+# What about some unlikely variables: LvR-handedness
+model5 <- lm(SALARY~Points+Position+AGE+Years_EXP+Handed,data=hockeyData)
+
+stargazer(model1,model3,model4,model5,
+          title="OV",keep.stat = c("n"),type="text")
 
 # Frisch-Waugh-Lovell -----------------------------------------------------
 
@@ -109,18 +120,6 @@ X1tilde <- residuals(lm(Points~Position,data=hockeyData))
 summary(lm(Ytilde~X1tilde))
 # Same as output from Model 3!
 
-
-# Omitted variables (2) ---------------------------------------------------
-
-# What other variables would you include?
-model4 <- lm(SALARY~Points+Position+AGE+Years_EXP,data=hockeyData)
-summary(model4)
-
-# What about some unlikely variables: LvR-handedness
-model5 <- lm(SALARY~Points+Position+AGE+Years_EXP+Handed,data=hockeyData)
-
-stargazer(model1,model3,model4,model5,
-          title="OV",keep.stat = c("n"),type="text")
 
 
 # Hypothesis testing ------------------------------------------------------

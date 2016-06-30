@@ -35,9 +35,9 @@ This is the course website for BUEC 333, Summer 2016.
 | June 27  | Week 7  | Nonlinear regression |           |
 | July 4   | Week 8  | Instrumental variables      |           |
 | July 11  | Week 9  | Validity          |           |
-| July 18  | Week 10 | Time series                    |           |
+| July 18  | Week 10 | Panel data
 | July 25  | Test 2  |                                | Test 2    |
-| August 1 | Week 11 | To be determined               | Hand-in 2 |
+| August 1 | Week 11 | TBD | Hand-in 2 |
 
 <br>
 
