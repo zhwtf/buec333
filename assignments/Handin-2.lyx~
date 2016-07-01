@@ -173,6 +173,36 @@ refer
  to that website in your answer, and in your code.
 \end_layout
 
+\begin_layout Enumerate
+In particular, consult paragraph 4.1.e in SFU's Code of Academic Integrity
+ and Good Conduct 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.sfu.ca/policies/gazette/student/s10-01.html"
+target "http://www.sfu.ca/policies/gazette/student/s10-01.html"
+
+\end_inset
+
+, which reads: 
+\begin_inset Quotes eld
+\end_inset
+
+"e.
+ Cheating in assignments, projects, examinations or other forms of evaluation
+ by: i.
+ using, or attempting to use, another student’s answers; ii.
+ providing answers to other students; iii.
+ failing to take reasonable measures to protect answers from use by other
+ students; or iv.
+ in the case of students who study together, submitting identical or virtually
+ identical assignments for evaluation unless permitted by the course Instructor
+ or supervisor.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Section*
 Exercises
