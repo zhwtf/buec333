@@ -125,7 +125,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 ##### Week 7
 
-* Topic: MLR (2), nonlinear regression
+* Topic: Nonlinear regression
 * Self-study: 7.1, 7.5, 7.6
 * In-class: 8.1, 8.2, 8.3 (until "Interactions between two continuous variables")
 * In-class exercises: 7.11, 8.7
@@ -139,11 +139,14 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 ##### Week 8
 
 * Topic: Instrumental variables
-* Self-study: 12.1
-* In-class: 12.2, 12.4, 12.5
+* Read (after class): 12.4, 12.5
+* In-class: 12.1, 12.2
 * In-class exercises: Wooldridge 15.2 and 15.7 
 * Tutorial exercises: 12.2, 12.9
-* Lab: Focus on exercise 12.1
+* Lab: Focus on exercise E12.1
+* More material:
+    - Inspiration for education/wages example: [Youtube](https://www.youtube.com/watch?v=FQ3d2syNfYI)
+    - Another good [video](https://www.youtube.com/watch?v=NLgB2WGGKUw) on IV estimation
 
 ##### Week 9
 
