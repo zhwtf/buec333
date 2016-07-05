@@ -21,6 +21,8 @@ I will demonstrate using R during the lectures, there are dedicated computer lab
 #### Hand-in assignments
 
 * [Hand-in assignment 1](./assignments/Handin-1.pdf)
+    - Solutions [rmd](./assignments/AnswerKey1.Rmd)
+    - Solutions [html](./assignments/AnswerKey1.html)
 
 For hand-in assignment 2, there will be very explicit formatting requirements. They will be posted in the course of week 8.
 

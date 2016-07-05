@@ -1,0 +1,487 @@
+---
+title: "BUEC 333 - Hand In Assignment 1 - Answer Key"
+author: "Tim Schulz"
+date: "June 27, 2016"
+output: html_document
+---
+
+#E3.1
+Start off with loading the data:
+```{r, include=FALSE}
+options(digits = 3)
+require(xlsx)
+```
+```{r}
+dat = read.xlsx('cps92_12.xlsx', sheetIndex = 1, header = T)
+```
+
+
+##(a)
+###i.
+Split the data into two data sets. One for 1992 and one for 2012.
+```{r}
+data1992 = subset(dat, year == 1992)
+data2012 = dat[dat$year == 2012, ]
+mean_1992 = mean(data1992$ahe)
+mean_2012 = mean(data2012$ahe)
+```
+The mean hourly earning for 1992 and 2012 respectively are
+```{r, echo=FALSE}
+c(mean_1992, mean_2012)
+```
+
+###ii.
+```{r}
+sd_1992 = sd(data1992$ahe)
+sd_2012 = sd(data2012$ahe)
+```
+The sample standard deviations of average hourly earning for 1992 and 2012 respectively are
+```{r, echo=FALSE}
+c(sd_1992, sd_2012)
+```
+
+###iii.
+I will show two approaches to this question.
+
+The manual approach:
+```{r}
+# Find the number of observations
+nobs_1992 = nrow(data1992)
+nobs_2012 = nrow(data2012)
+# assuming a normal distribution
+# need 5% total, so 2.75% on either side, meaning I need the .975 quantile
+# calculate the errors/deviations to the left and right of the mean
+error_1992 = qnorm(.975) * sd_1992 / sqrt(nobs_1992)
+error_2012 = qnorm(.975) * sd_2012 / sqrt(nobs_2012)
+# get the lower and upper bounds of each confidence interval
+lower_bound_1992 = mean_1992 - error_1992
+upper_bound_1992 = mean_1992 + error_1992
+lower_bound_2012 = mean_2012 - error_2012
+upper_bound_2012 = mean_2012 + error_2012
+```
+Therefore, the 95% confidence interval for the population mean of $AHE$ in 1992 is
+```{r, echo=FALSE}
+c(lower_bound_1992, upper_bound_1992)
+```
+and the 95% confidence interval for the population mean of $AHE$ in 2012 is
+```{r, echo=FALSE}
+c(lower_bound_2012, upper_bound_2012)
+```
+
+Since I'm lazy (I mean efficient) I can also write some custom functions that will do it for me:
+```{r}
+meanconfint = function(obj, cl)
+{
+  # need cl/2% on either side, so translate that into a quantile
+  q = .5 + cl/2
+  m = mean(obj)
+  n = length(obj)
+  s = sd(obj)
+  l = m - qnorm(q) * s / sqrt(n)
+  h = m + qnorm(q) * s / sqrt(n)
+  c(l, h)
+}
+```
+This function takes `obj` and `cl` as inputs. The former is a vector of values from which the mean and its confidence interval are calculated. The latter is the confidence level. Notice that I have to translate this into quantiles again.
+
+Using this function, I get the following results:
+```{r}
+meanconfint(data1992$ahe, .95)
+meanconfint(data2012$ahe, .95)
+```
+This is the same as before and saves me a whole bunch of steps when I do the same thing for different data again later on.
+
+###iv.
+Again, I will show the manual approach and one approach using a custom function.
+
+The manual way:
+```{r}
+delta_mean = mean_2012 - mean_1992
+delta_error =  qnorm(.975) * sqrt(sd_2012^2/nobs_2012 + sd_1992^2/nobs_1992)
+delta_lower_bound = delta_mean - delta_error
+delta_upper_bound = delta_mean + delta_error
+```
+The confidence interval for the difference in $AHE$ between 1992 and 2012 is
+```{r, echo=FALSE}
+c(delta_lower_bound, delta_upper_bound)
+```
+
+
+Using a new function:
+```{r}
+diffconfint = function(obj1, obj2, cl)
+{
+  q = .5 + cl/2
+  m1 = mean(obj1)
+  n1 = length(obj1)
+  s1 = sd(obj1)
+  m2 = mean(obj2)
+  n2 = length(obj2)
+  s2 = sd(obj2)
+  l = m1 - m2 - qnorm(q) * sqrt(s1^2/n1 + s2^2/n2)
+  h = m1 - m2 + qnorm(q) * sqrt(s1^2/n1 + s2^2/n2)
+  c(l, h)
+}
+```
+`diffconfint` is very similar to `meanconfint`. The only difference is that I know also have `obj2` which is the second vector of values that the first one is compared to.
+My answer using this function is the same:
+```{r}
+diffconfint(data2012$ahe, data1992$ahe, .95)
+```
+
+
+##(b)
+I adjust for inflation by going row by row through my data frame and creating a new column called `r.ahe` that contains the original value of `ahe` if it is from 2012 and an inflation-adjusted value if the observations in this row are from 1992.
+```{r}
+dat$r.ahe = apply(dat, 1, function(row) if(row['year']==1992) row['ahe']*229.6/140.3 else row['ahe'])
+```
+The results for 2012 will be unchanged.
+
+The sample standard deviation of $AHE$ in 1992 in 2012 dollars is
+```{r, echo=FALSE}
+sd(dat[dat$year==1992, 'r.ahe'])
+```
+The sample mean of $AHE$ in 1992 in 2012 dollars is
+```{r, echo=FALSE}
+r.mean_1992 = mean(dat[dat$year==1992, 'r.ahe'])
+r.mean_1992
+```
+The corresponding 95% confidence interval for the mean is (using `meanconfint`)
+```{r, echo=FALSE}
+meanconfint(dat[dat$year==1992, 'r.ahe'], .95)
+```
+The mean change from $AHE_{1992}$ to $AHE_{2012}$ in 2012 dollars is
+```{r, echo=FALSE}
+mean_2012 - r.mean_1992
+```
+with a 95% confidence interval of (using `diffconfint`)
+```{r, echo=FALSE}
+diffconfint(dat[dat$year==2012, 'ahe'], dat[dat$year==1992, 'r.ahe'], .95)
+```
+
+##(c)
+I should use the results from (b). Without adjusting for inflation, the values are essentially in different units ("2012-\$" and "1992-\$"). Comparing incomes in different years without accounting for inflation is about as useful as comparing miles to kilometers and then concluding 1.5km is more than 1mi just because one number is bigger than the other.
+
+##(d)
+###i.
+For 2012, the 95% confidence interval of $AHE$ for high school graduates is
+```{r, echo=FALSE}
+meanconfint(dat[dat$year==2012 & dat$bachelor==0, 'ahe'], .95)
+```
+###ii.
+The same confidence interval for college graduates is
+```{r, echo=FALSE}
+meanconfint(dat[dat$year==2012 & dat$bachelor==1, 'ahe'], .95)
+```
+###iii.
+The 95% confidence interval for the difference between $AHE$ of high school graduates and college graduates in 2012 is
+```{r, echo=FALSE}
+diffconfint(dat[dat$year==2012 & dat$bachelor==1, 'ahe'], dat[dat$year==2012 & dat$bachelor==0, 'ahe'], .95)
+```
+
+##(e)
+###i.
+For 1992, the 95% confidence interval of $AHE$ in 2012 dollars for high school graduates is
+```{r, echo=FALSE}
+meanconfint(dat[dat$year==1992 & dat$bachelor==0, 'r.ahe'], .95)
+```
+###ii.
+The same confidence interval for college graduates is
+```{r, echo=FALSE}
+meanconfint(dat[dat$year==1992 & dat$bachelor==1, 'r.ahe'], .95)
+```
+###iii.
+The 95% confidence interval for the difference between $AHE$ in 2012 dollars of high school graduates and college graduates in 1992 is
+```{r, echo=FALSE}
+diffconfint(dat[dat$year==1992 & dat$bachelor==1, 'r.ahe'], dat[dat$year==1992 & dat$bachelor==0, 'r.ahe'], .95)
+```
+
+##(f)
+I will answer this question using a 95% confidence interval for the difference. (Alternatively, I could construct test statistics.) If 0 lies within my confidence interval, I cannot conclude anything about the change of the variable of interest over time given my confidence level. If, however, the lower bound of my confidence interval is greater than 0, I can be fairly certain that the change is positive (there was an increase). Likewise, if the upper bound is negative, I can conclude that the real change was probably negative.
+
+###i.
+```{r}
+diffconfint(dat[dat$year==2012 & dat$bachelor==0, 'r.ahe'],
+            dat[dat$year==1992 & dat$bachelor==0, 'r.ahe'], .95)
+```
+I can conclude that there was no increase in inflation-adjusted earnings of high school graduates from 1992 to 2012. In fact, I am fairly certain that there was a decrease.
+
+###ii.
+```{r}
+diffconfint(dat[dat$year==2012 & dat$bachelor==1, 'r.ahe'],
+            dat[dat$year==1992 & dat$bachelor==1, 'r.ahe'], .95)
+```
+At the 95% confidence interval, I cannot conclude whether real wages for college graduates increased, decreased, or stayed the same between 1992 and 2012.
+
+###iii.
+I will do this one by hand. The gap between college and high school graduates over time looks like this:
+$$ D = \left(AHE_{C,2012} - AHE_{H,2012}\right) - \left(AHE_{C,1992} - AHE_{H,1992}\right) = AHE_{C,2012} - AHE_{H,2012} - AHE_{C,1992} + AHE_{H,1992}$$ 
+where the first term in brackets is the difference in earnings between high school and college graduates in 2012 and the second term in brackets is the same difference in 1992. 
+
+Therefore, my confidence interval will be
+$$ D \pm 1.96 \times \sqrt{ \frac{sd_{C,2012}^2}{N_{C,2012}} + \frac{sd_{H,2012}^2}{N_{H,2012}} + \frac{sd_{C,1992}^2}{N_{C,1992}} + \frac{sd_{H,1992}^2}{N_{H,1992}} } $$
+
+```{r}
+D = (mean(dat[dat$year==2012 & dat$bachelor==1, 'r.ahe'])
+     - mean(dat[dat$year==2012 & dat$bachelor==0, 'r.ahe'])
+     - mean(dat[dat$year==1992 & dat$bachelor==1, 'r.ahe'])
+     + mean(dat[dat$year==1992 & dat$bachelor==0, 'r.ahe']))
+
+s = sqrt(sd(dat[dat$year==2012 & dat$bachelor==1, 'r.ahe'])^2 /
+           nrow(dat[dat$year==2012 & dat$bachelor==1,])
+         + sd(dat[dat$year==2012 & dat$bachelor==0, 'r.ahe'])^2 /
+           nrow(dat[dat$year==2012 & dat$bachelor==0,])
+         + sd(dat[dat$year==1992 & dat$bachelor==1, 'r.ahe'])^2 /
+           nrow(dat[dat$year==1992 & dat$bachelor==1,])
+         + sd(dat[dat$year==1992 & dat$bachelor==0, 'r.ahe'])^2 /
+           nrow(dat[dat$year==1992 & dat$bachelor==0,]))
+D_lower_bound = D - qnorm(.975) * s
+D_upper_bound = D + qnorm(.975) * s
+```
+Therefore, my 95% confidence interval for the mean change in the difference between earning of high school and college graduates from 1992 to 2012 is
+```{r, echo=FALSE}
+c(D_lower_bound, D_upper_bound)
+```
+which leads me to conclude that the earnings gap has increased over time.
+
+##(g)
+To cut down on some work, I will use `ddply{plyr}` here to generate a part of the table.
+```{r, include=FALSE}
+require(plyr)
+```
+
+```{r}
+part_of_the_table = ddply(dat[dat$bachelor==0,], ~ year + female, summarize, mean=mean(r.ahe), sd=sd(r.ahe), n=length(r.ahe))
+```
+```{r, echo=FALSE}
+part_of_the_table
+```
+
+I can calculate the mean difference and confidence interval similar to what I did in (f) using
+$$D = \bar{AHE}_{M,2012} - \bar{AHE}_{W,2012} - \bar{AHE}_{M,1992} + \bar{AHE}_{W,1992} $$
+```{r}
+D = (part_of_the_table[3, 'mean'] - part_of_the_table[4, 'mean']
+     - part_of_the_table[1, 'mean'] + part_of_the_table[2, 'mean'])
+s = sqrt(sum(part_of_the_table$sd^2 / part_of_the_table$n))
+# notice here that the order does not matter and that R works element-by-element,
+# so I still do sd^2/n for each element and then sum over all of them
+D_lower_bound = D - qnorm(.975) * s
+D_upper_bound = D + qnorm(.975) * s
+```
+```{r, include=FALSE}
+# some shorter variable names to use in the table
+ym92 = part_of_the_table$mean[1]
+yw92 = part_of_the_table$mean[2]
+ym12 = part_of_the_table$mean[3]
+yw12 = part_of_the_table$mean[4]
+sm92 = part_of_the_table$sd[1]
+sw92 = part_of_the_table$sd[2]
+sm12 = part_of_the_table$sd[3]
+sw12 = part_of_the_table$sd[4]
+nm92 = part_of_the_table$n[1]
+nw92 = part_of_the_table$n[2]
+nm12 = part_of_the_table$n[3]
+nw12 = part_of_the_table$n[4]
+d92 = ym92 - yw92
+d12 = ym12 - yw12
+s92 = sqrt(sm92^2/nm92 + sw92^2/nw92)
+s12 = sqrt(sm12^2/nm12 + sw12^2/nw12)
+ci92 = diffconfint(dat[dat$year==1992 & dat$female==0 & dat$bachelor==0, 'r.ahe'],
+                   dat[dat$year==1992 & dat$female==1 & dat$bachelor==0, 'r.ahe'], .95)
+ci12 = diffconfint(dat[dat$year==2012 & dat$female==0 & dat$bachelor==0, 'r.ahe'],
+                   dat[dat$year==2012 & dat$female==1 & dat$bachelor==0, 'r.ahe'], .95)
+
+# put everything in a table
+table = data.frame(Year = c(1992,2012),
+                   ym = c(ym92, ym12),
+                   sm = c(sm92, sm12),
+                   nm = c(nm92, nm12),
+                   yw = c(yw92, yw12),
+                   sw = c(sw92, sw12),
+                   nw = c(nw92, nw12),
+                   d = c(d92, d12),
+                   s = c(s92, s12),
+                   ci = c(paste(round(ci92, 3), collapse=', '), paste(round(ci12, 3), collapse=', ')))
+# create column names that are interpreted nicely in math mode
+colnames(table) = c('Year', '$\\bar{Y}_m$', '$s_m$', '$n_m$',
+                    '$\\bar{Y}_w$', '$s_w$', '$n_w$',
+                    '$\\bar{Y}_m-\\bar{Y}_w$', '$SE(\\bar{Y}_m-\\bar{Y}_w)$',
+                    '$CI(\\bar{Y}_m-\\bar{Y}_w)$')
+```
+```{r, include=FALSE}
+require(pander)
+```
+: Trends in Hourly Earnings in the United States of Working High School Graduates, Ages 25--34, 1992 to 2012, in 2012 Dollars
+```{r, echo=FALSE}
+# this automatically creates the table
+pander(table)
+```
+
+
+Not surprisingly, high school graduates earn less than college graduates across the board. The gender pay gap for high school students is similar in magnitude to that of college graduates and appears to be increasing over time, which is also similar to what is observed for college graduates.
+
+
+#E4.1
+Load the data
+```{r}
+growthdata = read.xlsx('Growth.xlsx', header = TRUE, sheetIndex = 1)
+```
+
+##(a)
+```{r, include=FALSE}
+require(ggplot2)
+```
+
+```{r}
+plot = ggplot(growthdata, aes(x=tradeshare, y=growth)) + geom_point()
+```
+```{r, echo=FALSE}
+plot
+```
+
+There appears to be a positive correlation between a country's trade share and its growth rate.
+
+
+##(b)
+Mark Malta's point in red.
+```{r}
+plot + geom_point(aes(x=tradeshare, y=growth), growthdata[growthdata$country_name=='Malta',], colour='red')
+```
+
+Malta does indeed appear to be an outlier.
+
+##(c)
+Regress `growth` on `tradeshare`:
+```{r}
+reg1 = lm(growth ~ tradeshare, growthdata)
+```
+The estimated intercept and slope coefficients are
+```{r, echo=FALSE}
+reg1$coefficients
+```
+For a country with `tradeshare=0.5`, we predict a growth rate of
+```{r, echo=FALSE}
+as.numeric(predict(reg1, data.frame(tradeshare=.5)))
+```
+For a country with `tradeshare=1`, we predict a growth rate of
+```{r, echo=FALSE}
+as.numeric(predict(reg1, data.frame(tradeshare=1)))
+```
+
+##(d)
+Exclude Malta:
+```{r}
+reg2 = lm(growth ~ tradeshare, growthdata[growthdata$country_name!='Malta',])
+```
+Without Malta, the estimated intercept and slope coefficients are
+```{r, echo=FALSE}
+reg2$coefficients
+```
+Without Malta, for a country with `tradeshare=0.5`, we predict a growth rate of
+```{r, echo=FALSE}
+as.numeric(predict(reg2, data.frame(tradeshare=.5)))
+```
+Without Malta, for a country with `tradeshare=1`, we predict a lower growth rate of
+```{r, echo=FALSE}
+as.numeric(predict(reg2, data.frame(tradeshare=1)))
+```
+
+##(e)
+Scatterplot with estimated regression lines with and without Malta (in red)
+```{r}
+regplot = plot + geom_smooth(method='lm', data=growthdata, se=FALSE)
+regplot + geom_smooth(method='lm', data=growthdata[growthdata$country_name!='Malta',], se=FALSE, colour='red')
+```
+
+The regression line predicted for data that includes Malta is steeper than the one predicted for the data that excludes Malta since Malta has an even higher growth rate than predicted for its already large tradeshare. Including Malta therefore "pulls up" the estimated slope.
+
+##(f)
+Malta is a small island nation in the middle of the Mediterranean Sea. It probably has relatively small domestic production and instead serves as a trading hub for the whole area. This causes its large trade share.
+
+Given this description, one might argue that Malta is fundamentally different from the other countries included in the data set and should therefore be excluded. On the other hand, once we start excluding countries because we do not think them representative, it will be difficult to draw a line for other countries. We can almost always argue why a certain country may be very different from other countries in our data.
+
+
+#E5.1
+Load the data
+```{r}
+earningsdata = read.xlsx('Earnings_and_Height.xlsx', sheetIndex = 1)
+```
+
+##(a)
+Regress `earnings` on `height`
+```{r}
+reg1 = lm(earnings ~ height, earningsdata)
+pander(reg1)
+```
+
+Given the $t$ and $p$ values, I can safely conclude that the coefficient for `height` is significant.
+
+The confidence interval for this coefficient is
+```{r, echo=FALSE}
+pander(confint(reg1, 'height', level = .95))
+```
+
+
+
+##(b)
+Same only for women(`sex=0`)
+```{r}
+reg2 = lm(earnings ~ height, earningsdata[earningsdata$sex==0,])
+pander(reg2)
+```
+
+Given the $t$- and $p$-values, I can safely conclude that the coefficient for `height` is significant.
+
+The confidence interval for this coefficient is
+```{r, echo=FALSE}
+pander(confint(reg2, 'height', level = .95))
+```
+
+##(c)
+And for men (`sex=1`)
+```{r}
+reg3 = lm(earnings ~ height, earningsdata[earningsdata$sex==1,])
+pander(reg3)
+```
+
+Given the $t$ and $p$ values, I can safely conclude that the coefficient for `height` is significant.
+
+The confidence interval for this coefficient is
+```{r, echo=FALSE}
+pander(confint(reg3, 'height', level = .95))
+```
+
+##(d)
+I am interested in what I know about $\beta_{1,m} - \beta_{1,w}$ (which is equal to 0 under $H_0$) and its 95% confidence interval. If this interval does not contain 0, I can reject the null.
+```{r}
+# get the estimated difference
+d = reg3$coefficients[2] - reg2$coefficients[2]
+# calculate the standard error of this difference
+s = sqrt(summary(reg3)$coefficients[2,2]^2 + summary(reg3)$coefficients[2,2]^2)
+# construct the confidence interval
+d_lower_bound = d - qnorm(.975) * s
+d_upper_bound = d + qnorm(.975) * s
+```
+My estimated difference for the difference in the effect of `height` on `earnings` between men and women is `r I(d)` with the associated confidence interval of [`r I(d_lower_bound)`, `r I(d_upper_bound)`] and I therefore reject the null hypothesis that this difference is zero (the effects are the same).
+
+
+##(e)
+For this exercise, I need to identify jobs that I believe depend on physical strength and exclude those from the data.
+
+From the data description, I would say that `occupation` might be related to strength in the cases of `7` (protective service), `9` (farming), `10` (mechanics), `11` (construction/mining), and `15` (laborer). So I create a vector of these values and exclude all observations for which `occupation` is equal to one of these:
+```{r}
+physical = c(7, 9, 10, 11, 15)
+np.earningsdata = earningsdata[!(earningsdata$occupation %in% physical),]
+```
+Now run the regression based on these observations
+```{r}
+reg4 = lm(earnings ~ height, np.earningsdata)
+pander(reg4)
+```
+
+
+Even after restricting the sample to occupations that are unlikely to require physical strength, the coefficient on `height` is still positive and significantly different from zero.
+
+
+
+
