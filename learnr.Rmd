@@ -20,10 +20,34 @@ I will demonstrate using R during the lectures, there are dedicated computer lab
 
 #### Hand-in assignments
 
+##### Formatting instructions
+
+Your hand-in assignment is a written assignment. 
+
+In addition to the R code that is at the heart of your answers, you are expect to give answers to the questions in full sentences, in English. 
+
+*You are responsible for delivering a readable html document.*
+
+An example of what we expect, using E4.1, follows. These instructions are in addition to the instructions in the hand-in assignment itself.
+* [.Rmd](./assignments/buec333-handin-formatting.Rmd)
+* [.html](./assignments/buec333-handin-formatting.html)
+* [.pdf](./assignments/buec333-handin-formatting.pdf) with annotations
+    
+More importantly, here is a list of things *not* to do, some with an html file that demonstrates what went wrong. We will subtract points for violations. When in doubt, consult your lab TA.
+
+1. Do not print entire data frames, [html](./assignments/buec333-handin-formatting-1.html). The output just looks ridiculous, and the TA has to scroll through hundreds of pages to read your answer.
+2. Do not use "###"" for text, only for headers [html](./assignments/buec333-handin-formatting-2.html). In MS Word, you would not format your written text as "Heading 1" either. Regular text has no "#" in front of it. Use "#" only for headers for (sub-)questions. See the example above.
+3. Do not put you actual answer inside a code block as a comment. Try grading 10 pages of [this](./assignments/buec333-handin-formatting-3.html)
+4. Do not use a separate files for each question. You will receive 0 points. Hand in 1 (one) Rmd file, and 1 (one) html file.
+5. Do not hand in your assignment without checking your html file first. Your html file is the file that the TA uses to grade your assignment. If it is not readable, you will receive 0 points. Generating a readable html file is your responsibility.
+6. Print to screen only the variable you need for your answer. Do not print every single variable. If the question asks for a confidence interval, do not report know what the standard error and then 1.96 times the standard error is.
+    - Do not show a summary object with >10 components, and assume that we will find that one number that you were asked to report.
+    - Do not print data exploration ('head(df)', 'tail(df)', 'str(df)', etc.) to the screen, unless asked for by the question.
+7. Do not use tools you do not understand. Example: 'plot(lm(...))' produces a whole bunch of graphs that don't answer the question)
+
 * [Hand-in assignment 1](./assignments/Handin-1.pdf)
     - Solutions [rmd](./assignments/AnswerKey1.Rmd)
     - Solutions [html](./assignments/AnswerKey1.html)
 
-For hand-in assignment 2, there will be very explicit formatting requirements. They will be posted in the course of week 8.
 
 * [Hand-in assignment 2](./assignments/Handin-2.pdf)

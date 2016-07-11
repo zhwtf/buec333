@@ -1,0 +1,95 @@
+---
+title: "BUEC 333 - RMarkdown formatting instructions"
+author: "Chris Muris and Tim Schulz"
+date: "July 10, 2016"
+output: html_document
+---
+
+#E4.1
+
+To start, I load the data, using the [haven](https://github.com/hadley/haven/) package.
+
+```{r}
+library(haven)
+growthdata = read_dta('Growth.dta')
+```
+
+
+
+##(a)
+To plot the relationship between tradeshare and growth, I use the [ggplot](http://ggplot2.org/) package.
+
+```{r}
+require(ggplot2)
+plot = ggplot(growthdata, aes(x=tradeshare, y=growth)) + geom_point()
+plot
+```
+
+There appears to be a positive correlation between a country's trade share and its growth rate.
+
+##(b)
+Next, I Mark Malta's point in red, using the "colour" attribute in ggplot2, using code that I adapted from [cookbook-r](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#simple-color-assignment).
+
+```{r}
+plot + geom_point(aes(x=tradeshare, y=growth), growthdata[growthdata$country_name=='Malta',], colour='red')
+```
+
+Malta does indeed appear to be an outlier.
+
+##(c)
+
+Regress `growth` on `tradeshare`, using "lm".
+
+```{r}
+reg1 = lm(growth ~ tradeshare, growthdata)
+```
+
+The estimated intercept and slope coefficients are
+
+```{r}
+reg1$coefficients
+```
+
+For a country with `tradeshare=0.5`, we predict a growth rate of
+
+```{r}
+as.numeric(predict(reg1, data.frame(tradeshare=.5)))
+```
+
+For a country with `tradeshare=1`, we predict a growth rate of
+
+```{r}
+as.numeric(predict(reg1, data.frame(tradeshare=1)))
+```
+
+These predictions differ by 0.5 times the estimated regression coefficient on tradeshare.
+
+##(d)
+
+Next, we run the same regression, but now excluding Malta. In what follows, I am using code that was demonstrated during the computer lab of July 8, 2016.
+
+```{r}
+reg2 = lm(growth ~ tradeshare, growthdata[growthdata$country_name!='Malta',])
+```
+
+Without Malta, the estimated intercept and slope coefficients are
+
+```{r}
+reg2$coefficients
+```
+
+Without Malta, for a country with `tradeshare=0.5`, we predict a growth rate of
+
+```{r}
+as.numeric(predict(reg2, data.frame(tradeshare=.5)))
+```
+
+This prediction is close to the one we obtained when using the data frame with Malta.
+
+Without Malta, for a country with `tradeshare=1`, we predict a lower growth rate of
+
+```{r}
+as.numeric(predict(reg2, data.frame(tradeshare=1)))
+```
+
+This prediction is roughly 0.3 below the one we obtained using Malta.
