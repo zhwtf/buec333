@@ -35,9 +35,8 @@ This is the course website for BUEC 333, Summer 2016.
 | June 27  | Week 7  | Nonlinear regression |           |
 | July 4   | Week 8  | Instrumental variables      |           |
 | July 11  | Week 9  | Validity          |           |
-| July 18  | Week 10 | Panel data
 | July 25  | Test 2  |                                | Test 2    |
-| August 1 | Week 11 | TBD | Hand-in 2 |
+| August 1 | Week 11 | Panel data | Hand-in 2 |
 
 <br>
 
@@ -101,8 +100,8 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 ##### Week 5
 
 * Topic: Linear regression: Statistics
-* Self-study: 4.5
-* In-class: 4.4, 5.1, 5.2, 5.3
+* Self-study: 4.5, 5.3
+* In-class: 4.4, 5.1, 5.2
 * In-class exercises: 5.1, 5.3
 * Tutorial exercises: 4.10, 5.2, 5.4, 5.5
 * Lab: You will learn about visualization, and about regression. 
@@ -127,7 +126,7 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Nonlinear regression
 * Self-study: 7.1, 7.5, 7.6
-* In-class: 8.1, 8.2, 8.3 (until "Interactions between two continuous variables")
+* In-class: 8.1, 8.2
 * In-class exercises: 7.11, 8.7
 * Tutorial exercises: 7.1, 7.2, 7.3, 7.5, 8.1, 8.2 
 * Lab: Focus on questions 6.1 and 7.1 in your hand-in assignment.
@@ -153,29 +152,19 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * Topic: Internal and external validity
 * Self-study: 9.1, 9.2, 9.3, 9.4
 * In-class: Exercises only (week 9 + recap weeks 6-8)
-* In-class exercises: 
-    - Wk 9: 9.6
-    - Wk 6: 6.6
-    - Wk 7: 8.4, 8.5
-    - Old exams: Summer 2015, Test 3, Q4+6
+* In-class exercises: 6.7, 8.4, 9.6, and 15.2 from [Wooldridge](https://www.amazon.com/Introductory-Econometrics-Modern-Approach-Economics/dp/1111531048)
 * Tutorial exercises: 9.1, 9.2, 9.7, 9.11
-* Lab: Focus on putting your answers so far in acceptable format
 
 ##### Week 10
 
-* Topic: Panel data
-* Self-study: Section 10.1
-* In-class: Sections 10.2, 10.3, 10.4, 10.5
-* In-class exercises: Section 10.6
-* Tutorial exercises: 10.3, ...
-* Lab: Focus on exercise 10.1
+* Topic: Dummy variables, robust inference
+* Self-study: 5.3
+* In-class: 5.4, 8.3
+* In-class exercises: TBD
+* Tutorial exercises: 9.1, 9.2, 9.7, 9.11
 
 ##### Week 11
 
-* Topic: Time series, or other (by request)
-* Self-study: TBD
-* In-class: TBD
-* In-class exercises: TBD
-* Tutorial exercises: TBD
-* Lab: TBD
+* Topic: Panel data
+* In-class: Sections 10.1-10.5
 
