@@ -28,10 +28,13 @@ In addition to the R code that is at the heart of your answers, you are expect t
 
 *You are responsible for delivering a readable html document.*
 
+Every subquestion starts with a sentence or two explaining what you are going to do. Then, there will be some code, and R output (print only what you need to answer the question). Finally, a sentence or two to interpret the findings, and answer the question. Whenever you use code from a source (internet, lab, fellow student), give proper reference.
+
 An example of what we expect, using E4.1, follows. These instructions are in addition to the instructions in the hand-in assignment itself.
-* [.Rmd](./assignments/buec333-handin-formatting.Rmd)
-* [.html](./assignments/buec333-handin-formatting.html)
-* [.pdf](./assignments/buec333-handin-formatting.pdf) with annotations
+
+* Rmd: [.Rmd](./assignments/buec333-handin-formatting.Rmd)
+* html: [.html](./assignments/buec333-handin-formatting.html)
+* Annotated pdf: [.pdf](./assignments/buec333-handin-formatting.pdf) with annotations
     
 More importantly, here is a list of things *not* to do, some with an html file that demonstrates what went wrong. We will subtract points for violations. When in doubt, consult your lab TA.
 
