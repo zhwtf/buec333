@@ -78,49 +78,6 @@ summary(lm(lsalary ~ profits + ceoten + lsales + mktval , data=CEOdata ))
 qplot(lsales,lsalary,data=CEOdata)
 
 
-######################################
-## Example 2: School lunch program ###
-######################################
-
-lunchData <- read.table("MEAP93.raw",col.names=c("lnchprg","enroll","staff","expend","salary","benefits","droprate","gradrate","math10","sci11","totcomp","ltotcomp","lexpend","lenroll","lstaff","bensal","lsalary"))
-summary(lunchData)
-
-#  1. lnchprg                  perc. of studs. in sch. lunch prog.
-#  2. enroll                   school enrollment
-#  3. staff                    staff per 1000 students
-#  4. expend                   expend. per stud., $
-#  5. salary                   avg. teacher salary, $
-#  6. benefits                 avg. teacher benefits, $
-#  7. droprate                 school dropout rate, perc
-#  8. gradrate                 school graduation rate, perc
-#  9. math10                   perc studs passing MEAP math
-# 10. sci11                    perc studs passing MEAP science
-# 11. totcomp                  salary + benefits
-# 12. ltotcomp                 log(totcomp)
-# 13. lexpend                  log of expend
-# 14. lenroll                  log(enroll)
-# 15. lstaff                   log(staff)
-# 16. bensal                   benefits/salary
-# 17. lsalary                  log(salary)
-
-# Main variables are lnchprg and math10
-
-# What do you expect to be the relationship between the results on the math10 test,
-# and how many students receive this lunch program?
-# The *hope* is that participation in the lunch program benefits test scores...
-
-summary(lm(math10 ~ lnchprg, data=lunchData))
-
-# What is going on??
-
-# [Hint: tell me the omitted variables / selection story]
-
-# One variable to include is the class size, as you may have concluded
-# from the hand-in assignment.
-# Let's include enrollment, and staff
-
-summary(lm(math10 ~ lnchprg + enroll + staff, data=lunchData))
-
 
 ##########################################################3
 ## Example 3: Crime
