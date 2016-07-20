@@ -88,10 +88,33 @@ summary(lm(math10 ~ lnchprg + staff + salary + benefits + expend, data=lunchData
 
 # Q. Can you experiment and obtain the desired sign?
 
+# See below for a possible explanation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # My take on this:
 #  the intervention only works for 
 #    the lower tail.
-summary(lm(math10 ~ lnchprg + staff, data=lunchData, subset=(salary<25000)))
+#
+# Let's look at schools in the lowest quartiles
+#    of faculty salaries.
+summary(lm(math10 ~ lnchprg + staff, 
+           data=lunchData, 
+           subset=(salary<25000)))
 
 # Further analysis --------------------------------------------------------
 

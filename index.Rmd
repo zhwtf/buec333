@@ -163,6 +163,10 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 * In-class: 5.4, 8.3
 * In-class exercises: None.
 * Tutorial exercises: 5.6, 5.10, 5.12, 8.3, 8.6, 8.10
+* More material
+    - code: lunch program [.R](./code/week10-binary-lunch.R), [data](./code/MEAP93.raw)
+    - code: gender wage gap [.R](./code/week10-binary-wages.R), [data](./code/WAGE1.DTA)
+    - code: heteroskedasticity [.R](./code/week10-heteroskedasticity.R), [data](./code/fertil2.dta)
 
 ##### Week 11
 
