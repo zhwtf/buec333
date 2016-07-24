@@ -1,0 +1,372 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+IV questions
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Instrumental variables I.
+ 
+\series default
+In Acconcia et al.
+ (2014), 
+\begin_inset Quotes eld
+\end_inset
+
+Mafia and Public Spending
+\begin_inset Quotes erd
+\end_inset
+
+, American Economic Review 104(7), the authors use Italian data on 95 provinces
+ (indexed by 
+\begin_inset Formula $i$
+\end_inset
+
+) to estimate the regression coefficient 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in the model
+\begin_inset Formula 
+\[
+Y_{i}=\beta G_{i}+\gamma X_{i}+v_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ is the growth of per capita value added in a province 
+\begin_inset Formula $i$
+\end_inset
+
+; 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ is per capita spending on infrastructure in the same province; and 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ denotes further controls measuring the number of people reported to the
+ judicial authority for (i) Mafia-type association, (ii) extortion; (iii)
+ Mafia-related murders; (iv) corruption; and (v) the number of corruption
+ crimes reported to the judicial authority.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain why 
+\begin_inset Formula $G_{i,t}$
+\end_inset
+
+ is endogenous.
+ 
+\shape italic
+Provinces that are not doing well are more likely to be allocated aid from
+ the central government.
+\shape default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+For their instrumental variable strategy, the authors exploit a new anti-mafia/c
+orruption policy.
+ The new policy is such that, upon discovering mafia involvement, the city
+ council is dismissed, and financial flows into local public works and investmen
+t projects (where the mafia involvement typically occurs) is cut.
+ This allows the province to have a fresh, mafia-free start.
+ The instrument 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+number of city councils dismissed in province 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Do you think that 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is a relevant instrument? 
+\shape italic
+Yes, since discovery of mafia involvement is followed by cuts in spending,
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ is expected to be affected.
+ This can be checked.
+\end_layout
+
+\begin_layout Enumerate
+Convince me that 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is a valid instrument.
+ 
+\shape italic
+Note that 
+\begin_inset Formula $X$
+\end_inset
+
+ already contains a lot of information about the presence and size of mafia,
+ so the instrument is only about the discovery of them.
+ Many other correct answers are possible: you need to tell a story about
+ the relationship between the instrument and the error term 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Instrumental variables II.
+
+\series default
+ Evans and Schwab (1995) studied the effects of attending a Catholic high
+ school on the probability of attending college.
+ For concreteness, let 
+\begin_inset Formula $college$
+\end_inset
+
+ be a binary variable equal to unity if a student attends college, and zero
+ otherwise.
+ Let 
+\begin_inset Formula $CathHS$
+\end_inset
+
+ be a binary variable equal to one if the student attends a Catholic high
+ school.
+ The multiple linear regression model is:
+\begin_inset Formula 
+\[
+college=\beta_{0}+\beta_{1}CathHS+other\,factors+u
+\]
+
+\end_inset
+
+where the other factors include gender, race, family income, and parental
+ education.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Why might 
+\begin_inset Formula $CathHS$
+\end_inset
+
+ be correlated with 
+\begin_inset Formula $u$
+\end_inset
+
+? 
+\series bold
+Catholic schools are not so different from private schools.
+ Parents who make the effort of sending their kids to private schools will
+ also be more likely to support their child to go to college.
+\end_layout
+
+\begin_layout Enumerate
+Standardized test scores from the students' second year in high school are
+ available.
+ What can be done with this variable to improve the estimate of the causal
+ effect of attending a Catholic high school? 
+\series bold
+Added as a control variable!
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $CathRel$
+\end_inset
+
+ be a binary variable equal to one if the student is Catholic.
+ Discuss the two requirements needed for this to be a valid instrumental
+ variable for 
+\begin_inset Formula $CathHS$
+\end_inset
+
+ in the preceding equation.
+ 
+\series bold
+It would have to be correlated with CathHS, and it should not be correlated
+ with u (it should affect college only through CathHS and the other regressors.)
+\end_layout
+
+\begin_layout Enumerate
+Which one of these two requirements can be tested? 
+\series bold
+That it is correlated with HS
+\end_layout
+
+\begin_layout Enumerate
+Being Catholic has a significant effect on attending a Catholic high school.
+ Do you think 
+\begin_inset Formula $CathRel$
+\end_inset
+
+ is a convincing instrument for 
+\begin_inset Formula $CathHS$
+\end_inset
+
+? 
+\series bold
+That depends on what is captured by u.
+ Say that a spiritual/religious background makes students more introspective
+ and curious, or that this background trains your concentration through
+ prayer.
+ This may make it more likely that a student is interested in college, or
+ that they will do well in high school.
+ This is not captured by HS, and may violated the exogeneity of the instrument.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Cheat sheet
+\end_layout
+
+\begin_layout Enumerate
+Critical values:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+5%: 1.96
+\end_layout
+
+\begin_layout Enumerate
+1%: 2.58
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Adjusted 
+\begin_inset Formula $R$
+\end_inset
+
+-squared: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{R}^{2} & = & 1-\frac{n-1}{n-k-1}\frac{SSR}{TSS}\\
+ & = & 1-\frac{n-1}{n-k-1}\left(1-R^{2}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Two stage least squares estimator with a single regressor and a single instrumen
+t
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}^{TSLS}=\frac{s_{ZY}}{s_{ZX}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
