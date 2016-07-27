@@ -1,0 +1,637 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+BUEC 333-D200, Test 2
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1cm}
+\end_layout
+
+\end_inset
+
+July 27, 2016, 14:30-17:20
+\end_layout
+
+\begin_layout Section
+Chapter 6
+\end_layout
+
+\begin_layout Standard
+From Dougherty (2011, Chapter 6, p.
+ 254-255).
+ Using data on the educational attainment of 
+\begin_inset Formula $n=1000$
+\end_inset
+
+ individuals, their score on a knowledge test, and the educational attainment
+ of their parents, we estimate the following regression:
+\begin_inset Formula 
+\begin{align*}
+\widehat{S} & =5.42+0.13ASV+0.12SP\\
+ & \phantom{=5.42-}(0.01)\phantom{SV-}\left(0.03\right)
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $S$
+\end_inset
+
+ is the individual's number of years of schooling, 
+\begin_inset Formula $SP$
+\end_inset
+
+ is the number of years of schooling of the parents, and 
+\begin_inset Formula $ASV$
+\end_inset
+
+ is the individual's score on a knowledge test (between 0 and 10).
+\end_layout
+
+\begin_layout Enumerate
+Interpret the coefficient estimate of 
+\begin_inset Formula $0.12$
+\end_inset
+
+ on 
+\begin_inset Formula $SP$
+\end_inset
+
+.
+ 
+\series bold
+We estimate that the increase in the conditional expectation of your education
+ level is higher by 0.12 years if, ceteris paribus, the education level of
+ your parents goes up by 1 year.
+\end_layout
+
+\begin_layout Enumerate
+Is there sufficient statistical evidence that the education level of your
+ parents has an effect on your education level? 
+\series bold
+Yes, the t-value is 4>2.58>1.96.
+ We would reject the null of beta2=0.
+\end_layout
+
+\begin_layout Standard
+Next, we estimate the regression again, but now omitting 
+\begin_inset Formula $ASV.$
+\end_inset
+
+ We find that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\widehat{S} & =10.0+0.31SP.\\
+ & \phantom{=5.42-}(0.03)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+
+Is there any evidence of omitted variable bias? Explain! 
+\series bold
+Yes, there is a big change in the coefficient on SP.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+Based on the results above, do you think that the relationship between 
+\begin_inset Formula $SP$
+\end_inset
+
+ and 
+\begin_inset Formula $ASV$
+\end_inset
+
+ is positive, negative, or zero? Explain, using the formula for omitted
+ variable bias.
+ 
+\series bold
+Use the OV formula.
+ The bias is positive, so Cov(SP,ASV)>0.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+
+Explain in words, using your answer to (4), why the coefficient of 
+\begin_inset Formula $SP$
+\end_inset
+
+ changes from 0.31 to 0.12 when you include 
+\begin_inset Formula $ASV.$
+\end_inset
+
+ 
+\series bold
+People with more highly educated parents are more likely to score well on
+ ASV, which measures underlying intelligence.
+ That intelligence increase your expected education level.
+ In the second regression, that effect is falsely attributed to your parents'
+ education level.
+\end_layout
+
+\begin_layout Section
+Chapter 5+8
+\end_layout
+
+\begin_layout Standard
+Suppose that we have data on BUEC 333 test scores 
+\begin_inset Formula $\left(Y_{i}\right)$
+\end_inset
+
+, duration for which student 
+\begin_inset Formula $i$
+\end_inset
+
+ studies for the test 
+\begin_inset Formula $\left(X_{i}\right)$
+\end_inset
+
+, and the major of the student 
+\begin_inset Formula $\left(D_{i}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\[
+D_{i}=\left\{ \begin{array}{l}
+1,\text{ if economics major}\\
+0\text{, if non economics major.}
+\end{array}\right.
+\]
+
+\end_inset
+
+Consider the following model:
+\begin_inset Formula 
+\begin{equation}
+\ln\left(Y_{i}\right)=\beta_{0}+\beta_{1}X_{i}+\beta_{2}D_{i}+u_{i}
+\end{equation}
+
+\end_inset
+
+where Assumption 1 holds:
+\begin_inset Formula 
+\begin{equation}
+E\left(u_{i}|X_{i},D_{i}\right)=0.
+\end{equation}
+
+\end_inset
+
+ 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ is the score between 10 and 100.
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is the duration studied in hours, between 1 and 100.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation (in words) of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+? 
+\series bold
+The expectation of your test score goes up by beta1*100% if you study for
+ one additional hour, c.p.
+\end_layout
+
+\begin_layout Standard
+Now suppose that the OLS estimate for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is 0.08, and its standard error is 0.04.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+
+ Test whether 
+\begin_inset Formula $\beta_{1}=0$
+\end_inset
+
+, at the 5% significance level.
+ 
+\series bold
+t=0.08/0.04=2>1.96.
+ Reject.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+
+ Do the same test, but at the 1% significance level.
+ 
+\series bold
+t<2.58, do not reject.
+\end_layout
+
+\begin_layout Standard
+Finally, we try a different model:
+\begin_inset Formula 
+\begin{equation}
+Y_{i}=\beta_{0}+\beta_{1}\ln\left(X_{i}\right)+\beta_{2}D_{i}+\beta_{3}D_{i}\ln\left(X_{i}\right)+u_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+ What is the interpretation of 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+ in this model? 
+\series bold
+This is about the unit change in the conditional expectation of test scores
+ for a percentage increase in the hours studied, c.p.
+ This change is higher, by 0.01*beta3, for econ majors than for non-econ
+ majors.
+\end_layout
+
+\begin_layout Section
+Chapter 9
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solutions in the book's Chapter 9.
+\end_layout
+
+\begin_layout Enumerate
+What is the difference between internal and external validity?
+\end_layout
+
+\begin_layout Enumerate
+Give an example of a study that is 
+\series bold
+not
+\series default
+ externally valid.
+ You can make one up.
+ Explain!
+\end_layout
+
+\begin_layout Section
+Chapter 12
+\end_layout
+
+\begin_layout Standard
+In a famous example of instrumental variables estimation, Acemoglu, Johnson,
+ and Robinson (2001, AER) estimate the effect of institutions on economic
+ growth.
+ They use the following model:
+\begin_inset Formula 
+\begin{equation}
+GDP_{i}=\beta_{0}+\beta_{1}INST_{i}+u_{i}.
+\end{equation}
+
+\end_inset
+
+In this case, 
+\begin_inset Formula $GDP_{i}$
+\end_inset
+
+ is the gross domestic product of country 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $INST_{i}$
+\end_inset
+
+ is a measure of the quality of the institutions in that country.
+ In particular, it may measure the strength of the legal system, and how
+ well property rights are protected.
+\end_layout
+
+\begin_layout Enumerate
+In this model, what does 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ capture? Give some real-world examples of quantities captured by 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ 
+\series bold
+Other factors that influence a country's economic development.
+ For example, the presence of natural resources, the health and education
+ outcomes of its population, etc.
+\end_layout
+
+\begin_layout Enumerate
+The authors believe that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ may be correlated with 
+\begin_inset Formula $INST_{i}$
+\end_inset
+
+.
+ Do you agree? Explain! 
+\series bold
+Yes.
+ Excellent institutions would help with a country's health and education
+ levels, for example.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $INST_{i}$
+\end_inset
+
+ , is the OLS estimator for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ unbiased? Explain! 
+\series bold
+It is biased, since Assumption 1 fails.
+\end_layout
+
+\begin_layout Standard
+The authors use an instrument 
+\begin_inset Formula $MORT_{i}$
+\end_inset
+
+ that is defined as follows.
+ First, they restrict the sample to former colonies, i.e.
+ countries that were colonized by e.g.
+ Portugal, the Netherlands, and Spain during the 15th through 18th century.
+ For each of the remaining countries, they have a measurement for the proportion
+ of settlers that died.
+ For example, if Spain sent ships with 1000 men to Brazil, and only 700
+ of those are alive after 10 years, then 
+\begin_inset Formula $MORT_{i}=0.3$
+\end_inset
+
+ for Brazil.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+What are the two conditions that this instrumental variable must satisfy?
+ 
+\series bold
+It should be (i) correlated with INST, and (ii) uncorrelated with ui.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+
+ In the model above, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is 
+\begin_inset Formula $GDP$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $INST$
+\end_inset
+
+, and 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $MORT$
+\end_inset
+
+.
+ If it is given that
+\begin_inset Formula 
+\begin{align*}
+s_{XY} & =1,\\
+s_{X}^{2} & =2,\\
+s_{ZX} & =-1,\\
+s_{ZY} & =-1.
+\end{align*}
+
+\end_inset
+
+then what is 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+, the OLS estimate? 
+\series bold
+beta1-hat = sxy / s2x = 0.5
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.
+\end_layout
+
+\end_inset
+
+ What is 
+\begin_inset Formula $\hat{\beta}_{1}^{TSLS}$
+\end_inset
+
+? Why is it different from 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+? 
+\series bold
+beta1-hat-2sls=szy/szx=1.
+ It is different from the OLS estimate because Assumption 1 is violated,
+ and therefore the OLS estimate is biased.
+ If the conditions in (4) hold, then the TSLS estimator is consistent.
+\end_layout
+
+\end_body
+\end_document
