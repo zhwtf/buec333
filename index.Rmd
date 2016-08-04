@@ -172,4 +172,5 @@ Readings and exercises are from Stock and Watson, "Introduction to Econometrics"
 
 * Topic: Panel data
 * In-class: Sections 10.1-10.5
-
+* Additional material
+    - code: panel data [.R](./code/week11-traffic.R), [data](./code/fatality.dta)

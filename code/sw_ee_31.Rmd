@@ -27,9 +27,11 @@ se_Xbar <- sqrt(var(CPS_data$ahe) / nrow(CPS_data))
 
 # Confidence intervals
 c(Xbar-1.96*se_Xbar,Xbar+1.96*se_Xbar)
+
+# For this sample, the 95% confidence interval is given by 15.18 to 15.47.
+
 ```
 
-For this sample, the 95% confidence interval is given by 15.18 to 15.47.
 
 ## Question 4.1
 
